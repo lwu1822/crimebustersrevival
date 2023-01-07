@@ -15,7 +15,8 @@
 <div id="light" style="width: 100px; height: 50px">
 </div>
 
-<!-- Script is layed out in a sequence (without a function) and will execute when page is loaded -->
+<p>{{ site.baseurl }}</p>
+
 <script>
   
   function lightboard() {
