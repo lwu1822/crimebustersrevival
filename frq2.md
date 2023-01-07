@@ -1,16 +1,16 @@
-<button onclick="id()">ID</button>
+<button onclick="getUserInfo()">User info</button>
 
 <button onclick="createUser()">Create user</button>
 
-<p>ID:</p>
-<p id="id"></p>
+<p>User info:</p>
+<p id="userInfo"></p>
 
 
 
 
 <script>
   
-  function id() {
+  function getUserInfo() {
     let idInput = prompt("ID?");
 
     const urlStart = "https://crimebusterstest.tk/api/person/";
@@ -23,10 +23,11 @@
       .then(data => {
         console.log(data);
         
-        document.getElementById("id").innerHTML = data.email; 
+        document.getElementById("userInfo").innerHTML = data.email; 
       
       })
   }
+
 
   function createUser() {
     let createUserInput = prompt("Create user info?");
@@ -53,4 +54,5 @@
       
       })
   }
+  
 </script>
