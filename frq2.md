@@ -3,7 +3,10 @@
 <button onclick="createUser()">Create user</button>
 
 <p>User info:</p>
-<p id="userInfo"></p>
+<p id="userInfoName"></p>
+<p id="userInfoEmail"></p>
+<p id="userInfoPassword"></p>
+<p id="userInfoDob"></p>
 
 
 
@@ -23,15 +26,17 @@
       .then(data => {
         console.log(data);
         
-        document.getElementById("userInfo").innerHTML = 
-        "name: " + data.name + 
-        "\nemail: " + data.email +
-        "\npassword: " + data.password +
-        "\ndob: " + data.dob +
-        "\nheight: " + data.height +
-        "\nstats: " + data.stats +
-        "\nsleep: " + data.sleep +
-        "\ncalories: " + data.calories;
+        document.getElementById("userInfoName").innerHTML = 
+        "name: " + data.name;
+
+        document.getElementById("userInfoEmail").innerHTML = 
+        "email: " + data.email;
+
+        document.getElementById("userInfoPassword").innerHTML = 
+        "password: " + data.password;
+
+        document.getElementById("userInfoDob").innerHTML = 
+        "dob: " + data.dob;
       
       })
   }
