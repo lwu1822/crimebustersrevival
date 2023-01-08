@@ -115,7 +115,7 @@
 function monthDayYear1And2() {
     let month1Input = prompt("Month 1?");
     let day1Input = prompt("Day 1?");
-    let year1Input = prompt("Day 1?");
+    let year1Input = prompt("Year 1?");
     let month2Input = prompt("Month 2?");
     let day2Input = prompt("Day 2?");
     let year2Input = prompt("Year 2?");
