@@ -37,28 +37,34 @@
  
   function showYear() {
 
+    // clear the other divs
     document.getElementById("mdyCalendar").innerHTML = "";
     document.getElementById("twoYearsCalendar").innerHTML = "";
     document.getElementById("twoMdyCalendar").innerHTML = "";
 
     document.getElementById("yearCalendar").innerHTML = "";
 
+    // create a para element and paste "Year" onto html
     let title = document.createElement("p");
     title.appendChild(document.createTextNode("Year:"));
     document.getElementById("yearCalendar").appendChild(title);
 
+    // input text box
     let yearText = document.createElement("INPUT");
     yearText.setAttribute("id", "yearTextBoxId");
     yearText.setAttribute("type", "text"); 
     document.getElementById("yearCalendar").appendChild(yearText);
 
+    // button
     let yearFactsButton = document.createElement("BUTTON");
     //yearFactsButton.setAttribute("id", "yearFactsButtonId");
     yearFactsButton.appendChild(document.createTextNode("Get facts")); 
     // API stuff
     yearFactsButton.onclick = function() {
+      // clear contents
       document.getElementById("yearCalendarHTMLInfo").innerHTML = "";
 
+      // get the year inputted in the text box
       let yearInput = document.getElementById("yearTextBoxId").value;
 
       const urlStart = "https://crimebusterstest.tk/api/calendar/";
