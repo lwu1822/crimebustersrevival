@@ -31,29 +31,7 @@
 <div id="twoMdyCalendarHTMLInfo">
 </div>
 
-<br>
-<p>Leap Year?:</p>
-<p id="leapYear"></p>
 
-<p>First day of year:</p>
-<p id="firstDayOfYear"></p>
-
-<button onclick="monthDayYear()">Month, day, year</button>
-
-<p>Number of days since 1/1:</p>
-<p id="dayOfYear"></p>
-
-<p>Day of the week:</p>
-<p id="dayOfWeek"></p>
-
-<button onclick="year1And2()">Number of leap years</button>
-
-<p>Number of leap years</p>
-<p id="numLeapYear"></p>
-
-<button onclick="monthDayYear1And2()">Month, day, year 1 and 2</button>
-<p>Number of days between</p>
-<p id="numDayBtw"></p>
 
 <script>
  
