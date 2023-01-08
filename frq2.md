@@ -23,7 +23,15 @@
       .then(data => {
         console.log(data);
         
-        document.getElementById("userInfo").innerHTML = "email:" + data.email;
+        document.getElementById("userInfo").innerHTML = 
+        "name: " + data.name + 
+        "\nemail: " + data.email +
+        "\npassword: " + data.password +
+        "\ndob: " + data.dob +
+        "\nheight: " + data.height +
+        "\nstats: " + data.stats +
+        "\nsleep: " + data.sleep +
+        "\ncalories: " + data.calories;
       
       })
   }
