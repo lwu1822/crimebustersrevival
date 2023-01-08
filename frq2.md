@@ -23,7 +23,7 @@
       .then(data => {
         console.log(data);
         
-        document.getElementById("userInfo").innerHTML = data.email; 
+        document.getElementById("userInfo").innerHTML = "email:" + data.email;
       
       })
   }
