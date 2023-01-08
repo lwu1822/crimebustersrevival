@@ -1,16 +1,14 @@
-<button onclick="lightboard()">Lightboard</button>
-
 <p>Red:</p>
-<p id="red"></p>
+<input type="text" id="red">
 
 <p>Green:</p>
-<p id="green"></p>
+<input type="text" id="green">
 
 <p>Blue:</p>
-<p id="blue"></p>
+<input type="text" id="blue">
 
-<p>On/off:</p>
-<p id="onOff"></p>
+<button onclick="lightboard()">Generate</button>
+
 
 <div id="light" style="width: 100px; height: 50px">
 </div>
@@ -18,15 +16,16 @@
 <p>{{ site.baseurl }}</p>
 
 <script>
-  
+
+
   function lightboard() {
-    let redInput = prompt("Red?");
-    let greenInput = prompt("Green?");
-    let blueInput = prompt("Blue?");
-    let onOffInput = prompt("On/Off?");
+    let redInput = document.getElementById("red").value;
+    let greenInput = document.getElementById("green").value;
+    let blueInput = document.getElementById("blue").value;
+    
 
     const urlStart = "https://crimebusterstest.tk/api/lightboard/";
-    const url = urlStart + redInput + "/" + greenInput + "/" + blueInput + "/" + onOffInput;
+    const url = urlStart + redInput + "/" + greenInput + "/" + blueInput + "/" + "true";
 
     console.log(url); 
 
@@ -34,14 +33,9 @@
       .then(res => res.json())
       .then(data => {
         console.log(data);
-        document.getElementById("red").innerHTML = data.red; 
-        document.getElementById("green").innerHTML = data.green; 
-        document.getElementById("blue").innerHTML = data.blue; 
-        document.getElementById("onOff").innerHTML = data.on; 
-        
-        if (data.on == true) {
+       
           document.getElementById("light").style.backgroundColor = 'rgb(' + data.red + ',' + data.green + ',' + data.blue + ')';
-        }
+        
       })
   }
 </script>
