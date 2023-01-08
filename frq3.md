@@ -27,3 +27,19 @@
       
   }
 </script>
+
+<style> 
+button {
+	width: 100px;
+	height: 35px;
+	font-size: 16px;
+	background-color: #333;
+	color: #fff;
+	border: none;
+	cursor: pointer;
+}
+
+p {
+  font-size: 18px;
+}
+</style>
