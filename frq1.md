@@ -40,10 +40,14 @@
 
     // clear the other divs
     document.getElementById("mdyCalendar").innerHTML = "";
+    document.getElementById("mdyCalendarHTMLInfo").innerHTML = "";
     document.getElementById("twoYearsCalendar").innerHTML = "";
+    document.getElementById("twoYearsCalendarHTMLInfo").innerHTML = "";
     document.getElementById("twoMdyCalendar").innerHTML = "";
+    document.getElementById("twoMdyCalendarHTMLInfo").innerHTML = "";
 
     document.getElementById("yearCalendar").innerHTML = "";
+    document.getElementById("yearCalendarHTMLInfo").innerHTML = "";
 
     // create a para element and paste "Year" onto html
     let title = document.createElement("p");
@@ -115,6 +119,10 @@
     document.getElementById("yearCalendar").innerHTML = "";
     document.getElementById("twoYearsCalendar").innerHTML = "";
     document.getElementById("twoMdyCalendar").innerHTML = "";
+    document.getElementById("yearCalendarHTMLInfo").innerHTML = "";
+    document.getElementById("mdyCalendarHTMLInfo").innerHTML = "";
+    document.getElementById("twoYearsCalendarHTMLInfo").innerHTML = "";
+    document.getElementById("twoMdyCalendarHTMLInfo").innerHTML = "";
 
     document.getElementById("mdyCalendar").innerHTML = "";
 
@@ -204,6 +212,10 @@ function showTwoYears() {
     document.getElementById("yearCalendar").innerHTML = "";
     document.getElementById("mdyCalendar").innerHTML = "";
     document.getElementById("twoMdyCalendar").innerHTML = "";
+    document.getElementById("yearCalendarHTMLInfo").innerHTML = "";
+    document.getElementById("mdyCalendarHTMLInfo").innerHTML = "";
+    document.getElementById("twoYearsCalendarHTMLInfo").innerHTML = "";
+    document.getElementById("twoMdyCalendarHTMLInfo").innerHTML = "";
 
     document.getElementById("twoYearsCalendar").innerHTML = "";
 
@@ -266,6 +278,10 @@ function showTwoYears() {
     document.getElementById("yearCalendar").innerHTML = "";
     document.getElementById("twoYearsCalendar").innerHTML = "";
     document.getElementById("mdyCalendar").innerHTML = "";
+    document.getElementById("yearCalendarHTMLInfo").innerHTML = "";
+    document.getElementById("mdyCalendarHTMLInfo").innerHTML = "";
+    document.getElementById("twoYearsCalendarHTMLInfo").innerHTML = "";
+    document.getElementById("twoMdyCalendarHTMLInfo").innerHTML = "";
 
     document.getElementById("twoMdyCalendar").innerHTML = "";
 
