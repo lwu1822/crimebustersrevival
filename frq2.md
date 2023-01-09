@@ -9,7 +9,6 @@
 
 <p id="userInfoPassword"></p>
 <p id="userInfoDob"></p>
-<p id="userInfoWeight"></p>>
 
 
 
@@ -39,12 +38,7 @@
         "password: " + data.password;
 
         document.getElementById("userInfoDob").innerHTML = 
-        "dob: " + data.dob;
-
-        document.getElementById("userInfoWeight").innerHTML = 
-        "dob: " + data.dob;
-        
-      
+        "dob: " + data.dob;      
       })
   }
 
