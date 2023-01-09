@@ -1,3 +1,4 @@
+<style> @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;700&display=swap'); </style>
 <p>Red:</p>
 <input type="text" id="red">
 
