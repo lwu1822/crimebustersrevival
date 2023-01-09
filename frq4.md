@@ -14,7 +14,6 @@
 <div id="light" style="width: 100px; height: 50px">
 </div>
 
-<p>{{ site.baseurl }}</p>
 
 <script>
 
