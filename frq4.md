@@ -39,3 +39,5 @@
       })
   }
 </script>
+
+<output redInput, greenInput, blueInput></output>
