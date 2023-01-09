@@ -11,6 +11,7 @@
 <p id="userInfoDob"></p>
 <p id="userInfoHeight"></p>
 <p id="userInfoWeight"></p>
+<p id="userInfoIncome"></p>
 <p id="userInfoStats"></p>
 
 
@@ -47,7 +48,10 @@
         "height: " + data.height;
   
          document.getElementById("userInfoWeight").innerHTML = 
-        "height: " + data.weight;
+        "weight: " + data.weight;
+  
+          document.getElementById("userInfoIncome").innerHTML = 
+        "income: " + data.income;
       
       })
   }
