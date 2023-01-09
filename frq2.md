@@ -7,6 +7,7 @@
 <p id="userInfoEmail"></p>
 <p id="userInfoPassword"></p>
 <p id="userInfoDob"></p>
+<p id="userInfoWeight"></p>>
 
 
 
@@ -37,6 +38,10 @@
 
         document.getElementById("userInfoDob").innerHTML = 
         "dob: " + data.dob;
+
+        document.getElementById("userInfoWeight").innerHTML = 
+        "dob: " + data.dob;
+        
       
       })
   }
