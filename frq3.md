@@ -1,16 +1,18 @@
 <style> @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Source+Sans+Pro:wght@200;700&display=swap'); </style>
-<button onclick="calculator()">Calculator</button>
+
+
+<input type="text" id="equation">
+<button onclick="calculator()">Calculate!</button>
+
 
 <p>Answer:</p>
 <p id="answer"></p>
 
 
-
-
 <script>
   
   function calculator() {
-    let expression = prompt("Equation?");
+    let expression = document.getElementById("equation").value;
 
     const urlStart = "https://crimebusterstest.tk/api/calculator/";
     const url = urlStart + expression;
