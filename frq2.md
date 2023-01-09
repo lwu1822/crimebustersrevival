@@ -10,6 +10,7 @@
 <p id="userInfoPassword"></p>
 <p id="userInfoDob"></p>
 <p id="userInfoHeight"></p>
+<p id="userInfoWeight"></p>
 <p id="userInfoStats"></p>
 
 
