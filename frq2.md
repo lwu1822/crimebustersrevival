@@ -1,3 +1,4 @@
+<style> @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Source+Sans+Pro:wght@200;700&display=swap'); </style>
 <button onclick="getUserInfo()">User info</button>
 
 <button onclick="createUser()">Create user</button>
@@ -5,6 +6,7 @@
 <p>User info:</p>
 <p id="userInfoName"></p>
 <p id="userInfoEmail"></p>
+
 <p id="userInfoPassword"></p>
 <p id="userInfoDob"></p>
 <p id="userInfoHeight"></p>
@@ -38,13 +40,10 @@
         "password: " + data.password;
 
         document.getElementById("userInfoDob").innerHTML = 
-        "dob: " + data.dob;
-        
+        "dob: " + data.dob;      
+          
         document.getElementById("userInfoHeight").innerHTML = 
         "height: " + data.height;
-
-        document.getElementById("userInfoSats").innerHTML = 
-        "stats: " + data.getStats();
       
       })
   }
