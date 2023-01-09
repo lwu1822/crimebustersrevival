@@ -11,6 +11,8 @@
 <button onclick="lightboard()">Generate</button>
 
 
+
+
 <div id="light" style="width: 100px; height: 50px">
 </div>
 
@@ -19,6 +21,11 @@
 
 
   function lightboard() {
+    let redInput = document.getElementById("red").value;
+    let greenInput = document.getElementById("green").value;
+    let blueInput = document.getElementById("blue").value;
+  
+  function randomlightboard() {
     let redInput = document.getElementById("red").value;
     let greenInput = document.getElementById("green").value;
     let blueInput = document.getElementById("blue").value;
