@@ -1,5 +1,5 @@
 <h1>Calendar</h1>
-
+<style> @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap'); </style>
 <button onclick="showYear()">Year</button>
 <button onclick="showMdy()">Month, Day, Year</button>
 <button onclick="showTwoYears()">Two Years</button>
