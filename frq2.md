@@ -10,6 +10,8 @@
 <p id="userInfoPassword"></p>
 <p id="userInfoDob"></p>
 <p id="userInfoHeight"></p>
+<p id="userInfoWeight"></p>
+<p id="userInfoIncome"></p>
 <p id="userInfoStats"></p>
 
 
@@ -44,6 +46,12 @@
           
         document.getElementById("userInfoHeight").innerHTML = 
         "height: " + data.height;
+  
+         document.getElementById("userInfoWeight").innerHTML = 
+        "weight: " + data.weight;
+  
+          document.getElementById("userInfoIncome").innerHTML = 
+        "income: " + data.income;
       
       })
   }
