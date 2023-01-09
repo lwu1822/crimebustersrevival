@@ -45,6 +45,9 @@
           
         document.getElementById("userInfoHeight").innerHTML = 
         "height: " + data.height;
+  
+         document.getElementById("userInfoWeight").innerHTML = 
+        "height: " + data.weight;
       
       })
   }
