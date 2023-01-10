@@ -14,7 +14,7 @@
   function calculator() {
     let expression = document.getElementById("equation").value;
 
-    const urlStart = "https://crimebusterstest.tk/api/calculator/";
+    const urlStart = "https://crimebusterstest.tk/api/calculator/all/";
     const url = urlStart + expression;
 
     console.log(url); 
