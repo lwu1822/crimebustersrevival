@@ -30,7 +30,7 @@ Columns: <input type="text" id="column">
 <style>
  .test {
   margin: 1rem;
-  padding: 2rem 10rem;
+  padding: 0rem 0rem;
   text-align: center;
 }
 
@@ -75,6 +75,8 @@ Columns: <input type="text" id="column">
       let redInput;
       let blueInput;
       let greenInput;
+
+      let br = document.createElement("br");
       for (let i = 0; i < rowInput * columnInput; i++) {
         redInput = data[i].light.red;
         greenInput = data[i].light.green; 
@@ -85,9 +87,12 @@ Columns: <input type="text" id="column">
         div.style.height = "50px"; 
         div.style.backgroundColor = 'rgb(' + redInput + ',' + greenInput + ',' + blueInput + ')';
         div.style.display = "inline-block";
-        div.style.padding = "1rem 1rem";
+        div.style.padding = "0rem 0rem";
         document.getElementById("randomLight").appendChild(div); 
 
+        if ((i+1)%rowInput == 0) {
+          document.getElementById("randomLight").appendChild(br.cloneNode());
+        }
       }
     
         //document.getElementById("randomLight").style.backgroundColor = 'rgb(' + data.red + ',' + data.green + ',' + data.blue + ')';
