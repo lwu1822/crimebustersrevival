@@ -130,6 +130,11 @@
     title.appendChild(document.createTextNode("Month, Day, Year:"));
     document.getElementById("mdyCalendar").appendChild(title);
 
+    let mdyMDYText = document.createElement("input");
+    mdyMDYText.setAttribute("id", "mdyMDYBoxId");
+    mdyMDYText.setAttribute("type", "date");
+    document.getElementById("mdyCalendar").appendChild(mdyMDYText);
+/*
     let mdyMText = document.createElement("INPUT");
     mdyMText.setAttribute("id", "mdyMTextBoxId");
     mdyMText.setAttribute("type", "text"); 
@@ -148,7 +153,7 @@
     mdyYText.setAttribute("id", "mdyYTextBoxId");
     mdyYText.setAttribute("type", "text"); 
     document.getElementById("mdyCalendar").appendChild(mdyYText);
-
+*/
 
     let mdyFactsButton = document.createElement("BUTTON");
     mdyFactsButton.appendChild(document.createTextNode("Get facts")); 
@@ -157,9 +162,18 @@
     mdyFactsButton.onclick = function() {
       document.getElementById("mdyCalendarHTMLInfo").innerHTML = "";
 
+      let mdyMDYInput = document.getElementById("mdyMDYBoxId").value;
+      console.log(mdyMDYInput);
+
+      let mdyMInput = mdyMDYInput.split(/-/s)[1];
+      let mdyDInput = mdyMDYInput.split(/-/s)[2];
+      let mdyYInput = mdyMDYInput.split(/-/s)[0];
+      /*
       let mdyMInput = document.getElementById("mdyMTextBoxId").value;
       let mdyDInput = document.getElementById("mdyDTextBoxId").value;
       let mdyYInput = document.getElementById("mdyYTextBoxId").value;
+      */
+
 
       const urlStart = "https://crimebusterstest.tk/api/calendar/";
       let url = urlStart + "dayOfYear/" + mdyMInput + "/" + mdyDInput + "/" + mdyYInput;
@@ -196,8 +210,8 @@
               document.getElementById("mdyCalendarHTMLInfo").appendChild(mdyInfo);
             
             })
-            
-    };
+           
+    }
     
     // add button to HTML
     document.getElementById("mdyCalendar").appendChild(mdyFactsButton);
@@ -289,7 +303,19 @@ function showTwoYears() {
     title.appendChild(document.createTextNode("Month 1, Day 1, Year 1, Month 2, Day 2, Year 2"));
     document.getElementById("twoMdyCalendar").appendChild(title);
 
+    let twoMdyMDY1Text = document.createElement("input");
+    twoMdyMDY1Text.setAttribute("id", "twoMdyMDY1BoxId");
+    twoMdyMDY1Text.setAttribute("type", "date");
+    document.getElementById("twoMdyCalendar").appendChild(twoMdyMDY1Text);
 
+    document.getElementById("twoMdyCalendar").appendChild(br.cloneNode());
+
+    let twoMdyMDY2Text = document.createElement("input");
+    twoMdyMDY2Text.setAttribute("id", "twoMdyMDY2BoxId");
+    twoMdyMDY2Text.setAttribute("type", "date");
+    document.getElementById("twoMdyCalendar").appendChild(twoMdyMDY2Text);
+
+    /*
     let twoMdyM1Text = document.createElement("INPUT");
     twoMdyM1Text.setAttribute("id", "twoMdyM1TextBoxId");
     twoMdyM1Text.setAttribute("type", "text"); 
@@ -329,6 +355,7 @@ function showTwoYears() {
     twoMdyY2Text.setAttribute("id", "twoMdyY2TextBoxId");
     twoMdyY2Text.setAttribute("type", "text"); 
     document.getElementById("twoMdyCalendar").appendChild(twoMdyY2Text);
+    */
 
     let twoMdyFactsButton = document.createElement("BUTTON");
     twoMdyFactsButton.appendChild(document.createTextNode("Get facts")); 
@@ -337,13 +364,27 @@ function showTwoYears() {
     twoMdyFactsButton.onclick = function() {
       document.getElementById("twoMdyCalendarHTMLInfo").innerHTML = "";
 
+      let twoMdyMDY1Input = document.getElementById("twoMdyMDY1BoxId").value;
+
+      let twoMdyM1Input = twoMdyMDY1Input.split(/-/s)[1];
+      let twoMdyD1Input = twoMdyMDY1Input.split(/-/s)[2];
+      let twoMdyY1Input = twoMdyMDY1Input.split(/-/s)[0];
+
+
+      let twoMdyMDY2Input = document.getElementById("twoMdyMDY2BoxId").value;
+
+      let twoMdyM2Input = twoMdyMDY2Input.split(/-/s)[1];
+      let twoMdyD2Input = twoMdyMDY2Input.split(/-/s)[2];
+      let twoMdyY2Input = twoMdyMDY2Input.split(/-/s)[0];
+
+/*
       let twoMdyM1Input = document.getElementById("twoMdyM1TextBoxId").value;
       let twoMdyD1Input = document.getElementById("twoMdyD1TextBoxId").value;
       let twoMdyY1Input = document.getElementById("twoMdyY1TextBoxId").value;
       let twoMdyM2Input = document.getElementById("twoMdyM2TextBoxId").value;
       let twoMdyD2Input = document.getElementById("twoMdyD2TextBoxId").value;
       let twoMdyY2Input = document.getElementById("twoMdyY2TextBoxId").value;
-
+*/ 
     const urlStart = "https://crimebusterstest.tk/api/calendar/";
     let url = urlStart + "dayOfWeek/" + twoMdyM1Input + "/" + twoMdyD1Input+ "/" + twoMdyY1Input+ "/" + twoMdyM2Input+ "/" + twoMdyD2Input+ "/" + twoMdyY2Input;
     console.log(url);
