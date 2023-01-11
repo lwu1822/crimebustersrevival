@@ -1,9 +1,13 @@
 <style> @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Source+Sans+Pro:wght@200;700&display=swap'); </style>
-<button onclick="getUserInfo()">User info</button>
 
-<button onclick="createUser()">Create user</button>
+Current user IDs: 
+<div id="currentUser"></div>
 
-<p>User info:</p>
+<br>
+User id: <input type="text" id="userId">
+<button onclick="getUserInfo()">Get user info</button>
+
+
 <p id="userInfoName"></p>
 <p id="userInfoEmail"></p>
 
@@ -15,12 +19,30 @@
 <p id="userInfoStats"></p>
 
 
+<button onclick="createUser()">Create user</button>
 
 
 <script>
   
+  
+
+const url = "https://crimebusterstest.tk/api/person/";
+  fetch(url)
+      .then(res => res.json())
+      .then(data => {
+        console.log(data);
+
+        for (let i = 0; i < data.length; i++) {
+          let userID = data[i].id;
+           let currentUserList = document.createElement("p");
+
+  currentUserList.appendChild(document.createTextNode(userID));
+            document.getElementById("currentUser").appendChild(currentUserList);
+        }
+      })
+
   function getUserInfo() {
-    let idInput = prompt("ID?");
+    let idInput = document.getElementById("userId").value;
 
     const urlStart = "https://crimebusterstest.tk/api/person/";
     const url = urlStart + idInput;
