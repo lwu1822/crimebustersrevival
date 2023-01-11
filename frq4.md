@@ -16,21 +16,24 @@
 <div id="light" style="width: 100px; height: 50px">
 </div>
 
-# Generate random ligths
+# Generate random lights
 
 
 Rows: <input type="text" id="row">
 <br>
 Columns: <input type="text" id="column">
 <button onclick="randomLightboard()">Generate</button>
-<div class="test" id="randomLight">
+<div class = "test" id="randomLight">
 </div>
 
 
 <style>
-  .randomLight {
-  padding: 1rem 1rem;
-  }
+ .test {
+  margin: 1rem;
+  padding: 2rem 10rem;
+  text-align: center;
+}
+
 </style>
 
 <script>
@@ -57,7 +60,7 @@ Columns: <input type="text" id="column">
   }
 
    function randomLightboard() {
-    
+    document.getElementById("randomLight").innerHTML = ""; 
 
     let rowInput = document.getElementById("row").value;
     let columnInput = document.getElementById("column").value;
@@ -81,6 +84,8 @@ Columns: <input type="text" id="column">
         div.style.width = "100px";
         div.style.height = "50px"; 
         div.style.backgroundColor = 'rgb(' + redInput + ',' + greenInput + ',' + blueInput + ')';
+        div.style.display = "inline-block";
+        div.style.padding = "1rem 1rem";
         document.getElementById("randomLight").appendChild(div); 
 
       }
