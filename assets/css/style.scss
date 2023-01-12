@@ -16,7 +16,8 @@
   }
 
   button {
-    background: rgb(253, 253, 215);
+    background: #D1A3CE;
+    color: #001535;
     font-family: 'Oswald', sans-serif;
 font-family: 'Source Sans Pro', sans-serif;
   }
@@ -32,5 +33,9 @@ font-family: 'Source Sans Pro', sans-serif;
 color: #D1A3CE;
   }
 
+  a :hover {
+    color: #927290;
+  }
 
-body { padding: 0px 0 20px 0px; margin: 0px; font: 14px/1.5 "OpenSansRegular", "Helvetica Neue", Helvetica, Arial, sans-serif; color: #927290; font-weight: normal; background-attachment: fixed !important; background: linear-gradient(#005b96, #001535); }
+
+body { padding: 0px 0 20px 0px; margin: 0px; font: 14px/1.5 "OpenSansRegular", "Helvetica Neue", Helvetica, Arial, sans-serif; color: #ffffff; font-weight: normal; background-attachment: fixed !important; background: linear-gradient(#005b96, #001535); }
