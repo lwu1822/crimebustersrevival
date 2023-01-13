@@ -103,4 +103,3 @@ Columns: <input type="text" id="column">
    }
 </script>
 
-<output redInput, greenInput, blueInput></output>
