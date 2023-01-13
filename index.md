@@ -6,14 +6,11 @@
 
 </head>
 
-{% block body %}
 <body>
 <p> Crimebusters Revival!
 The return of our awesome website.
 View our FRQ APIs above. </p>
 </body>
-
-{% endblock %}
 
 </html>
 
