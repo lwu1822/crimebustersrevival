@@ -10,13 +10,13 @@ body {
 
 .navbar {
   overflow: hidden;
-  background-color: #333;
+  background-color: #D1A3CE;
 }
 
 .navbar a {
   float: left;
   font-size: 16px;
-  color: white;
+  color: #001535;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -31,7 +31,7 @@ body {
   font-size: 16px;  
   border: none;
   outline: none;
-  color: white;
+  color: #D1A3CE;
   padding: 14px 16px;
   background-color: inherit;
   font-family: inherit;
@@ -39,13 +39,14 @@ body {
 }
 
 .navbar a:hover, .dropdown:hover .dropbtn {
-  background-color: red;
+  background-color: #001535;
 }
 
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #f9f9f9;
+  background-color: #D1A3CE;
+  margin-top: 3%;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
@@ -53,7 +54,7 @@ body {
 
 .dropdown-content a {
   float: none;
-  color: black;
+  color: #001535;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
@@ -61,7 +62,7 @@ body {
 }
 
 .dropdown-content a:hover {
-  background-color: #ddd;
+  background-color: #D1A3CE;
 }
 
 .dropdown:hover .dropdown-content {
@@ -89,27 +90,3 @@ body {
 </html>
 
 <!-- 
-<table>
-   <tr>
-        <td><a href="{{ site.baseurl }}">Home</a></td>
-        <td><a href="{{ site.baseurl }}/frq1">FRQ 1</a></td>
-        <td><a href="{{ site.baseurl }}/frq2">FRQ 2</a></td>
-        <td><a href="{{ site.baseurl }}/frq3">FRQ 3</a></td>
-        <td><a href="{{ site.baseurl }}/frq4">FRQ 4</a></td>
-    </tr> 
-    <tr>
-        <td><a href="{{ site.baseurl }}">Home</a></td>
-        <td>
-            <div class="dropdown1">
-            <button class="dropbtn1">FRQs</button>
-            <div class="dropdown1-content">
-              <a href="{{ site.baseurl }}/frq1">FRQ 1</a>
-              <a href="{{ site.baseurl }}/frq2">FRQ 2</a>
-              <a href="{{ site.baseurl }}/frq3">FRQ 3</a>
-              <a href="{{ site.baseurl }}/frq4">FRQ 4</a>
-            </div>
-          </div>
-        </td>
-    </tr>
-</table>
- -->
