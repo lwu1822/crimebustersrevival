@@ -1,10 +1,9 @@
-<!DOCTYPE html>
 <html>
 <head>
     <title>Caesar Cipher</title>
 </head>
 <body>
-    <h1>Caesar Cipher</h1>
+<h1>Caesar Cipher</h1>
 
 <p>Enter a message to be decrypyted:</p>
 <input type="text" id="message">
