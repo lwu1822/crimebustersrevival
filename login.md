@@ -16,6 +16,6 @@
 <br>
 
 <script>
-    data = {email:"b@gmail.com",password:"test2"};
+    data = {email:"a@gmail.com",password:"a"};
 fetch("http://crimebusterstest.tk/login/authenticate", {method: 'POST', headers: {'Content-Type':'application/json'}, body: JSON.stringify(data)})
 </script>
