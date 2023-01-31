@@ -16,6 +16,10 @@
 <br>
 
 <script>
+    /*
+data = {email:"a@gmail.com",password:"a"};
+fetch("https://crimebusterstest.tk/login/authenticate", {method: 'POST', mode: 'no-cors', headers: {'Accept': 'application/json', 'Content-Type':'application/json'}, body: JSON.stringify(data)})
+*/
     data = {email:"a@gmail.com",password:"a"};
-fetch("https://crimebusterstest.tk/login/authenticate", {method: 'POST', headers: {'Content-Type':'application/json'}, body: JSON.stringify(data)})
+fetch("https://crimebusterstest.tk/login/authenticate", {method: 'POST',  headers: {'Accept': 'application/json', 'Content-Type':'application/json'}, body: JSON.stringify(data)})
 </script>
