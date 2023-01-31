@@ -87,6 +87,22 @@ body {
   </div> 
     <a class="dropbtn" href="{{ site.baseurl }}/caesar">Caesar</a>
     <a class="dropbtn" href="{{ site.baseurl }}/login">Log-In/Sign Up</a>
+    <div class="dropdown px-3" sec="authorize" content="isAuthenticated()">
+      <span class="dropdown-toggle link-dark" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" sec:authentication="name">
+      </span>
+      <ul class="dropdown-menu dropdown-menu-dark">
+          <li>
+              <div class="dropdown-item">
+                  <p style="margin-bottom:2px"><strong>ROLES:</strong></p>
+                  <p style="font-size:0.75em;margin:1px" sec="authorize" content="hasRole('ADMIN')">ADMIN</p>
+                  <p style="font-size:0.75em;margin:1px" sec="authorize" content="hasRole('TEACHER')">TEACHER</p>
+                  <p style="font-size:0.75em;margin:1px" sec="authorize" content="hasRole('STUDENT')">STUDENT</p>
+              </div>
+          </li>
+          <li><a class="dropdown-item active" href='/logout'>Logout</a></li>
+      </ul>
+  </div>
+
 </div>
 
 </body>
