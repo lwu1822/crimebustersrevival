@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 <head>
     <title>Atbash Cipher</title>
@@ -6,7 +5,7 @@
 <body>
     <h1>Atbash Cipher</h1>
 
-    <p>Enter a message to be decrypyted/encrypted:</p>
+<p>Enter a message to be decrypyted/encrypted:</p>
     <input type="text" id="message">
     <br>
     <br>
