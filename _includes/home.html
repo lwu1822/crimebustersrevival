@@ -85,7 +85,13 @@ body {
         <a href="{{ site.baseurl }}/frq4">FRQ 4</a>
     </div>
   </div> 
-    <a class="dropbtn" href="{{ site.baseurl }}/caesar">Caesar</a>
+  <div class="dropdown">
+    <button class="dropbtn">Decrypt</button>
+    <div class="dropdown-content">
+        <a href="{{ site.baseurl }}/caesar">Caesar</a>
+        <a href="{{ site.baseurl }}/atbash">Atbash</a>
+    </div>
+  </div> 
     <a class="dropbtn" href="{{ site.baseurl }}/login">Log-In/Sign Up</a>
     <div class="dropdown px-3" sec="authorize" content="isAuthenticated()">
       <span class="dropdown-toggle link-dark" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" sec:authentication="name">
