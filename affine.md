@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html>
+
 <head>
     <title>Affine Cipher</title>
 </head>
@@ -33,4 +32,3 @@
 <!-- Include the JavaScript file -->
 <script src="affine.js"></script>
 </body>
-</html>
