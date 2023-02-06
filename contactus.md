@@ -89,7 +89,7 @@
             padding: 20px;
         }
     </style>
-    <div class="center-block" style="margin: 2% 5% 5%; text-align:left; font-family: gilroy,serif;">
+    <div class="center-block" style="margin: 2% 5% 5%; text-align:left; color:steelblue; font-family: gilroy,serif;">
     <div class="container">
         <form action="https://formsubmit.co/bettanetwork123@gmail.com" method="POST">
 
@@ -117,7 +117,6 @@
 
 
 
-{% endblock %}
 
 </html>
 </div>
