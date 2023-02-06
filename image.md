@@ -1,4 +1,4 @@
-
+<html>
     <h1>
         Image Decryptor
     </h1>
@@ -9,3 +9,4 @@
 
     <p>Decrypted message:</p>
     <p id="decrypted"></p>
+</html>
