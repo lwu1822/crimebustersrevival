@@ -6,7 +6,6 @@
 <h1>Learn Manual Codebusting</h1>
 
 <p>Choose a cipher to learn:</p>
-<a href="{{ site.baseurl }}/atbash">Atbash</a>
     <title>Button</title>
     <style>
         .container{
@@ -19,8 +18,8 @@
 </head>
 <body>
     <div class="container">
-        <h1 style="text-align:center;">Simple Html Button</h1>
-        <a href="https://www.google.com/">
+        <h1 style="text-align:center;">Atbash</h1>
+        <a href="{{ site.baseurl }}/atbash">
             <button class="btn btn-primary btn-lg">Click</button>
         </a>
     </div>
