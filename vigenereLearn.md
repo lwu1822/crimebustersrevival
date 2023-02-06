@@ -1,4 +1,3 @@
-<html>
 <h1>Popup/Modal Windows without JavaScript</h1>
 <div class="box">
 	<a class="button" href="#popup1">Let me Pop up</a>
@@ -13,7 +12,6 @@
 		</div>
 	</div>
 </div>
-</html>
 
 <script>
 body {
