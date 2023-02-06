@@ -13,25 +13,33 @@
         <a href="{{ site.baseurl }}/atbash">
             <button class="btn btn-primary btn-lg">Caesar</button>
         </a>
+    <br>
+    <br>
     </div>
     <div class="container">
         <a href="{{ site.baseurl }}/atbash">
             <button class="btn btn-primary btn-lg">Atbash</button>
         </a>
+    <br>
+    <br>
     </div>
     <div class="container">
         <a href="{{ site.baseurl }}/atbash">
             <button class="btn btn-primary btn-lg">Vignere</button>
         </a>
+        <br>
+    <br>
     </div>
     <div class="container">
         <a href="{{ site.baseurl }}/atbash">
             <button class="btn btn-primary btn-lg">Affine</button>
         </a>
+        <br>
+    <br>
     </div>
     <div class="container">
         <a href="{{ site.baseurl }}/atbash">
-            <button class="btn btn-primary btn-lg">Aristocrat</button>
+            <button class="btn btn-primary btn-lg">Aristocrat/Substitution</button>
         </a>
     </div>
 </body>
