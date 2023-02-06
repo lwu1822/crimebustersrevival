@@ -9,7 +9,7 @@
 <p>Choose a cipher to learn:</p>
     <title>Button</title>
 <body>
-    <div class="container">
+    <div class="text-center">
         <a href="{{ site.baseurl }}/atbash">
             <button class="btn btn-primary btn-lg">Caesar</button>
         </a>
