@@ -16,28 +16,28 @@
     <br>
     <br>
     </div>
-    <div class="container">
+    <div class="text-center">
         <a href="{{ site.baseurl }}/atbash">
             <button class="btn btn-primary btn-lg">Atbash</button>
         </a>
     <br>
     <br>
     </div>
-    <div class="container">
+    <div class="text-center">
         <a href="{{ site.baseurl }}/atbash">
             <button class="btn btn-primary btn-lg">Vignere</button>
         </a>
         <br>
     <br>
     </div>
-    <div class="container">
+    <div class="text-center">
         <a href="{{ site.baseurl }}/atbash">
             <button class="btn btn-primary btn-lg">Affine</button>
         </a>
         <br>
     <br>
     </div>
-    <div class="container">
+    <div class="text-center">
         <a href="{{ site.baseurl }}/atbash">
             <button class="btn btn-primary btn-lg">Aristocrat/Substitution</button>
         </a>
