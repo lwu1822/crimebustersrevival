@@ -1,3 +1,6 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Dosis&display=swap');
+</style>
 <html>
 <head>
     <title>Caesar Cipher</title>
