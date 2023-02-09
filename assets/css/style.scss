@@ -14,23 +14,24 @@
     flex: 33.33%;
     padding: 5px;
   }
-
+  .text-center {
+    text-align: center;
+  }
   button {
     background: #D1A3CE;
     color: #001535;
-    font-family: 'Oswald', sans-serif;
-font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Dosis', sans-serif;
+font-size: medium;
+    
   }
   h1 {
-    font-family: 'Oswald', sans-serif;
-font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Dosis', sans-serif;
   }
   p{
-    font-family: 'Oswald', sans-serif;
-font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Dosis', sans-serif;
   }
   a{
-color: #D1A3CE;
+color: #e2c0e0;
   }
 
   a:hover {
