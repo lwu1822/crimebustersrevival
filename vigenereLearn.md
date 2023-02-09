@@ -88,10 +88,10 @@
   <body>
     <h2>Multiple Popup Forms</h2>
     <p>
-      <button class="button" data-modal="modalOne">Contact Us</button>
+      <button class="button" data-modal="modalOne">How to Encrypt Vigenere</button>
     </p>
     <p>
-      <button class="button" data-modal="modalTwo">Send a Compliant Form</button>
+      <button class="button" data-modal="modalTwo">How to Decrypt Vigenere</button>
     </p>
     <div id="modalOne" class="modal">
       <div class="modal-content">
