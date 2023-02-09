@@ -98,18 +98,7 @@
         <div class="contact-form">
           <a class="close">&times;</a>
           <form action="/">
-            <h2>Contact Us</h2>
-            <div>
-              <input class="fname" type="text" name="name" placeholder="Full name" />
-              <input type="text" name="name" placeholder="Email" />
-              <input type="text" name="name" placeholder="Phone number" />
-              <input type="text" name="name" placeholder="Website" />
-            </div>
-            <span>Message</span>
-            <div>
-              <textarea rows="4"></textarea>
-            </div>
-            <button type="submit" href="/">Submit</button>
+            <h2>How to Encrypt Vigenere</h2>
           </form>
         </div>
       </div>
@@ -119,18 +108,7 @@
         <div class="contact-form">
           <span class="close">&times;</span>
           <form action="/">
-            <h2>Complaint form</h2>
-            <div>
-              <input class="fname" type="text" name="name" placeholder="Full name" />
-              <input type="text" name="name" placeholder="Email" />
-              <input type="text" name="name" placeholder="Phone number" />
-              <input type="text" name="name" placeholder="Website" />
-            </div>
-            <span>Message</span>
-            <div>
-              <textarea rows="4"></textarea>
-            </div>
-            <button type="submit" href="/">Submit</button>
+            <h2>How to Decrypt Vigenere</h2>
           </form>
         </div>
       </div>
