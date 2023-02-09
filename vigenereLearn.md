@@ -86,7 +86,6 @@
     </style>
   </head>
   <body>
-    <h2>Multiple Popup Forms</h2>
     <p>
       <button class="button" data-modal="modalOne">How to Encrypt Vigenere</button>
     </p>
