@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Dosis&display=swap');
+</style>
 <html>
 <head>
     <title>Affine Cipher</title>
@@ -21,4 +23,3 @@
 <!-- Include the JavaScript file -->
 <script src="affine.js"></script>
 </body>
-</html>
