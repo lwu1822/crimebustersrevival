@@ -17,7 +17,7 @@
 
 <script>
 
-var url = "https://crimebusters.tk/"
+var url = "https://crimebusters.tk"
 //var url = "http://localhost:8085"
 // Comment out next line for local testing
 // url = "http://localhost:8085"
