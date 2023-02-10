@@ -101,6 +101,36 @@
           <a class="close">&times;</a>
           <form action="/">
             <h2>How to Encrypt Vigenere</h2>
+            <p>
+            The Vigenère cipher uses a 26×26 table with A to Z as the row heading and column heading This table is usually referred to as the Vigenère Tableau, Vigenère Table or Vigenère Square. We shall use Vigenère Table. The first row of this table has the 26 English letters. Starting with the second row, each row has the letters shifted to the left one position in a cyclic way. For example, when B is shifted to the first position on the second row, the letter A moves to the end.
+            </p>
+            <p>
+            In addition to the plaintext, the Vigenère cipher also requires a keyword, which is repeated so that the total length is equal to that of the plaintext. For example, suppose the plaintext is MICHIGAN TECHNOLOGICAL UNIVERSITY and the keyword is HOUGHTON. Then, the keyword must be repeated as follows:
+            </p>
+            <p>
+            MICHIGAN TECHNOLOGICAL UNIVERSITY
+            </p> 
+            <p>
+            HOUGHTON HOUGHTONHOUGH TONHOUGNTO
+            </p>
+            <p>
+            We follow the tradition by removing all spaces and punctuation, converting all letters to upper case, and dividing the result into 5-letter blocks. As a result, the above plaintext and keyword become the following:
+            </p>
+            <p>
+            MICHI GANTE CHNOL OGICA LUNIV ERSIT Y
+            </p>
+            <p>
+            HOUGH TONHO UGHTO NHOUG HTONH OUGHT O
+            </p>
+            <p>
+            To encrypt, pick a letter in the plaintext and its corresponding letter in the keyword, use the keyword letter and the plaintext letter as the row index and column index, respectively, and the entry at the row-column intersection is the letter in the ciphertext. For example, the first letter in the plaintext is M and its corresponding keyword letter is H. This means that the row of H and the column of M are used, and the entry T at the intersection is the encrypted result.
+            </p>
+            <p>
+            Repeating this process until all plaintext letters are processed, the ciphertext is TWWNPZOA ASWNUHZBNWWGS NBVCSLYPMM. The following has the plaintext, repeated keyword and ciphertext aligned together.
+            </p>
+            <p>MICHI GANTE CHNOL OGICA LUNIV ERSIT Y</p>
+            <p>HOUGH TONHO UGHTO NHOUG HTONH OUGHT O</p>
+            <p>TWWNP ZOAAS WNUHZ BNWWG SNBVC SLYPM M</p>
           </form>
         </div>
       </div>
