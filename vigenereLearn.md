@@ -14,6 +14,9 @@
         background-color: rgb(0, 0, 0);
         background-color: rgba(0, 0, 0, 0.4);
       }
+      p {
+        color: black;
+      }
       .modal-content {
         margin: 50px auto;
         border: 1px solid #999;
