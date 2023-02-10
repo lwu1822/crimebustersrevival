@@ -29,7 +29,7 @@
         color: black;
       }
       span {
-        color: #666;
+        color: #9E79AB;
         display: block;
         padding: 0 0 5px;
       }
