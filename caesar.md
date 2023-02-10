@@ -24,7 +24,7 @@
   function decrypt() {
     let expression = document.getElementById("message").value;
 
-    const urlStart = "https://localhost:8085/api/decrypt/all/";
+    const urlStart = "http://localhost:8085/api/decrypt/all/";
     const url = urlStart + expression;
 
     console.log(url); 
