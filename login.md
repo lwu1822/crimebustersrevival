@@ -17,7 +17,8 @@
 
 <script>
 
-var url = "https://crimebusters.tk"
+var url = "https://crimebusters.tk/"
+//var url = "http://localhost:8085"
 // Comment out next line for local testing
 // url = "http://localhost:8085"
 // Authenticate endpoint
@@ -26,8 +27,8 @@ const login_url = url + '/authenticate';
 
     // Set body to include login data
     const body = {
-        email: "c@gmail.com",
-        password: "c",
+        email: "a@gmail.com",
+        password: "a",
     };
 
     // Set Headers to support cross origin
@@ -44,6 +45,25 @@ const login_url = url + '/authenticate';
 
     // Fetch JWT
     fetch(login_url, requestOptions);
+
+const options = {
+    method: 'GET', // *GET, POST, PUT, DELETE, etc.
+    mode: 'cors', // no-cors, *cors, same-origin
+    cache: 'default', // *default, no-cache, reload, force-cache, only-if-cached
+    credentials: 'include', // include, *same-origin, omit
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  };
+
+  // fetch the API
+  fetch("http://localhost:8085/api/person/19", options)
+  .then(response => {
+      // check for response errors and display
+      response.json().then(data => {
+        console.log(data);
+      })
+      });
 
 
     /*
