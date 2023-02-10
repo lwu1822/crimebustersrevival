@@ -100,7 +100,7 @@
     </p>
     <div id="modalOne" class="modal">
       <div class="modal-content">
-        <div class="contact-form">
+        <div style="color: black" class="contact-form">
           <a class="close">&times;</a>
           <form action="/">
             <h2>How to Encrypt Vigenere</h2>
@@ -140,7 +140,7 @@
     </div>
     <div id="modalTwo" class="modal">
       <div class="modal-content">
-        <div class="contact-form">
+        <div style="color: black" class="contact-form">
           <span class="close">&times;</span>
           <form action="/">
             <h2>How to Decrypt Vigenere</h2>
@@ -151,7 +151,7 @@
     </div>
     <div id="modalThree" class="modal">
       <div class="modal-content">
-        <div class="contact-form">
+        <div style="color: black" class="contact-form">
           <span class="close">&times;</span>
           <form action="/">
             <h2>Vigenere Sample Problem</h2>
