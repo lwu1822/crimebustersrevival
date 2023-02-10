@@ -92,6 +92,9 @@
     <p>
       <button class="button" data-modal="modalTwo">How to Decrypt Vigenere</button>
     </p>
+    <p>
+      <button class="button" data-modal="modalThree">Vigenere Sample Problem</button>
+    </p>
     <div id="modalOne" class="modal">
       <div class="modal-content">
         <div class="contact-form">
@@ -108,6 +111,16 @@
           <span class="close">&times;</span>
           <form action="/">
             <h2>How to Decrypt Vigenere</h2>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div id="modalThree" class="modal">
+      <div class="modal-content">
+        <div class="contact-form">
+          <span class="close">&times;</span>
+          <form action="/">
+            <h2>Vigenere Sample Problem</h2>
           </form>
         </div>
       </div>
