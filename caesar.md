@@ -19,6 +19,26 @@
 <p id="decrypted"></p>
 
 <!-- Include the JavaScript file -->
-<script src="caesar.js"></script>
+<script>
+  
+  function decrypt() {
+    let expression = document.getElementById("message").value;
+
+    const urlStart = "http://localhost:8085/api/decrypt/all/";
+    const url = urlStart + expression;
+
+    console.log(url); 
+
+    fetch(url)
+      .then(res => res.json())
+      .then(data => {
+        console.log(data);
+        
+        document.getElementById("decrypted").innerHTML = data.result; 
+      
+      })
+      
+  }
+</script>
 </body>
 </html>
