@@ -158,7 +158,7 @@
   <hr />
   <div id='block-11' style='padding: 1px;'>
     <label for='option-11' style=' padding: 5px; font-size: 2.5rem; color: black;'>
-      <input type='radio' name='option' value='6/24' id='option-11' style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+      <input type='radio' name='option' value='6/24' id='option-11' style='transform: scale(1.6); margin-top: -2px;' />
       6/24</label>
     <span id='result-11'></span>
   </div>
@@ -166,7 +166,7 @@
 
   <div id='block-12' style='padding: 1px;'>
     <label for='option-12' style=' padding: 5px; font-size: 2.5rem; color: black;'>
-      <input type='radio' name='option' value='6' id='option-12' style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+      <input type='radio' name='option' value='6' id='option-12' style='transform: scale(1.6); margin-top: -2px;' />
       6</label>
     <span id='result-12'></span>
   </div>
@@ -174,7 +174,7 @@
 
   <div id='block-13' style='padding: 1px;'>
     <label for='option-13' style=' padding: 5px; font-size: 2.5rem; color: black;'>
-      <input type='radio' name='option' value='1/3' id='option-13' style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+      <input type='radio' name='option' value='1/3' id='option-13' style='transform: scale(1.6);  margin-top: -2px;' />
       1/3</label>
     <span id='result-13'></span>
   </div>
@@ -182,7 +182,7 @@
 
   <div id='block-14' style='padding: 1px;'>
     <label for='option-14' style=' padding: 5px; font-size: 2.5rem; color: black;'>
-      <input type='radio' name='option' value='1/6' id='option-14' style='transform: scale(1.6); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+      <input type='radio' name='option' value='1/6' id='option-14' style='transform: scale(1.6); margin-top: -2px;' />
       1/6</label>
     <span id='result-14'></span>
   </div>
