@@ -46,24 +46,19 @@ const login_url = url + '/authenticate';
     // Fetch JWT
     fetch(login_url, requestOptions);
 
-const options = {
-    method: 'GET', // *GET, POST, PUT, DELETE, etc.
-    mode: 'cors', // no-cors, *cors, same-origin
-    cache: 'default', // *default, no-cache, reload, force-cache, only-if-cached
-    credentials: 'include', // include, *same-origin, omit
-    headers: {
-      'Content-Type': 'application/json',
-    },
-  };
-
-  // fetch the API
-  fetch("http://localhost:8085/api/person/19", options)
-  .then(response => {
-      // check for response errors and display
-      response.json().then(data => {
-        console.log(data);
-      })
-      });
+      // Fetch JWT
+        fetch(login_url, requestOptions)
+        .then(response => {
+            // trap error response from Web API
+            if (!response.ok) {
+                const errorMsg = 'Login error: ' + response.status;
+                console.log(errorMsg);
+                return;
+            }
+            // Success!!!
+            // Redirect to Database location
+            window.location.href = "/leaderboard";
+        })
 
 
     /*
