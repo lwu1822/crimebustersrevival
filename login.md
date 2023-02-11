@@ -57,7 +57,7 @@ const login_url = url + '/authenticate';
             }
             // Success!!!
             // Redirect to Database location
-            window.location.href = "/leaderboard";
+            window.location.href = "{{site.baseurl}}/leaderboard";
         })
 
 
