@@ -57,7 +57,7 @@ const login_url = url + '/authenticate';
             }
             // Success!!!
             // Redirect to Database location
-            window.location.href = "{{ site.baseurl }}/leaderboard";
+            window.location.href = "https://lwu1822.github.io/crimebustersrevival/leaderboard";
         })
 
 
