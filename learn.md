@@ -33,7 +33,7 @@
     <br>
     </div>
     <div class="text-center">
-        <a href="{{ site.baseurl }}/atbash">
+        <a href="{{ site.baseurl }}/affineLearn">
             <button class="btn btn-primary btn-lg">Affine</button>
         </a>
         <br>
