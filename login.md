@@ -1,13 +1,14 @@
 ## Login
 <br>
 
-<form action="login()">
-    Email: <input type="email" required>
+<form action="javascript:login()">
+    Email: <input type="email" id="email" required>
     <br>
     <br>
-    Password: <input type="password" required>
+    Password: <input type="password" id="password" required>
     <br>
     <br>
+    <div id="loginError"></div>
     <button>Login</button>
     <br>
     <a href="signup">No account? Sign up here</a>
@@ -17,50 +18,114 @@
 
 <script>
 
-var url = "https://crimebusters.tk"
-//var url = "http://localhost:8085"
-// Comment out next line for local testing
-// url = "http://localhost:8085"
-// Authenticate endpoint
-const login_url = url + '/authenticate';
+    function login() {
+        console.log("hi"); 
+        var baseurl = "https://crimebusters.tk"
+        // Comment out next line for local testing
+        //var  baseurl = "http://localhost:8085"
+
+        // Authenticate endpoint
+        const login_url = baseurl + '/authenticate';
+
+        // Set body to include login data
+        const body = {
+            email: document.getElementById("email").value,
+            password: document.getElementById("password").value,
+        };
+
+        // Set Headers to support cross origin
+        const requestOptions = {
+            method: 'POST',
+            mode: 'cors', // no-cors, *cors, same-origin
+            cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+            credentials: 'include', // include, *same-origin, omit
+            body: JSON.stringify(body),
+            headers: {
+                "content-type": "application/json",
+            },
+        };
+
+        // Fetch JWT
+        fetch(login_url, requestOptions);
+
+        // Fetch JWT
+            fetch(login_url, requestOptions)
+            .then(response => {
+                // trap error response from Web API
+                if (!response.ok) {
+                    const errorMsg = 'Login error: ' + response.status;
+                    console.log(errorMsg);
+
+                    //HTML error output
+                    const p = document.createElement("p");
+                    p.appendChild(document.createTextNode("Login unsuccessful. Please try again")); 
+                    document.getElementById("loginError").appendChild(p);
+                    return;
+                }
+                // Success!!!
+                // Redirect to Database location
+                //window.location.href = "https://lwu1822.github.io/crimebustersrevival/homepage";
+                window.location.href = "http://localhost:4002/homepage";
+            })
+
+    }
+
+        /**********************************************************
+         Test if JWT is working on localhost:
+         Steps: 
+         1. Uncomment the lines below and comment the lines above
+         2. Edit /etc/nginx/sites-available/[nginx file]
+         * *******************************************************/
+
+        /*
+        var baseurl = "https://crimebusters.tk"
+        // Authenticate endpoint
+        const login_url = baseurl + '/authenticate';
+
+        // Set body to include login data
+        const body = {
+            email: "a@gmail.com",
+            password: "a",
+        };
+
+        // Set Headers to support cross origin
+        const requestOptions = {
+            method: 'POST',
+            mode: 'cors', // no-cors, *cors, same-origin
+            cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+            credentials: 'include', // include, *same-origin, omit
+            body: JSON.stringify(body),
+            headers: {
+                "content-type": "application/json",
+            },
+        };
+
+        // Fetch JWT
+        fetch(login_url, requestOptions);
+
+        // Fetch JWT
+            fetch(login_url, requestOptions)
+            .then(response => {
+                // trap error response from Web API
+                if (!response.ok) {
+                    const errorMsg = 'Login error: ' + response.status;
+                    console.log(errorMsg);
+                    return;
+                }
+                // Success!!!
+                // Redirect to Database location
+                window.location.href = "http://localhost:4002/homepage";
+            })
+
+        */
 
 
-    // Set body to include login data
-    const body = {
-        email: "a@gmail.com",
-        password: "a",
-    };
-
-    // Set Headers to support cross origin
-    const requestOptions = {
-        method: 'POST',
-        mode: 'cors', // no-cors, *cors, same-origin
-        cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
-        credentials: 'include', // include, *same-origin, omit
-        body: JSON.stringify(body),
-        headers: {
-            "content-type": "application/json",
-        },
-    };
-
-    // Fetch JWT
-    fetch(login_url, requestOptions);
-
-      // Fetch JWT
-        fetch(login_url, requestOptions)
-        .then(response => {
-            // trap error response from Web API
-            if (!response.ok) {
-                const errorMsg = 'Login error: ' + response.status;
-                console.log(errorMsg);
-                return;
-            }
-            // Success!!!
-            // Redirect to Database location
-            window.location.href = "https://lwu1822.github.io/crimebustersrevival/leaderboard";
-        })
 
 
+
+/************************************************************
+Previous testing code, probably no use anymore
+*************************************************************/
     /*
 data = {email:"a@gmail.com", password:"a"};
 fetch("https://crimebusters.tk/authenticate", 
