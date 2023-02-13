@@ -105,15 +105,15 @@
           <form action="/">
             <h2>How to Encrypt Affine</h2>
             <p style="color: black">
-            Encryption uses a classic alphabet, and two integers, called coefficients or keys A and B, these are the parameters of the affine function Ax+B (which is a straight line/linear equation).
+            Encryption uses a classic alphabet, and two integers, called coefficients or keys A and B, these are the parameters of the affine function Ax+B (which is a straight line/linear equation).</p>
 
-Example: Encrypt DCODE with the keys A=5, B=3 and the English/latin alphabet ABCDEFGHIJKLMNOPQRSTUVWXYZ.
+<p style="color: black">Example: Encrypt DCODE with the keys A=5, B=3 and the English/latin alphabet ABCDEFGHIJKLMNOPQRSTUVWXYZ.</p>
 
-For each letter of the alphabet is associated to the value of its position in the alphabet (starting at 0).
+<p style="color: black">For each letter of the alphabet is associated to the value of its position in the alphabet (starting at 0).</p>
 
-Example: By default, A=0, B=1, …, Z=25, it is possible (but not recommended) to use A=1, …, Y=25, Z=0 using the alphabet ZABCDEFGHIJKLMNOPQRSTUVWXY.
+<p style="color: black">Example: By default, A=0, B=1, …, Z=25, it is possible (but not recommended) to use A=1, …, Y=25, Z=0 using the alphabet ZABCDEFGHIJKLMNOPQRSTUVWXY.</p>
 
-For each letter of value x of the plain text, is associated a value y, result of the affine function y = A * x + B mod 26 (with 26 the alphabet size). Each computed value y corresponds to a letter with the same position in the alphabet, it is the ciphered letter. The Affine ciphertext is the replacement of all the letters by the new ones.
+<p style="color: black">For each letter of value x of the plain text, is associated a value y, result of the affine function y = A * x + B mod 26 (with 26 the alphabet size). Each computed value y corresponds to a letter with the same position in the alphabet, it is the ciphered letter. The Affine ciphertext is the replacement of all the letters by the new ones.
             </p>
           </form>
         </div>
@@ -125,7 +125,24 @@ For each letter of value x of the plain text, is associated a value y, result of
           <span class="close">&times;</span>
           <form action="/">
             <h2>How to Decrypt Affine</h2>
-            <p style="color: black">To decrypt, pick a letter in the ciphertext and its corresponding letter in the keyword, use the keyword letter to find the corresponding row, and the letter heading of the column that contains the ciphertext letter is the needed plaintext letter. For example, to decrypt the first letter T in the ciphertext, we find the corresponding letter H in the keyword. Then, the row of H is used to find the corresponding letter T and the column that contains T provides the plaintext letter M (see the above figures). Consider the fifth letter P in the ciphertext. This letter corresponds to the keyword letter H and row H is used to find P. Since P is on column I, the corresponding plaintext letter is I.</p>
+            <p style="color: black">
+            Affine decryption requires to know the two keys A and B (the one from encryption) and the used alphabet.</p>
+
+<p style="color: black">Example: Decrypt the ciphered message SNVSX with keys A=5 and B=3</p>
+
+<p style="color: black">For each letter of the alphabet, associate the value of its position in the alphabet.</p>
+
+<p style="color: black">Example: The alphabet ABCDEFGHIJKLMNOPQRSTUVWXYZ, starting at 0 gives A=0, B=1, …, Z=25.</p>
+
+<p style="color: black">Each letter of value y of the message corresponds to a value x, result of the inverse function x = A′ × (y − B) mod 26 (with 26 the alphabet size)</p>
+
+<p style="color: black">The value A′ is an integer such as A × A′ = 1 mod 26 (with 26 the alphabet size). To find A′, calculate its modular inverse.</p>
+
+<p style="color: black">Example: A coefficient A′ for A =5 with an alphabet size of 26 is 21 because 5 * 21 = 105 ≡ 1 mod 26.
+For S (y = 18), x = A′ × (18 − B) = 21 × (18 − 3) ≡ 315 mod 26 = 3 For each value x, associate the letter with the same position in the alphabet: the coded letter. The plain text is the replacement of all characters with calculated new letters.</p>
+
+<p style="color: black">Example: For S (x = 3) associate the letter at position 3: D, etc. The original plain text is DCODE.
+ </p>
           </form>
         </div>
       </div>
@@ -137,37 +154,37 @@ For each letter of value x of the plain text, is associated a value y, result of
           <form action="/">
             <h2>Affine Sample Problem</h2>
             <div style='transform: scale(0.65); position: relative; top: -100px;'>
-  <h2 style="color: black;">Encrypt the sample text ALL IS WELL using the keyword CAKE!</h2><br>
+  <h2 style="color: black;">Encrypt the sample text SECRET WORD using A coefficient 3 and B coefficient 1!</h2><br>
   <p style="color: black;">Choose the best answer:</p><br>
   <hr />
   <div id='block-11' style='padding: 1px;'>
     <label for='option-11' style=' padding: 5px; font-size: 1.5rem; color: black;'>
-      <input type='radio' name='option' value='CLVMUWPPN' id='option-11' style='transform: scale(1.6); margin-top: -2px;' />
-      CLVMUWPPN</label>
+      <input type='radio' name='option' value='DNHANG PRAK' id='option-11' style='transform: scale(1.6); margin-top: -2px;' />
+      DNHANG PRAK</label>
     <span id='result-11'></span>
   </div>
   <hr />
 
   <div id='block-12' style='padding: 1px;'>
     <label for='option-12' style=' padding: 5px; font-size: 1.5rem; color: black;'>
-      <input type='radio' name='option' value='ELAMUWPPQ' id='option-12' style='transform: scale(1.6); margin-top: -2px;' />
-      ELAMUWPPQ</label>
+      <input type='radio' name='option' value='DEHANG ERAK' id='option-12' style='transform: scale(1.6); margin-top: -2px;' />
+      DEHANG ERAK</label>
     <span id='result-12'></span>
   </div>
   <hr />
 
   <div id='block-13' style='padding: 1px;'>
     <label for='option-13' style=' padding: 5px; font-size: 1.5rem; color: black;'>
-      <input type='radio' name='option' value='CYVGUWCPE' id='option-13' style='transform: scale(1.6);  margin-top: -2px;' />
-      CYVGUWCPE</label>
+      <input type='radio' name='option' value='DNHAG PRA' id='option-13' style='transform: scale(1.6);  margin-top: -2px;' />
+      DNHAG PRA</label>
     <span id='result-13'></span>
   </div>
   <hr />
 
   <div id='block-14' style='padding: 1px;'>
     <label for='option-14' style=' padding: 5px; font-size: 1.5rem; color: black;'>
-      <input type='radio' name='option' value='CLVWUWPWN' id='option-14' style='transform: scale(1.6); margin-top: -2px;' />
-      CLVWUWPWN</label>
+      <input type='radio' name='option' value='WNHANG PWAK' id='option-14' style='transform: scale(1.6); margin-top: -2px;' />
+      WNHANG PWAK</label>
     <span id='result-14'></span>
   </div>
   <hr />
