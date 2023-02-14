@@ -9,3 +9,7 @@ How does it work?
 - All letters shift by 3 to the right. For example, a would become d and b would become e.
 
 ![image](images/ceaserCipher.png)
+
+<a href="{{ site.baseurl }}/caesar">
+            <button class="btn btn-primary btn-lg">Decrypt something with Caesar Cipher!</button>
+        </a>
