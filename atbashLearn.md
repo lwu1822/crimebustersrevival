@@ -107,11 +107,11 @@
             <p style="color: black">
             The Atbash Cipher simply reverses the plaintext alphabet to create the ciphertext alphabet. That is, the first letter of the alphabet is encrypted to the last letter of the alphabet, the second letter to the penultimate letter and so forth. In the original Hebrew this means that 'aleph' is encrypted to 'tav', and 'beth' to 'shin'. This is where we get the name of the cipher 'atbash'. For the Hebrew alphabet we get the following conversion table.
             </p>
-            <img src="hebrewatbash.png" alt="Flowers in Chania">
+            <img src="images/hebrewatbash.png" alt="Flowers in Chania">
             <p style="color: black">
             For the Roman alphabet of 26 letters, we have the ciphertext alphabet as given in the table below.
             </p>
-            <img src="englishatbash.png" alt="Flowers in Chania">
+            <img src="images/englishatbash.png" alt="Flowers in Chania">
             <p style="color: black">
             As with any monoalphabetic substitution cipher, encryption using the Atbash Cipher is very simple once the ciphertext alphabet has been generated. We simply replace each occurence of each plaintext letter with the respective ciphertext letter given by the table. So, if we take the plaintext "atbash", we can see that "a" enciphers to "Z", "t" enciphers to "G" and so on. Continuing in this way, we see that the final ciphertext is "ZGYZHS".
             </p> 
@@ -143,7 +143,7 @@
   <div id='block-11' style='padding: 1px;'>
     <label for='option-11' style=' padding: 5px; font-size: 1.5rem; color: black;'>
       <input type='radio' name='option' value='UOVV ZG LMXV' id='option-11' style='transform: scale(1.6); margin-top: -2px;' />
-      UOVV ZG LMXV</label>
+      .   UOVV ZG LMXV</label>
     <span id='result-11'></span>
   </div>
   <hr />
@@ -151,7 +151,7 @@
   <div id='block-12' style='padding: 1px;'>
     <label for='option-12' style=' padding: 5px; font-size: 1.5rem; color: black;'>
       <input type='radio' name='option' value='UODD ZG LMXD' id='option-12' style='transform: scale(1.6); margin-top: -2px;' />
-      UODD ZG LMXD</label>
+      .   UODD ZG LMXD</label>
     <span id='result-12'></span>
   </div>
   <hr />
@@ -159,7 +159,7 @@
   <div id='block-13' style='padding: 1px;'>
     <label for='option-13' style=' padding: 5px; font-size: 1.5rem; color: black;'>
       <input type='radio' name='option' value='USVV ZG LMSV' id='option-13' style='transform: scale(1.6);  margin-top: -2px;' />
-      USVV ZG LMSV</label>
+      .   USVV ZG LMSV</label>
     <span id='result-13'></span>
   </div>
   <hr />
@@ -167,7 +167,7 @@
   <div id='block-14' style='padding: 1px;'>
     <label for='option-14' style=' padding: 5px; font-size: 1.5rem; color: black;'>
       <input type='radio' name='option' value='WOVV ZG LMXV' id='option-14' style='transform: scale(1.6); margin-top: -2px;' />
-      WOVV ZG LMXV</label>
+      .   WOVV ZG LMXV</label>
     <span id='result-14'></span>
   </div>
   <hr />
