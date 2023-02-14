@@ -12,7 +12,7 @@
     <title>Button</title>
 <body>
     <div class="text-center">
-        <a href="{{ site.baseurl }}/atbash">
+        <a href="{{ site.baseurl }}/caesarlearn">
             <button class="btn btn-primary btn-lg">Caesar</button>
         </a>
     <br>
