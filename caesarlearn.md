@@ -7,3 +7,5 @@ What is Caesar?
 How does it work?
 - A shift cipher
 - All letters shift by 3 to the right. For example, a would become d and b would become e.
+
+![image](images/ceaserCipher.png)
