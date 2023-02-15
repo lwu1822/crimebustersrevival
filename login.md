@@ -17,9 +17,7 @@
 <br>
 
 <script>
-
     function login() {
-        console.log("hi"); 
         var baseurl = "https://crimebusters.tk"
         // Comment out next line for local testing
         //var  baseurl = "http://localhost:8085"
@@ -32,6 +30,8 @@
             email: document.getElementById("email").value,
             password: document.getElementById("password").value,
         };
+
+       
 
         // Set Headers to support cross origin
         const requestOptions = {
@@ -62,6 +62,7 @@
                     document.getElementById("loginError").appendChild(p);
                     return;
                 }
+
                 // Success!!!
                 // Redirect to Database location
                 //window.location.href = "https://lwu1822.github.io/crimebustersrevival/homepage";
@@ -69,6 +70,7 @@
             })
 
     }
+
 
         /**********************************************************
          Test if JWT is working on localhost:
