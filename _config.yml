@@ -2,7 +2,7 @@ theme: jekyll-theme-midnight
 remote_theme: pages-themes/midnight@v0.2.0
 plugins:
 - jekyll-remote-theme
-title: "Crime Busters Revival"
-description: "Crime Busters Project"
+title: "Code Busters Revival"
+description: "Learn to Bust Any Code!"
 gitorg: "https://github.com/lwu1822/crimebustersrevival"
 google_analytics:

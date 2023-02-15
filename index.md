@@ -6,9 +6,8 @@
 </head>
 
 <body>
-<p> Crimebusters Revival!
-The return of our awesome website.
-View our FRQ APIs above. </p>
+<p> Codebusters Revival!
+The return of our awesome website. </p>
 </body>
 
 </html>
