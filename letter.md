@@ -16,6 +16,6 @@
 <p id="decrypted"></p>
 
 <!-- Include the JavaScript file -->
-<script src="caesar.js"></script>
+<script src="letter.js"></script>
 </body>
 </html>
