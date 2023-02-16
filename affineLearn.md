@@ -90,13 +90,13 @@
   </head>
   <body>
     <p>
-      <button class="button" data-modal="modalOne">How to Encrypt Affine</button>
+      <button style="color: ghostwhite" class="button" data-modal="modalOne">How to Encrypt Affine</button>
     </p>
     <p>
-      <button class="button" data-modal="modalTwo">How to Decrypt Affine</button>
+      <button style="color: ghostwhite" class="button" data-modal="modalTwo">How to Decrypt Affine</button>
     </p>
     <p>
-      <button class="button" data-modal="modalThree">Affine Sample Problem</button>
+      <button style="color: ghostwhite" class="button" data-modal="modalThree">Affine Sample Problem</button>
     </p>
     <div id="modalOne" class="modal">
       <div class="modal-content">
@@ -195,6 +195,12 @@ For S (y = 18), x = A′ × (18 − B) = 21 × (18 − 3) ≡ 315 mod 26 = 3 For
         </div>
       </div>
     </div>
+    <br>
+    <center>
+    <a href="{{ site.baseurl }}/affine">
+            <button style="padding: 2%; font-size: small" class="btn btn-primary btn-lg">Decrypt something with Affine Cipher!</button>
+        </a>
+    </center>
     <script>
       let modalBtns = [...document.querySelectorAll(".button")];
       modalBtns.forEach(function (btn) {

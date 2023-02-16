@@ -90,13 +90,13 @@
   </head>
   <body>
     <p>
-      <button class="button" data-modal="modalOne">How to Encrypt Atbash</button>
+      <button style="color: ghostwhite" class="button" data-modal="modalOne">How to Encrypt Atbash</button>
     </p>
     <p>
-      <button class="button" data-modal="modalTwo">How to Decrypt Atbash</button>
+      <button style="color: ghostwhite" class="button" data-modal="modalTwo">How to Decrypt Atbash</button>
     </p>
     <p>
-      <button class="button" data-modal="modalThree">Atbash Sample Problem</button>
+      <button style="color: ghostwhite" class="button" data-modal="modalThree">Atbash Sample Problem</button>
     </p>
     <div id="modalOne" class="modal">
       <div class="modal-content">
@@ -178,6 +178,12 @@
         </div>
       </div>
     </div>
+    <br>
+    <center>
+    <a href="{{ site.baseurl }}/atbash">
+            <button style="padding: 2%; font-size: small" class="btn btn-primary btn-lg">Decrypt something with Atbash Cipher!</button>
+        </a>
+    </center>
     <script>
       let modalBtns = [...document.querySelectorAll(".button")];
       modalBtns.forEach(function (btn) {
