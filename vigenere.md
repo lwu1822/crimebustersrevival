@@ -8,16 +8,16 @@
 <body>
 <h1>Vigenere Cipher</h1>
 
-<p>Enter a message to be encrrypted:</p>
+<p>Enter a message to be decrypted:</p>
     <input type="text" id="message">
     <p>Key:</p>
     <input type="text" id="key">
     <br>
     <br>
-    <button onclick="encrypt()">Encrypt</button>
+    <button onclick="encrypt()">Decrypt</button>
     <br>
     <br>
-    <p>Encrypted message:</p>
+    <p>Decrypted message:</p>
     <p id="encrypted"></p>
 <!-- Include the JavaScript file -->
 <script>
