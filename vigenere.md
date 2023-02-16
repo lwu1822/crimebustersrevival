@@ -21,7 +21,7 @@
     <p id="encrypted"></p>
 <!-- Include the JavaScript file -->
 <script>
-  function encrypted() {
+  function encrypt() {
     // Get the message from the text box
     var message = document.getElementById("message").value;
     var key = parseInt(document.getElementById("key").value);
