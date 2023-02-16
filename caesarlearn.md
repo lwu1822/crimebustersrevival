@@ -181,9 +181,11 @@
       </div>
     </div>
     <br>
+    <center>
     <a href="{{ site.baseurl }}/caesar">
-            <button style="padding: 2%" class="btn btn-primary btn-lg">Decrypt something with Caesar Cipher!</button>
+            <button style="padding: 2%; font-size: small" class="btn btn-primary btn-lg">Decrypt something with Caesar Cipher!</button>
         </a>
+    </center>
     <script>
       let modalBtns = [...document.querySelectorAll(".button")];
       modalBtns.forEach(function (btn) {
