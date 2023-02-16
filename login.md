@@ -19,8 +19,13 @@
 <script>
     function login() {
         var baseurl = "https://crimebusters.tk"
+
+        /*************************************************
+         * THIS IS PROBABLY NOT NEEDED
         // Comment out next line for local testing
         //var  baseurl = "http://localhost:8085"
+        **************************************************/
+
 
         // Authenticate endpoint
         const login_url = baseurl + '/authenticate';

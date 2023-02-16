@@ -89,10 +89,16 @@
 
    // prepare URL
   var url = "https://crimebusters.tk/api/person/findEmail";
-  // Uncomment next line for localhost testing
+
+
+
+  /*************************************************
+  * THIS IS PROBABLY NOT NEEDED
+  // Uncomment next line for localhost testing 
   // url = "http://localhost:8085/api/person/";
-  /*************************************************************
-  */
+  *****************************************************/
+
+
   // set options for cross origin header request
   const options = {
     method: 'GET', // *GET, POST, PUT, DELETE, etc.
@@ -121,7 +127,7 @@
       }
 
 
-      
+
        // valid response will contain json data
       response.json().then(data => {
           console.log(data.email);
