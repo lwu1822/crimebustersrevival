@@ -21,29 +21,29 @@
     <p id="encrypted"></p>
 <!-- Include the JavaScript file -->
 <script>
-  function vigencrypt() {
-    let expression = document.getElementById("message").value;
-    const urlStart = "http://localhost:8085/api/vigenc/all/";
-    const url = urlStart + expression;
-    console.log(url); 
-    fetch(url)
-      .then(res => res.json())
-      .then(data => {
-        console.log(data);
-        document.getElementById("encrypted").innerHTML = data.result; 
-      })    
-  }
+  // function vigencrypt() {
+  //   let expression = document.getElementById("message").value;
+  //   const urlStart = "http://localhost:8085/api/vigenc/all/";
+  //   const url = urlStart + expression;
+  //   console.log(url); 
+  //   fetch(url)
+  //     .then(res => res.json())
+  //     .then(data => {
+  //       console.log(data);
+  //       document.getElementById("encrypted").innerHTML = data.result; 
+  //     })    
+  // }
 function encrypt() {
-    var message = document.getElementById("message").value;
-    var key = parseInt(document.getElementById("key").value);
+  var message = document.getElementById("message").value;
+  var key = document.getElementById("key").value;
   var cypher = "";
   for(var i = 0, j = 0; i < message.length; i++){
     var currentLetter = message[i];
-     if(isUpperCase(currentLetter)){
+    if(currentLetter.match(/[A-Z]/)){
       var upperLetter = ((currentLetter.charCodeAt() - 65) + (key[j%key.length].toUpperCase().charCodeAt() - 65)) % 26;
       cypher += String.fromCharCode(upperLetter+65);
       j++;
-    }else if(isLowerCase(currentLetter)){
+    }else if(currentLetter.match(/[a-z]/)){
       var lowerLetter = ((currentLetter.charCodeAt() - 97) + (key[j%key.length].toLowerCase().charCodeAt() - 97)) % 26;
       cypher += String.fromCharCode(lowerLetter+97);
       j++;
@@ -52,7 +52,7 @@ function encrypt() {
     }
   }
   document.getElementById("encrypted").innerHTML = cypher;
-};
+}
 
 </script>
 </body>
