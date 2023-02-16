@@ -11,7 +11,7 @@
 <p>Enter a message to be encrrypted:</p>
     <input type="text" id="message">
     <p>Shift:</p>
-    <input type="number" id="shift">
+    <input type="text" id="shift">
     <br>
     <br>
     <button onclick="encrypt()">Encrypt</button>
