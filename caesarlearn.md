@@ -180,6 +180,10 @@
         </div>
       </div>
     </div>
+    <br>
+    <a href="{{ site.baseurl }}/caesar">
+            <button style="padding: 2%" class="btn btn-primary btn-lg">Decrypt something with Caesar Cipher!</button>
+        </a>
     <script>
       let modalBtns = [...document.querySelectorAll(".button")];
       modalBtns.forEach(function (btn) {
@@ -245,9 +249,3 @@
     </script>
   </body>
 </html>
-
-
-
-<a href="{{ site.baseurl }}/caesar">
-            <button class="btn btn-primary btn-lg">Decrypt something with Caesar Cipher!</button>
-        </a>
