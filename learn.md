@@ -12,7 +12,7 @@
     <title>Button</title>
 <body>
     <div class="text-center">
-        <a href="{{ site.baseurl }}/caesarlearn">
+        <a href="{{ site.baseurl }}/caesarLearn">
             <button class="btn btn-primary btn-lg">Caesar</button>
         </a>
     <br>
