@@ -90,13 +90,13 @@
   </head>
   <body>
     <p>
-      <button class="button" data-modal="modalOne">How to Encrypt Caesar</button>
+      <button style="color: ghostwhite" class="button" data-modal="modalOne">How to Encrypt Caesar</button>
     </p>
     <p>
-      <button class="button" data-modal="modalTwo">How to Decrypt Caesar</button>
+      <button style="color: ghostwhite" class="button" data-modal="modalTwo">How to Decrypt Caesar</button>
     </p>
     <p>
-      <button class="button" data-modal="modalThree">Caesar Sample Problem</button>
+      <button style="color: ghostwhite" class="button" data-modal="modalThree">Caesar Sample Problem</button>
     </p>
     <div id="modalOne" class="modal">
       <div class="modal-content">
