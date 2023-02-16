@@ -41,7 +41,7 @@
     </div>
     <div class="text-center">
         <a href="{{ site.baseurl }}/atbash">
-            <button class="btn btn-primary btn-lg">Aristocrat/Substitution</button>
+            <button class="btn btn-primary btn-lg">Substitution</button>
         </a>
     </div>
 </body>
