@@ -173,14 +173,18 @@ dropdown leads to settings */
     </div>
   </div> 
   <a class="dropbtn" href="{{ site.baseurl }}/learn">Learn</a>
-    <a class="dropbtn" href="{{ site.baseurl }}/login">Log-In</a>
+    <a class="dropbtn" href="{{ site.baseurl }}/login">Log-In/Sign-Up</a>
     <a class="dropbtn" href="{{ site.baseurl }}/contactus">Contact Us</a>
 </div>
 
 
 <div class="navbar2">
     <div class="dropdown2">
-      <button class="dropbtn2">{Username}</button>
+      <!--button says: [email]-->
+      <!--SEE JS (JS EDITS THE NAME IN [email])-->
+      <button class="dropbtn2" id="dropbtn2"></button>
+
+       <!--dropdown says: Settings-->
       <div class="dropdown-content2">
         <a href="{{ site.baseurl }}/settings">Settings</a>
       </div>
@@ -252,7 +256,7 @@ dropdown leads to settings */
           //make button on the right side of the screen with email
           var p = document.createElement("p");
           p.appendChild(document.createTextNode(email)); 
-          document.getElementById("dropbtn").appendChild(p);
+          document.getElementById("dropbtn2").appendChild(p);
 
    
           
