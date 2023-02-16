@@ -49,6 +49,7 @@
     j = ++j % key.length
   }
   return result
+  document.getElementById("encrypted").innerHTML = result;
 }
       
 </script>
