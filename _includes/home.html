@@ -70,12 +70,45 @@ body {
 .dropdown:hover .dropdown-content {
   display: block;
 }
+
+
+
+
+/*CODE BELOW IS TO STYLE THE USER DROPDOWN MENU (box says: [email]) and
+dropdown leads to settings */
+.dropdownUserMenu {
+  float: right;
+  overflow: hidden;
+  background-color: #D1A3CE;
+}
+
+.dropdownUserMenu .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: #001535;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin-top: 3%;
+}
+
+.navbar a:hover, .dropdownUserMenu:hover .dropbtn {
+  color: #005b96;
+}
+
+
+.dropdownUserMenu:hover .dropdown-content {
+  display: block;
+}
+
+
 </style>
 </head>
 <body>
 
 <div class="navbar">
-    <a class="dropbtn" href="{{ site.baseurl }}">Home</a>
+    <a class="dropbtn" href="{{ site.baseurl }}/homepage">Home</a>
   <div class="dropdown">
     <button class="dropbtn">FRQs</button>
     <div class="dropdown-content">
@@ -91,7 +124,6 @@ body {
         <a href="{{ site.baseurl }}/atbash">Atbash</a>
         <a href="{{ site.baseurl }}/affine">Affine</a>
         <a href="{{ site.baseurl }}/caesar">Caesar</a>
-        <a href="{{ site.baseurl }}/letter">Letter</a>
     </div>
   </div> 
   <div class="dropdown">
@@ -107,7 +139,97 @@ body {
 
 </div>
 
+
+
+
+
+<div class="dropdownUserMenu">
+  <!--button says: [email]-->
+  <!--SEE JS (JS EDITS THE NAME IN [email])-->
+  <button class="dropbtn" id="dropbtn"></button>
+
+  <!--dropdown says: Settings-->
+  <div class="dropdown-content">
+      <a href="{{ site.baseurl }}/settings">Settings</a>
+  </div>
+</div>
+
+<br>
+<br>
+
+
+
 </body>
 </html>
+
+
+
+
+
+<script>
+  var page = window.location.origin + "/login";
+  if (window.location.href != page) {
+    //console.log("hi");
+ // prepare URL
+  var url = "https://crimebusters.tk/api/person/findEmail";
+
+
+
+  /*************************************************
+  * THIS IS PROBABLY NOT NEEDED
+  // Uncomment next line for localhost testing 
+  // url = "http://localhost:8085/api/person/";
+  *****************************************************/
+
+
+  // set options for cross origin header request
+  var options = {
+    method: 'GET', // *GET, POST, PUT, DELETE, etc.
+    mode: 'cors', // no-cors, *cors, same-origin
+    cache: 'default', // *default, no-cache, reload, force-cache, only-if-cached
+    credentials: 'include', // include, *same-origin, omit
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  };
+  // fetch the API
+  fetch(url, options)
+    // response is a RESTful "promise" on any successful fetch
+    .then(response => {
+      // check for response errors and display
+      if (response.status !== 200) {
+        const errorMsg = 'Database response error: ' + response.status;
+        console.log(errorMsg);
+    /**********************************************************/
+        //HTML error output
+        const p = document.createElement("p");
+        p.appendChild(document.createTextNode("Oops! There seems to be an error with the server. Sorry for the inconvenience, please try again at a later time.")); 
+        document.getElementById("loginError").appendChild(p);
+    /********************************************************/
+        return;
+      }
+
+
+
+       // valid response will contain json data
+      response.json().then(data => {
+          console.log(data.email);
+          var email = data.email;
+
+          //make button on the right side of the screen with email
+          var p = document.createElement("p");
+          p.appendChild(document.createTextNode(email)); 
+          document.getElementById("dropbtn").appendChild(p);
+
+   
+          
+         
+        })
+      }
+      )
+  }
+
+  
+</script>
 
 <!-- 
