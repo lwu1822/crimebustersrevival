@@ -221,6 +221,7 @@ For S (y = 18), x = A′ × (18 − B) = 21 × (18 − 3) ≡ 315 mod 26 = 3 For
       document.getElementById('block-11').style.border = '3px solid limegreen'
       document.getElementById('result-11').style.color = 'limegreen'
       document.getElementById('result-11').innerHTML = 'Correct!'
+      incrementCount()
     }
     if (document.getElementById('option-12').checked) {
       document.getElementById('block-12').style.border = '3px solid red'
@@ -244,7 +245,7 @@ For S (y = 18), x = A′ × (18 − B) = 21 × (18 − 3) ≡ 315 mod 26 = 3 For
   // the functon displays the link to the correct answer
   function showCorrectAnswer1() {
     let showAnswer1 = document.createElement('p')
-    showAnswer1.innerHTML = 'Show Corrent Answer'
+    showAnswer1.innerHTML = 'Show Correct Answer'
     showAnswer1.style.position = 'relative'
     showAnswer1.style.top = '-180px'
     showAnswer1.style.fontSize = '1.75rem'

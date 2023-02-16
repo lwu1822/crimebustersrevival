@@ -76,29 +76,68 @@ body {
 
 /*CODE BELOW IS TO STYLE THE USER DROPDOWN MENU (box says: [email]) and
 dropdown leads to settings */
-.dropdownUserMenu {
-  float: right;
-  overflow: hidden;
-  background-color: #D1A3CE;
+.navbar2 {
+  overflow: visible;
+  background-color: #001535;
+  margin-bottom: 7%;
+  margin-top: -2%;
 }
 
-.dropdownUserMenu .dropbtn {
+.navbar2 a {
+  float: right;
+  font-size: 16px;
+  color: #005b96;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown2 {
+  float: right;
+  overflow: hidden;
+  background-color: #001535;
+}
+
+.dropdown2 .dropbtn2 {
   font-size: 16px;  
   border: none;
   outline: none;
-  color: #001535;
+  color: #005b96;
   padding: 14px 16px;
   background-color: inherit;
   font-family: inherit;
   margin-top: 3%;
 }
 
-.navbar a:hover, .dropdownUserMenu:hover .dropbtn {
-  color: #005b96;
+.navbar2 a:hover, .dropdown2:hover .dropbtn2 {
+  color: #D1A3CE;
 }
 
+.dropdown-content2 {
+  display: none;
+  position: absolute;
+  background-color: #001535;
+  padding-top: 1%;
+  padding-bottom: 2%;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
 
-.dropdownUserMenu:hover .dropdown-content {
+.dropdown-content2 a {
+  float: none;
+  color: #005b96;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content2 a:hover {
+  color: #D1A3CE;
+}
+
+.dropdown2:hover .dropdown-content2 {
   display: block;
 }
 
@@ -134,29 +173,23 @@ dropdown leads to settings */
     </div>
   </div> 
   <a class="dropbtn" href="{{ site.baseurl }}/learn">Learn</a>
-    <a class="dropbtn" href="{{ site.baseurl }}/login">Log-In/Sign Up</a>
+    <a class="dropbtn" href="{{ site.baseurl }}/login">Log-In</a>
     <a class="dropbtn" href="{{ site.baseurl }}/contactus">Contact Us</a>
-
 </div>
 
 
-
-
-
-<div class="dropdownUserMenu">
-  <!--button says: [email]-->
-  <!--SEE JS (JS EDITS THE NAME IN [email])-->
-  <button class="dropbtn" id="dropbtn"></button>
-
-  <!--dropdown says: Settings-->
-  <div class="dropdown-content">
-      <a href="{{ site.baseurl }}/settings">Settings</a>
-  </div>
+<div class="navbar2">
+    <div class="dropdown2">
+      <button class="dropbtn2">{Username}</button>
+      <div class="dropdown-content2">
+        <a href="{{ site.baseurl }}/settings">Settings</a>
+      </div>
+    </div> 
 </div>
 
 <br>
 <br>
-
+<br>
 
 
 </body>
@@ -229,6 +262,10 @@ dropdown leads to settings */
       )
   }
 
+    var pointCount= 0;
+    function incrementCount(){
+       count++;
+    }
   
 </script>
 
