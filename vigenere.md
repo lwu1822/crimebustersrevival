@@ -21,7 +21,7 @@
     <p id="encrypted"></p>
 <!-- Include the JavaScript file -->
 <script>
-  function decrypt() {
+  function encrypt() {
     let expression = document.getElementById("encrypted").value;
     const urlStart = "http://localhost:8085/api/vigenc/all/";
     const url = urlStart + expression;
@@ -33,6 +33,7 @@
         document.getElementById("encrypted").innerHTML = data.result; 
       })
       }  
+      
 </script>
 </body>
 </html>
