@@ -221,6 +221,7 @@ For S (y = 18), x = A′ × (18 − B) = 21 × (18 − 3) ≡ 315 mod 26 = 3 For
       document.getElementById('block-11').style.border = '3px solid limegreen'
       document.getElementById('result-11').style.color = 'limegreen'
       document.getElementById('result-11').innerHTML = 'Correct!'
+      incrementCount()
     }
     if (document.getElementById('option-12').checked) {
       document.getElementById('block-12').style.border = '3px solid red'

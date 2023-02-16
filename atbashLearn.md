@@ -204,6 +204,7 @@
       document.getElementById('block-11').style.border = '3px solid limegreen'
       document.getElementById('result-11').style.color = 'limegreen'
       document.getElementById('result-11').innerHTML = 'Correct!'
+      incrementCount()
     }
     if (document.getElementById('option-12').checked) {
       document.getElementById('block-12').style.border = '3px solid red'
