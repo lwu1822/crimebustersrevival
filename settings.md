@@ -8,9 +8,9 @@
   var url = "https://crimebusters.tk/api/person/findEmail";
   
 
-  
+
   // set options for cross origin header request
-  const options = {
+    options = {
     method: 'GET', // *GET, POST, PUT, DELETE, etc.
     mode: 'cors', // no-cors, *cors, same-origin
     cache: 'default', // *default, no-cache, reload, force-cache, only-if-cached
