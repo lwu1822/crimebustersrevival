@@ -21,18 +21,6 @@
     <p id="encrypted"></p>
 <!-- Include the JavaScript file -->
 <script>
-  function vigencrypt() {
-    let expression = document.getElementById("encrypted").value;
-    const urlStart = "http://localhost:8085/api/vigenc/all/";
-    const url = urlStart + expression;
-    console.log(url); 
-    fetch(url)
-      .then(res => res.json())
-      .then(data => {
-        console.log(data);
-        document.getElementById("encrypt").innerHTML = data.result; 
-      })
-      }  
   function encrypted (message, key) {
   let result = ''
   for (let i = 0, j = 0; i < message.length; i++) {
