@@ -21,23 +21,27 @@
     <p id="encrypted"></p>
 <!-- Include the JavaScript file -->
 <script>
-  function encrypted (message, key) {
-  let result = ''
+  function encrypted() {
+    // Get the message from the text box
+    var message = document.getElementById("message").value;
+    var key = parseInt(document.getElementById("key").value);
+    // Shift
+    var encrypted = "";
   for (let i = 0, j = 0; i < message.length; i++) {
     const c = message.charAt(i)
     if (isLetter(c)) {
       if (isUpperCase(c)) {
-        result += String.fromCharCode((c.charCodeAt(0) + key.toUpperCase().charCodeAt(j) - 2 * 65) % 26 + 65) // A: 65
+        encrypted += String.fromCharCode((c.charCodeAt(0) + key.toUpperCase().charCodeAt(j) - 2 * 65) % 26 + 65) // A: 65
       } else {
-        result += String.fromCharCode((c.charCodeAt(0) + key.toLowerCase().charCodeAt(j) - 2 * 97) % 26 + 97) // a: 97
+        encrypted += String.fromCharCode((c.charCodeAt(0) + key.toLowerCase().charCodeAt(j) - 2 * 97) % 26 + 97) // a: 97
       }
     } else {
-      result += c
+      encrypted += c
     }
     j = ++j % key.length
   }
-  return result
-  document.getElementById("encrypted").innerHTML = result;
+  return encrypted
+  document.getElementById("encrypted").innerHTML = encrypted;
 }
       
 </script>
