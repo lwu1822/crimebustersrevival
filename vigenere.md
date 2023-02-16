@@ -33,7 +33,7 @@
         document.getElementById("encrypted").innerHTML = data.result; 
       })    
   }
-function encrypt{
+function encrypt() {
     var message = document.getElementById("message").value;
     var key = parseInt(document.getElementById("key").value);
   var cypher = "";
