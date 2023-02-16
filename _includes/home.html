@@ -82,7 +82,7 @@ dropdown leads to settings */
   background-color: #D1A3CE;
 }
 
-.dropdownUserMenu .dropbtn {
+.dropdownUserMenu .dropbtn2 {
   font-size: 16px;  
   border: none;
   outline: none;
@@ -93,12 +93,17 @@ dropdown leads to settings */
   margin-top: 3%;
 }
 
-.navbar a:hover, .dropdownUserMenu:hover .dropbtn {
+.dropdown2 {
+  float: right;
+  overflow: hidden;
+}
+
+.navbar a:hover, .dropdownUserMenu:hover .dropbtn2 {
   color: #005b96;
 }
 
 
-.dropdownUserMenu:hover .dropdown-content {
+.dropdownUserMenu:hover .dropdown-content2 {
   display: block;
 }
 
@@ -138,9 +143,9 @@ dropdown leads to settings */
 <br>
 
 <div class="dropdownUserMenu">
-  <div class="dropdown">
-    <button class="dropbtn">{Username}</button>
-    <div class="dropdown-content">
+  <div class="dropdown2">
+    <button class="dropbtn2">{Username}</button>
+    <div class="dropdown-content2">
       <a href="{{ site.baseurl }}/settings">Settings</a>
     </div>
   </div> 
