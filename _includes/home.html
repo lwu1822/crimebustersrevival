@@ -76,13 +76,27 @@ body {
 
 /*CODE BELOW IS TO STYLE THE USER DROPDOWN MENU (box says: [email]) and
 dropdown leads to settings */
-.dropdownUserMenu {
-  float: right;
+.navbar2 {
   overflow: hidden;
   background-color: #D1A3CE;
+  margin-bottom: 5%;
 }
 
-.dropdownUserMenu .dropbtn2 {
+.navbar2 a {
+  float: right;
+  font-size: 16px;
+  color: #001535;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown2 {
+  float: right;
+  overflow: hidden;
+}
+
+.dropdown2 .dropbtn2 {
   font-size: 16px;  
   border: none;
   outline: none;
@@ -93,17 +107,36 @@ dropdown leads to settings */
   margin-top: 3%;
 }
 
-.dropdown2 {
-  float: right;
-  overflow: hidden;
+.navbar2 a:hover, .dropdown2:hover .dropbtn2 {
+  color: #D1A3CE;
 }
 
-.navbar a:hover, .dropdownUserMenu:hover .dropbtn2 {
+.dropdown-content2 {
+  display: none;
+  position: absolute;
+  background-color: #001535;
+  padding-top: 1%;
+  padding-bottom: 2%;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content2 a {
+  float: none;
   color: #005b96;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
 }
 
+.dropdown-content2 a:hover {
+  background-color: #005b96;
+  color: #D1A3CE;
+}
 
-.dropdownUserMenu:hover .dropdown-content2 {
+.dropdown2:hover .dropdown-content2 {
   display: block;
 }
 
@@ -136,20 +169,20 @@ dropdown leads to settings */
   <a class="dropbtn" href="{{ site.baseurl }}/learn">Learn</a>
     <a class="dropbtn" href="{{ site.baseurl }}/login">Log-In</a>
     <a class="dropbtn" href="{{ site.baseurl }}/contactus">Contact Us</a>
-    
-
 </div>
 
 <br>
 
-<div class="dropdownUserMenu">
-  <div class="dropdown2">
-    <button class="dropbtn2">{Username}</button>
-    <div class="dropdown-content2">
-      <a href="{{ site.baseurl }}/settings">Settings</a>
-    </div>
-  </div> 
+
+<div class="navbar2">
+    <div class="dropdown2">
+      <button class="dropbtn2">{Username}</button>
+      <div class="dropdown-content2">
+        <a href="{{ site.baseurl }}/settings">Settings</a>
+      </div>
+    </div> 
 </div>
+
 
 </body>
 </html>
