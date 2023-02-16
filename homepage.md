@@ -75,7 +75,8 @@
 
 <br>
 
-
+<p> Codebusters Revival!
+The return of our awesome website. </p>
 
 <div id="error"></div>
 
