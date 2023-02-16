@@ -30,10 +30,10 @@
       .then(res => res.json())
       .then(data => {
         console.log(data);
-        document.getElementById("encrypted").innerHTML = data.result; 
+        document.getElementById("encrypt").innerHTML = data.result; 
       })
       }  
-  function encrypt (message, key) {
+  function encrypted (message, key) {
   let result = ''
   for (let i = 0, j = 0; i < message.length; i++) {
     const c = message.charAt(i)
