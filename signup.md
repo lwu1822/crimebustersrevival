@@ -2,7 +2,7 @@
 ## Sign Up
 <br>
 
-<form action="signup()">
+<form action="javascript:signup()">
     Email: <input type="email" id="email" required>
     <br>
     <br>
@@ -10,6 +10,9 @@
     <br>
     <br>
     Name: <input type="text" id="name" required>
+    <br>
+    <br>
+    Birthday: <input type="text" id="dob" required>
     <br>
     <br>
     Confirm password: <input type="password" required>
@@ -23,7 +26,7 @@
 
 
 <script>
-    //function login() {
+    function signup() {
         var baseurl = "https://crimebusters.tk"
 
         /*************************************************
@@ -44,11 +47,11 @@
         };
         */
         const body = {
-            email: "b@gmail.com",
-            password: "b",
-            name: "b b",
-            dob: "2023-02-15",
-            personrole: [{"email": "b@gmail.com", "role": "user"}]
+            email: document.getElementById("email").value,
+            password: document.getElementById("password").value,
+            name: document.getElementById("name").value,
+            dob: document.getElementById("dob").value,
+            personrole: [{"email": document.getElementById("email").value, "role": "user"}]
         };
 
        
@@ -91,7 +94,7 @@
                 //window.location.href = "{{ site.baseurl }}/homepage";
             })
 
-    //}
+    }
 
 
       
