@@ -66,7 +66,7 @@
                 // Success!!!
                 // Redirect to Database location
                 //window.location.href = "https://lwu1822.github.io/crimebustersrevival/homepage";
-                window.location.href = "http://localhost:4002/homepage";
+                window.location.href = "{{ site.baseurl }}/homepage";
             })
 
     }
