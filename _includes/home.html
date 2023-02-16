@@ -70,12 +70,84 @@ body {
 .dropdown:hover .dropdown-content {
   display: block;
 }
+
+
+
+
+/*CODE BELOW IS TO STYLE THE USER DROPDOWN MENU (box says: [email]) and
+dropdown leads to settings */
+.navbar2 {
+  overflow: visible;
+  background-color: #001535;
+  margin-bottom: 7%;
+  margin-top: -2%;
+}
+
+.navbar2 a {
+  float: right;
+  font-size: 16px;
+  color: #005b96;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown2 {
+  float: right;
+  overflow: hidden;
+  background-color: #001535;
+}
+
+.dropdown2 .dropbtn2 {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: #005b96;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin-top: 3%;
+}
+
+.navbar2 a:hover, .dropdown2:hover .dropbtn2 {
+  color: #D1A3CE;
+}
+
+.dropdown-content2 {
+  display: none;
+  position: absolute;
+  background-color: #001535;
+  padding-top: 1%;
+  padding-bottom: 2%;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content2 a {
+  float: none;
+  color: #005b96;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content2 a:hover {
+  color: #D1A3CE;
+}
+
+.dropdown2:hover .dropdown-content2 {
+  display: block;
+}
+
+
 </style>
 </head>
 <body>
 
 <div class="navbar">
-    <a class="dropbtn" href="{{ site.baseurl }}">Home</a>
+    <a class="dropbtn" href="{{ site.baseurl }}/homepage">Home</a>
   <div class="dropdown">
     <button class="dropbtn">FRQs</button>
     <div class="dropdown-content">
@@ -91,23 +163,107 @@ body {
         <a href="{{ site.baseurl }}/atbash">Atbash</a>
         <a href="{{ site.baseurl }}/affine">Affine</a>
         <a href="{{ site.baseurl }}/caesar">Caesar</a>
-        <a href="{{ site.baseurl }}/letter">Letter</a>
-    </div>
-  </div> 
-  <div class="dropdown">
-    <button class="dropbtn">Other</button>
-    <div class="dropdown-content">
-        <a href="{{ site.baseurl }}/image">Image</a>
-        <a href="{{ site.baseurl }}/brute">Brute Force</a>
     </div>
   </div> 
   <a class="dropbtn" href="{{ site.baseurl }}/learn">Learn</a>
-    <a class="dropbtn" href="{{ site.baseurl }}/login">Log-In/Sign Up</a>
+    <a class="dropbtn" href="{{ site.baseurl }}/login">Log-In/Sign-Up</a>
     <a class="dropbtn" href="{{ site.baseurl }}/contactus">Contact Us</a>
-
 </div>
+
+
+<div class="navbar2">
+    <div class="dropdown2">
+      <!--button says: [email]-->
+      <!--SEE JS (JS EDITS THE NAME IN [email])-->
+      <button class="dropbtn2" id="dropbtn2"></button>
+
+       <!--dropdown says: Settings-->
+      <div class="dropdown-content2">
+        <a href="{{ site.baseurl }}/settings">Settings</a>
+      </div>
+    </div> 
+</div>
+
+<br>
+<br>
+<br>
+
 
 </body>
 </html>
+
+
+
+
+
+<script>
+  var page = window.location.origin + "/login";
+  if (window.location.href != page) {
+    //console.log("hi");
+ // prepare URL
+  var url = "https://crimebusters.tk/api/person/findEmail";
+
+
+
+  /*************************************************
+  * THIS IS PROBABLY NOT NEEDED
+  // Uncomment next line for localhost testing 
+  // url = "http://localhost:8085/api/person/";
+  *****************************************************/
+
+
+  // set options for cross origin header request
+  var options = {
+    method: 'GET', // *GET, POST, PUT, DELETE, etc.
+    mode: 'cors', // no-cors, *cors, same-origin
+    cache: 'default', // *default, no-cache, reload, force-cache, only-if-cached
+    credentials: 'include', // include, *same-origin, omit
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  };
+  // fetch the API
+  fetch(url, options)
+    // response is a RESTful "promise" on any successful fetch
+    .then(response => {
+      // check for response errors and display
+      if (response.status !== 200) {
+        const errorMsg = 'Database response error: ' + response.status;
+        console.log(errorMsg);
+    /**********************************************************/
+        //HTML error output
+        const p = document.createElement("p");
+        p.appendChild(document.createTextNode("Oops! There seems to be an error with the server. Sorry for the inconvenience, please try again at a later time.")); 
+        document.getElementById("loginError").appendChild(p);
+    /********************************************************/
+        return;
+      }
+
+
+
+       // valid response will contain json data
+      response.json().then(data => {
+          console.log(data.email);
+          var email = data.email;
+
+          //make button on the right side of the screen with email
+          var p = document.createElement("p");
+          p.appendChild(document.createTextNode(email)); 
+          document.getElementById("dropbtn2").appendChild(p);
+
+   
+          
+         
+        })
+      }
+      )
+  }
+
+    var pointCount= 0;
+    function incrementCount(){
+       count++;
+    }
+  
+</script>
 
 <!-- 

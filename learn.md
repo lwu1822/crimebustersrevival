@@ -12,14 +12,14 @@
     <title>Button</title>
 <body>
     <div class="text-center">
-        <a href="{{ site.baseurl }}/atbash">
+        <a href="{{ site.baseurl }}/caesarLearn">
             <button class="btn btn-primary btn-lg">Caesar</button>
         </a>
     <br>
     <br>
     </div>
     <div class="text-center">
-        <a href="{{ site.baseurl }}/atbash">
+        <a href="{{ site.baseurl }}/atbashLearn">
             <button class="btn btn-primary btn-lg">Atbash</button>
         </a>
     <br>
@@ -33,7 +33,7 @@
     <br>
     </div>
     <div class="text-center">
-        <a href="{{ site.baseurl }}/atbash">
+        <a href="{{ site.baseurl }}/affineLearn">
             <button class="btn btn-primary btn-lg">Affine</button>
         </a>
         <br>
