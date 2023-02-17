@@ -198,8 +198,19 @@ dropdown leads to settings */
 
 
 <script>
-  var page = window.location.origin + "/login";
-  if (window.location.href != page) {
+  var login = window.location.origin + "/login";
+  var singup = window.location.origin + "/signup";
+  var page = [login, singup];
+
+  var showUsrMenu = true;
+
+  for (let i = 0; i < page.length; i++) {
+    if (window.location.href == page[i]) {
+      showUsrMenu = false; 
+    }
+  }
+
+  if (showUsrMenu) {
     //console.log("hi");
  // prepare URL
   var url = "https://crimebusters.tk/api/person/findEmail";
