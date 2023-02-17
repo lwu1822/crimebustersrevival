@@ -1,7 +1,16 @@
+<style>
+    p {
+        text-align: left !important;
+    }
+</style>
+
 <!--populate with user info using JS-->
 <div id="email"></div>
 <div id="name"></div>
 <div id="dob"></div>
+<br>
+
+<button onclick="deleteUsr()">Delete user</button>
 
 <script>
       // prepare URL
@@ -65,4 +74,78 @@
         })
       }
       )
+
+
+    function deleteUsr() {
+        var baseurl = "https://crimebusters.tk"
+
+        /*************************************************
+         * THIS IS PROBABLY NOT NEEDED
+        // Comment out next line for local testing
+        var  baseurl = "http://localhost:8085"
+        **************************************************/
+
+
+        // Authenticate endpoint
+        const login_url = baseurl + '/api/person/delete/35';
+
+        // Set body to include login data
+        /*
+        const body = {
+            email: document.getElementById("email").value,
+            password: document.getElementById("password").value,
+        };
+        */
+      
+       
+/*
+        // Set Headers to support cross origin
+        //IMPORTANT!!!!!!! TO SUCCESSFULLY POST, YOU NEED TO REMOVE
+        // credentials:'include'
+        const requestOptions = {
+            method: 'DELETE',
+            
+            //mode: 'cors', // no-cors, *cors, same-origin
+            cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+            //credentials: 'include', // include, *same-origin, omit
+            
+            //body: JSON.stringify(body),
+
+            headers: {
+                "content-type": "application/json"
+            },
+            
+        };
+        */
+
+   options = {
+    method: 'GET', // *GET, POST, PUT, DELETE, etc.
+    mode: 'cors', // no-cors, *cors, same-origin
+    cache: 'default', // *default, no-cache, reload, force-cache, only-if-cached
+    credentials: 'include', // include, *same-origin, omit
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  };
+        
+        // Fetch JWT
+            fetch(login_url, options)
+            .then(response => {
+                // trap error response from Web API
+                if (!response.ok) {
+                    const errorMsg = 'Login error: ' + response.status;
+                    console.log(errorMsg);
+;
+                
+                    return;
+                }
+
+                console.log("User successfully created");
+                // Success!!!
+                // Redirect to Database location
+                //window.location.href = "https://lwu1822.github.io/crimebustersrevival/homepage";
+                //window.location.href = "{{ site.baseurl }}/homepage";
+            })
+
+    }
 </script>
