@@ -1,3 +1,9 @@
+<style>
+    p {
+        text-align: left !important;
+    }
+</style>
+
 <!--populate with user info using JS-->
 <div id="email"></div>
 <div id="name"></div>
