@@ -198,10 +198,14 @@ dropdown leads to settings */
 
 
 <script>
+  //list of urls where i don't want user menu bar to show up (because
+  // the user has not logged in)
   var login = window.location.origin + "/login";
-  var singup = window.location.origin + "/signup";
-  var page = [login, singup];
+  var signup = window.location.origin + "/signup";
+  var homepage = window.location.origin + "/homepage";
+  var page = [login, signup, homepage];
 
+  //if showUsrMenu = true, user menu shows up
   var showUsrMenu = true;
 
   for (let i = 0; i < page.length; i++) {
@@ -211,64 +215,43 @@ dropdown leads to settings */
   }
 
   if (showUsrMenu) {
-    //console.log("hi");
- // prepare URL
-  var url = "https://crimebusters.tk/api/person/findEmail";
+    var url = "https://crimebusters.tk/api/person/findEmail";
 
+    var options = {
+      method: 'GET', 
+      mode: 'cors', 
+      cache: 'default', 
+      credentials: 'include', 
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    };
 
+    fetch(url, options)
+      .then(response => {
+        //error
+        if (response.status !== 200) {
+          const errorMsg = 'Database response error: ' + response.status;
+          console.log(errorMsg);
+          //HTML error output
+          const p = document.createElement("p");
+          p.appendChild(document.createTextNode("Oops! There seems to be an error with the server. Sorry for the inconvenience, please try again at a later time.")); 
+          document.getElementById("loginError").appendChild(p);
+          return;
+        }
 
-  /*************************************************
-  * THIS IS PROBABLY NOT NEEDED
-  // Uncomment next line for localhost testing 
-  // url = "http://localhost:8085/api/person/";
-  *****************************************************/
+        response.json().then(data => {
+            console.log(data.email);
+            var email = data.email;
 
-
-  // set options for cross origin header request
-  var options = {
-    method: 'GET', // *GET, POST, PUT, DELETE, etc.
-    mode: 'cors', // no-cors, *cors, same-origin
-    cache: 'default', // *default, no-cache, reload, force-cache, only-if-cached
-    credentials: 'include', // include, *same-origin, omit
-    headers: {
-      'Content-Type': 'application/json',
-    },
-  };
-  // fetch the API
-  fetch(url, options)
-    // response is a RESTful "promise" on any successful fetch
-    .then(response => {
-      // check for response errors and display
-      if (response.status !== 200) {
-        const errorMsg = 'Database response error: ' + response.status;
-        console.log(errorMsg);
-    /**********************************************************/
-        //HTML error output
-        const p = document.createElement("p");
-        p.appendChild(document.createTextNode("Oops! There seems to be an error with the server. Sorry for the inconvenience, please try again at a later time.")); 
-        document.getElementById("loginError").appendChild(p);
-    /********************************************************/
-        return;
-      }
-
-
-
-       // valid response will contain json data
-      response.json().then(data => {
-          console.log(data.email);
-          var email = data.email;
-
-          //make button on the right side of the screen with email
-          var p = document.createElement("p");
-          p.appendChild(document.createTextNode(email)); 
-          document.getElementById("dropbtn2").appendChild(p);
-
-   
-          
-         
+            //make button on the right side of the screen with user's 
+            //email as the text on the button
+            var p = document.createElement("p");
+            p.appendChild(document.createTextNode(email)); 
+            document.getElementById("dropbtn2").appendChild(p);
         })
-      }
-      )
+        
+      })
   }
 
     var pointCount= 0;
@@ -277,5 +260,3 @@ dropdown leads to settings */
     }
   
 </script>
-
-<!-- 

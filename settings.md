@@ -130,6 +130,8 @@
               }
 
               console.log("User successfully deleted");
+
+              window.location.href = "{{ site.baseurl }}/homepage";
             
             })
 
