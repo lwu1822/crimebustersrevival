@@ -40,7 +40,7 @@
     <br>
     </div>
     <div class="text-center">
-        <a href="{{ site.baseurl }}/atbash">
+        <a href="{{ site.baseurl }}/substitutionLearn">
             <button class="btn btn-primary btn-lg">Substitution</button>
         </a>
     </div>
