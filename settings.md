@@ -13,24 +13,24 @@
 <button onclick="deleteUsr()">Delete user</button>
 
 <script>
-  // prepare URL
-  var url = "https://crimebusters.tk/api/person/findEmail";
+  //show user information (email, dob, name, etc.) on settings page
+  
+  //get user info based on cookie
+  var usrSettingsUrl = "https://crimebusters.tk/api/person/findEmail";
 
-  // set options for cross origin header request
-  options = {
-    method: 'GET', // *GET, POST, PUT, DELETE, etc.
-    mode: 'cors', // no-cors, *cors, same-origin
-    cache: 'default', // *default, no-cache, reload, force-cache, only-if-cached
-    credentials: 'include', // include, *same-origin, omit
+  var usrSettingsOptions = {
+    method: 'GET', 
+    mode: 'cors', 
+    cache: 'default', 
+    credentials: 'include', 
     headers: {
       'Content-Type': 'application/json',
     },
   };
-  // fetch the API
-  fetch(url, options)
-    // response is a RESTful "promise" on any successful fetch
+
+  fetch(usrSettingsUrl, usrSettingsOptions)
     .then(response => {
-      // check for response errors and display
+      //error message
       if (response.status !== 200) {
         const errorMsg = 'Database response error: ' + response.status;
         console.log(errorMsg);
@@ -41,6 +41,7 @@
         return;
       }
 
+      //show user info if success
       response.json().then(data => {
         console.log(data);
         var email = data.email;
@@ -68,15 +69,16 @@
       })
     })
   
+  //delete user button
   function deleteUsr() {
+    //get user id from cookie (need id to delete user)
     var getUrl = "https://crimebusters.tk/api/person/findEmail";
 
-    // set options for cross origin header request
     var getOptions = {
-      method: 'GET', // *GET, POST, PUT, DELETE, etc.
-      mode: 'cors', // no-cors, *cors, same-origin
-      cache: 'default', // *default, no-cache, reload, force-cache, only-if-cached
-      credentials: 'include', // include, *same-origin, omit
+      method: 'GET', 
+      mode: 'cors', 
+      cache: 'default', 
+      credentials: 'include', 
       headers: {
         'Content-Type': 'application/json',
       },
@@ -84,48 +86,50 @@
 
     fetch(getUrl, getOptions)
     .then(response => {
-        // trap error response from Web API
+        //error message
         if (!response.ok) {
             const errorMsg = 'Login error: ' + response.status;
             console.log(errorMsg);
             return;
         }
 
-        console.log("User successfully created");
+        //if success
+        console.log("User id successfully obtained");
 
         response.json().then(data => {
           console.log(data);
 
+          //get id from cookie
           var id = data.id;
 
           console.log("id: " + id);
 
+          //delete user based on id
           var deleteBaseURL = "https://crimebusters.tk";
           var deleteURL = deleteBaseURL + '/api/person/delete/' + id;
 
-          console.log("url: " + deleteURL);
+          console.log("delete user url: " + deleteURL);
 
           var deleteOptions = {
-            method: 'GET', // *GET, POST, PUT, DELETE, etc.
-            mode: 'cors', // no-cors, *cors, same-origin
-            cache: 'default', // *default, no-cache, reload, force-cache, only-if-cached
-            credentials: 'include', // include, *same-origin, omit
+            method: 'GET', 
+            mode: 'cors', 
+            cache: 'default', 
+            credentials: 'include', 
             headers: {
               'Content-Type': 'application/json',
             },
           };
               
-          // Fetch JWT
           fetch(deleteURL, deleteOptions)
           .then(response => {
-              // trap error response from Web API
+              //error
               if (!response.ok) {
                   const errorMsg = 'Login error: ' + response.status;
                   console.log(errorMsg);
                   return;
               }
 
-              console.log("User successfully created");
+              console.log("User successfully deleted");
             
             })
 
