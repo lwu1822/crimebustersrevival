@@ -23,9 +23,20 @@
 </form>
 
 <br>
+<br>
+
+<div id="successMsg" class="test"></div>
+
+<style>
+    p {
+        text-align: left !important;
+    }
+</style>
 
 
 <script>
+    
+
     function signup() {
         var baseurl = "https://crimebusters.tk"
 
@@ -87,7 +98,18 @@
                     return;
                 }
 
-                console.log("hi");
+                console.log("User successfully created");
+
+                var p = document.createElement("p");
+                p.appendChild(document.createTextNode("User successfully created!")); 
+                document.getElementById("successMsg").appendChild(p);
+
+                var a = document.createElement('a');
+                var loginLink = document.createTextNode("Go back to login");
+                a.appendChild(loginLink);
+                a.href = "{{ site.baseurl }}/login";
+                document.getElementById("successMsg").appendChild(a);
+
                 // Success!!!
                 // Redirect to Database location
                 //window.location.href = "https://lwu1822.github.io/crimebustersrevival/homepage";
