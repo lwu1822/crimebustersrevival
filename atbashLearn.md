@@ -90,13 +90,13 @@
   </head>
   <body>
     <p>
-      <button class="button" data-modal="modalOne">How to Encrypt Atbash</button>
+      <button style="color: ghostwhite" class="button" data-modal="modalOne">How to Encrypt Atbash</button>
     </p>
     <p>
-      <button class="button" data-modal="modalTwo">How to Decrypt Atbash</button>
+      <button style="color: ghostwhite" class="button" data-modal="modalTwo">How to Decrypt Atbash</button>
     </p>
     <p>
-      <button class="button" data-modal="modalThree">Atbash Sample Problem</button>
+      <button style="color: ghostwhite" class="button" data-modal="modalThree">Atbash Sample Problem</button>
     </p>
     <div id="modalOne" class="modal">
       <div class="modal-content">
@@ -124,7 +124,7 @@
         <div style="color: black" class="contact-form">
           <span class="close">&times;</span>
           <form action="/">
-            <h2>How to Decrypt Vigenere</h2>
+            <h2>How to Decrypt Atbash</h2>
             <p style="color: black">Due to the symmetric nature of this cipher, the decryption process is exactly the same as the encryption process. Thus, for the recipient to decrypt the ciphertext, the same ciphertext alphabet must be generated as was used to encrypt the message in the first place. In this case, the ciphertext alphabet relies only on the alphabet used, and hence the table above is also used to decipher the message. So, given the ciphertext "XRKSVI", and assuming that the alphabet used was the standard Roman alphabet of 26 letters, we can retrieve the plaintext "cipher".</p>
           </form>
         </div>
@@ -135,7 +135,7 @@
         <div style="color: black" class="contact-form">
           <span class="close">&times;</span>
           <form action="/">
-            <h2>Vigenere Sample Problem</h2>
+            <h2>Atbash Sample Problem</h2>
             <div style='transform: scale(0.65); position: relative; top: -100px;'>
   <h2 style="color: black;">Encrypt the sample text FLEE AT ONCE!</h2><br>
   <p style="color: black;">Choose the best answer:</p><br>
@@ -178,6 +178,12 @@
         </div>
       </div>
     </div>
+    <br>
+    <center>
+    <a href="{{ site.baseurl }}/atbash">
+            <button style="padding: 2%; font-size: small" class="btn btn-primary btn-lg">Decrypt something with Atbash Cipher!</button>
+        </a>
+    </center>
     <script>
       let modalBtns = [...document.querySelectorAll(".button")];
       modalBtns.forEach(function (btn) {

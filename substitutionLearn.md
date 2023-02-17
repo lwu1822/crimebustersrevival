@@ -90,31 +90,24 @@
   </head>
   <body>
     <p>
-      <button style="color: ghostwhite" class="button" data-modal="modalOne">How to Encrypt Affine</button>
+      <button style="color: ghostwhite" class="button" data-modal="modalOne">How to Encrypt Substitution</button>
     </p>
     <p>
-      <button style="color: ghostwhite" class="button" data-modal="modalTwo">How to Decrypt Affine</button>
+      <button style="color: ghostwhite" class="button" data-modal="modalTwo">How to Decrypt Substitution</button>
     </p>
     <p>
-      <button style="color: ghostwhite" class="button" data-modal="modalThree">Affine Sample Problem</button>
+      <button style="color: ghostwhite" class="button" data-modal="modalThree">Substitution Sample Problem</button>
     </p>
     <div id="modalOne" class="modal">
       <div class="modal-content">
         <div style="color: black" class="contact-form">
           <a class="close">&times;</a>
           <form action="/">
-            <h2>How to Encrypt Affine</h2>
+            <h2>How to Encrypt Substitution</h2>
             <p style="color: black">
-            Encryption uses a classic alphabet, and two integers, called coefficients or keys A and B, these are the parameters of the affine function Ax+B (which is a straight line/linear equation).</p>
+            For a substitution to be correct, it is necessary for the same element to be substituted by only one other (valid in both cases, for encryption and decryption) so that there is never more than one possibility of encryption or decryption.</p>
 
-<p style="color: black">Example: Encrypt DCODE with the keys A=5, B=3 and the English/latin alphabet ABCDEFGHIJKLMNOPQRSTUVWXYZ.</p>
-
-<p style="color: black">For each letter of the alphabet is associated to the value of its position in the alphabet (starting at 0).</p>
-
-<p style="color: black">Example: By default, A=0, B=1, …, Z=25, it is possible (but not recommended) to use A=1, …, Y=25, Z=0 using the alphabet ZABCDEFGHIJKLMNOPQRSTUVWXY.</p>
-
-<p style="color: black">For each letter of value x of the plain text, is associated a value y, result of the affine function y = A * x + B mod 26 (with 26 the alphabet size). Each computed value y corresponds to a letter with the same position in the alphabet, it is the ciphered letter. The Affine ciphertext is the replacement of all the letters by the new ones.
-            </p>
+<p style="color: black">Example: The Caesar cipher is an alphabetical substitution which replaces each letter by the following in the alphabet: ABC becomes 'BCD'.</p>
           </form>
         </div>
       </div>
@@ -124,25 +117,9 @@
         <div style="color: black" class="contact-form">
           <span class="close">&times;</span>
           <form action="/">
-            <h2>How to Decrypt Affine</h2>
+            <h2>How to Decrypt Substitution</h2>
             <p style="color: black">
-            Affine decryption requires to know the two keys A and B (the one from encryption) and the used alphabet.</p>
-
-<p style="color: black">Example: Decrypt the ciphered message SNVSX with keys A=5 and B=3</p>
-
-<p style="color: black">For each letter of the alphabet, associate the value of its position in the alphabet.</p>
-
-<p style="color: black">Example: The alphabet ABCDEFGHIJKLMNOPQRSTUVWXYZ, starting at 0 gives A=0, B=1, …, Z=25.</p>
-
-<p style="color: black">Each letter of value y of the message corresponds to a value x, result of the inverse function x = A′ × (y − B) mod 26 (with 26 the alphabet size)</p>
-
-<p style="color: black">The value A′ is an integer such as A × A′ = 1 mod 26 (with 26 the alphabet size). To find A′, calculate its modular inverse.</p>
-
-<p style="color: black">Example: A coefficient A′ for A =5 with an alphabet size of 26 is 21 because 5 * 21 = 105 ≡ 1 mod 26.
-For S (y = 18), x = A′ × (18 − B) = 21 × (18 − 3) ≡ 315 mod 26 = 3 For each value x, associate the letter with the same position in the alphabet: the coded letter. The plain text is the replacement of all characters with calculated new letters.</p>
-
-<p style="color: black">Example: For S (x = 3) associate the letter at position 3: D, etc. The original plain text is DCODE.
- </p>
+            The condition for a successful substitution decryption is to know the correspondence table used.</p>
           </form>
         </div>
       </div>
@@ -152,15 +129,15 @@ For S (y = 18), x = A′ × (18 − B) = 21 × (18 − 3) ≡ 315 mod 26 = 3 For
         <div style="color: black" class="contact-form">
           <span class="close">&times;</span>
           <form action="/">
-            <h2>Affine Sample Problem</h2>
+            <h2>Substitution Sample Problem</h2>
             <div style='transform: scale(0.65); position: relative; top: -100px;'>
-  <h2 style="color: black;">Encrypt the sample text SECRET WORD using A coefficient 3 and B coefficient 1!</h2><br>
+  <h2 style="color: black;">Encrypt the sample text DATA ENCRYPTION using a key of 4!</h2><br>
   <p style="color: black;">Choose the best answer:</p><br>
   <hr />
   <div id='block-11' style='padding: 1px;'>
     <label for='option-11' style=' padding: 5px; font-size: 1.5rem; color: black;'>
       <input type='radio' name='option' value='DNHANG PRAK' id='option-11' style='transform: scale(1.6); margin-top: -2px;' />
-      DNHANG PRAK</label>
+      HEXE IRGVCTXMSR</label>
     <span id='result-11'></span>
   </div>
   <hr />
@@ -168,7 +145,7 @@ For S (y = 18), x = A′ × (18 − B) = 21 × (18 − 3) ≡ 315 mod 26 = 3 For
   <div id='block-12' style='padding: 1px;'>
     <label for='option-12' style=' padding: 5px; font-size: 1.5rem; color: black;'>
       <input type='radio' name='option' value='DEHANG ERAK' id='option-12' style='transform: scale(1.6); margin-top: -2px;' />
-      DEHANG ERAK</label>
+      WEXE IRGWCTXMSR</label>
     <span id='result-12'></span>
   </div>
   <hr />
@@ -176,7 +153,7 @@ For S (y = 18), x = A′ × (18 − B) = 21 × (18 − 3) ≡ 315 mod 26 = 3 For
   <div id='block-13' style='padding: 1px;'>
     <label for='option-13' style=' padding: 5px; font-size: 1.5rem; color: black;'>
       <input type='radio' name='option' value='DNHAG PRA' id='option-13' style='transform: scale(1.6);  margin-top: -2px;' />
-      DNHAG PRA</label>
+      HEQE IRGQCTXMSQ</label>
     <span id='result-13'></span>
   </div>
   <hr />
@@ -184,7 +161,7 @@ For S (y = 18), x = A′ × (18 − B) = 21 × (18 − 3) ≡ 315 mod 26 = 3 For
   <div id='block-14' style='padding: 1px;'>
     <label for='option-14' style=' padding: 5px; font-size: 1.5rem; color: black;'>
       <input type='radio' name='option' value='WNHANG PWAK' id='option-14' style='transform: scale(1.6); margin-top: -2px;' />
-      WNHANG PWAK</label>
+      HCXE IRCVCTXMSR</label>
     <span id='result-14'></span>
   </div>
   <hr />
@@ -197,8 +174,8 @@ For S (y = 18), x = A′ × (18 − B) = 21 × (18 − 3) ≡ 315 mod 26 = 3 For
     </div>
     <br>
     <center>
-    <a href="{{ site.baseurl }}/affine">
-            <button style="padding: 2%; font-size: small" class="btn btn-primary btn-lg">Decrypt something with Affine Cipher!</button>
+    <a href="{{ site.baseurl }}/substitution">
+            <button style="padding: 2%; font-size: small" class="btn btn-primary btn-lg">Decrypt something with Substitution Cipher!</button>
         </a>
     </center>
     <script>
