@@ -76,14 +76,16 @@ body {
 
 /*CODE BELOW IS TO STYLE THE USER DROPDOWN MENU (box says: [email]) and
 dropdown leads to settings */
-.navbar2 {
+
+/*
+.userDropdown {
   overflow: visible;
   background-color: #001535;
   margin-bottom: 7%;
   margin-top: -2%;
 }
 
-.navbar2 a {
+.userDropdown a {
   float: right;
   font-size: 16px;
   color: #005b96;
@@ -91,14 +93,15 @@ dropdown leads to settings */
   padding: 14px 16px;
   text-decoration: none;
 }
+*/
 
-.dropdown2 {
+.userMenu {
   float: right;
   overflow: hidden;
   background-color: #001535;
 }
 
-.dropdown2 .dropbtn2 {
+.userMenu .userMenuButton {
   font-size: 16px;  
   border: none;
   outline: none;
@@ -109,11 +112,11 @@ dropdown leads to settings */
   margin-top: 3%;
 }
 
-.navbar2 a:hover, .dropdown2:hover .dropbtn2 {
+.userMenu:hover .userMenuButton {
   color: #D1A3CE;
 }
 
-.dropdown-content2 {
+.userMenuDropdownContent {
   display: none;
   position: absolute;
   background-color: #001535;
@@ -124,7 +127,7 @@ dropdown leads to settings */
   z-index: 1;
 }
 
-.dropdown-content2 a {
+.userMenuDropdownContent a {
   float: none;
   color: #005b96;
   padding: 12px 16px;
@@ -133,11 +136,11 @@ dropdown leads to settings */
   text-align: left;
 }
 
-.dropdown-content2 a:hover {
+.userMenuDropdownContent a:hover {
   color: #D1A3CE;
 }
 
-.dropdown2:hover .dropdown-content2 {
+.userMenu:hover .userMenuDropdownContent {
   display: block;
 }
 
@@ -172,18 +175,18 @@ dropdown leads to settings */
 </div>
 
 
-<div class="navbar2">
-    <div class="dropdown2">
+<!-- <div class="userDropdown" id="userDropdown"> -->
+    <div class="userMenu">
       <!--button says: [email]-->
       <!--SEE JS (JS EDITS THE NAME IN [email])-->
-      <button class="dropbtn2" id="dropbtn2"></button>
+      <button class="userMenuButton" id="userMenuButton"></button>
 
        <!--dropdown says: Settings-->
-      <div class="dropdown-content2">
+      <div class="userMenuDropdownContent">
         <a href="{{ site.baseurl }}/settings">Settings</a>
       </div>
     </div> 
-</div>
+<!-- </div> -->
 
 <br>
 <br>
@@ -198,6 +201,8 @@ dropdown leads to settings */
 
 
 <script>
+  //document.getElementById("userDropdown").innerHTML="";
+
   //list of urls where i don't want user menu bar to show up (because
   // the user has not logged in)
   var login = window.location.origin + "/login";
@@ -248,9 +253,9 @@ dropdown leads to settings */
             //email as the text on the button
             var p = document.createElement("p");
             p.appendChild(document.createTextNode(email)); 
-            document.getElementById("dropbtn2").appendChild(p);
+            document.getElementById("userMenuButton").appendChild(p);
         })
-        
+
       })
   }
 
