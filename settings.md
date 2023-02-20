@@ -1,13 +1,15 @@
 <style>
-    p {
+    .userInfo {
         text-align: left !important;
     }
 </style>
 
 <!--populate with user info using JS-->
-<div id="email"></div>
-<div id="name"></div>
-<div id="dob"></div>
+<div id="userInfo">
+  <div id="email"></div>
+  <div id="name"></div>
+  <div id="dob"></div>
+</div>
 <br>
 
 <button onclick="deleteUsr()">Delete user</button>
