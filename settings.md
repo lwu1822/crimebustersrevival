@@ -4,6 +4,10 @@
     }
 </style>
 
+# Settings
+
+<br>
+
 <!--populate with user info using JS-->
 <div id="userInfo">
   <div id="email"></div>
