@@ -42,6 +42,8 @@ input[type="radio"] {
   </head>
   <body>
     <h1>Quiz</h1>
+    <br>
+    <br>
     <form>
       <ol>
         <li>
