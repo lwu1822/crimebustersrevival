@@ -13,5 +13,5 @@ form.addEventListener('submit', e => {
       score++;
     }
   });
-  alert(`You scored ${score} out of ${answers.length}!`);
+  alert(`You scored ${score+1} out of ${answers.length}!`);
 });
