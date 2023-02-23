@@ -43,7 +43,6 @@ input[type="radio"] {
   <body>
     <h1>Quiz</h1>
     <br>
-    <br>
     <form>
       <ol>
         <li>
@@ -102,6 +101,139 @@ input[type="radio"] {
           <div>
             <input type="radio" name="q3" value="D">
             <label for="q3D">D. A hash function</label>
+          </div>
+        </li>
+         <li>
+          <h3>Question 4: What is the name of the cipher that involves rearranging the letters of a word or phrase to create a new word or phrase?</h3>
+          <div>
+            <input type="radio" name="q4" value="A">
+            <label for="q4A">A. Anagram cipher</label>
+          </div>
+          <div>
+            <input type="radio" name="q4" value="B">
+            <label for="q4B">B. Rail fence cipher</label>
+          </div>
+          <div>
+            <input type="radio" name="q4" value="C">
+            <label for="q4C">C. Atbash cipher</label>
+          </div>
+          <div>
+            <input type="radio" name="q4" value="D">
+            <label for="q4D">D. Caesar cipher</label>
+          </div>
+        </li>
+        <li>
+          <h3>Question 5: What is the name of the cipher that involves substituting each letter of the alphabet with a different letter, number, or symbol based on a set of specific rules?</h3>
+          <div>
+            <input type="radio" name="q5" value="A">
+            <label for="q5A">A. Substitution cipher</label>
+          </div>
+          <div>
+            <input type="radio" name="q5" value="B">
+            <label for="q5B">B. Transposition cipher</label>
+          </div>
+          <div>
+            <input type="radio" name="q5" value="C">
+            <label for="q5C">C. Playfair cipher</label>
+          </div>
+          <div>
+            <input type="radio" name="q5" value="D">
+            <label for="q5D">D. Enigma cipher</label>
+          </div>
+        </li>
+        <li>
+          <h3>Question 6: What is the name of the cipher that involves writing a message in a grid, then reading it off in a specific pattern?</h3>
+          <div>
+            <input type="radio" name="q6" value="A">
+            <label for="q6A">A. Rail fence cipher</label>
+          </div>
+          <div>
+            <input type="radio" name="q6" value="B">
+            <label for="q6B">B. Columnar transposition cipher</label>
+          </div>
+          <div>
+            <input type="radio" name="q6" value="C">
+            <label for="q6C">C. Playfair cipher</label>
+          </div>
+          <div>
+            <input type="radio" name="q6" value="D">
+            <label for="q6D">D. Atbash cipher</label>
+          </div>
+        </li>
+         <li>
+          <h3>Question 7: What is the name of the cipher that involves replacing each letter with the letter that is a certain number of positions ahead or behind it in the alphabet?</h3>
+          <div>
+            <input type="radio" name="q7" value="A">
+            <label for="q7A">A. Caesar cipher</label>
+          </div>
+          <div>
+            <input type="radio" name="q7" value="B">
+            <label for="q7B">B. Vigenère cipher</label>
+          </div>
+          <div>
+            <input type="radio" name="q7" value="C">
+            <label for="q7C">C. Rail fence cipher</label>
+          </div>
+          <div>
+            <input type="radio" name="q7" value="D">
+            <label for="q7D">D. Atbash cipher</label>
+          </div>
+        </li>
+        <li>
+          <h3>Question 8: What is the name of the cipher that involves replacing each letter with the letter that is a certain number of positions ahead or behind it in the alphabet, with the number changing based on the position of the letter in the message?</h3>
+          <div>
+            <input type="radio" name="q8" value="A">
+            <label for="q8A">A. Beaufort cipher</label>
+          </div>
+          <div>
+            <input type="radio" name="q8" value="B">
+            <label for="q8B">B. Polybius cipher</label>
+          </div>
+          <div>
+            <input type="radio" name="q8" value="C">
+            <label for="q8C">C. Atbash cipher</label>
+          </div>
+          <div>
+            <input type="radio" name="q8" value="D">
+            <label for="q8D">D. Autokey cipher</label>
+          </div>
+        </li>
+         <li>
+          <h3>Question 9: What is the name of the cipher that involves writing a message backwards and upside down, then rotating it 180 degrees?</h3>
+          <div>
+            <input type="radio" name="q9" value="A">
+            <label for="q9A">A. Bacons cipher</label>
+          </div>
+          <div>
+            <input type="radio" name="q9" value="B">
+            <label for="q9B">B. Playfair cipher</label>
+          </div>
+          <div>
+            <input type="radio" name="q9" value="C">
+            <label for="q9C">C. Mirror cipher</label>
+          </div>
+          <div>
+            <input type="radio" name="q9" value="D">
+            <label for="q9D">D. Scytale cipher</label>
+          </div>
+        </li>
+         <li>
+          <h3>Question 10: What is the name of the cipher that involves replacing each letter with a different letter, number, or symbol based on a specific pattern or key, with the same pattern or key being used for both encryption and decryption?</h3>
+          <div>
+            <input type="radio" name="q10" value="A">
+            <label for="q10A">A. Vernam cipher</label>
+          </div>
+          <div>
+            <input type="radio" name="q10" value="B">
+            <label for="q10B">B. Rail fence cipher</label>
+          </div>
+          <div>
+            <input type="radio" name="q10" value="C">
+            <label for="q10C">C. Atbash cipher</label>
+          </div>
+          <div>
+            <input type="radio" name="q10" value="D">
+            <label for="q10D">D. Caesar cipher</label>
           </div>
         </li>
       </ol>
