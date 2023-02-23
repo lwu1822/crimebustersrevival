@@ -45,7 +45,7 @@ input[type="radio"] {
     <form>
       <ol>
         <li>
-          <h2>Question 1: What is the name of the cipher that involves shifting each letter of the alphabet by a certain number of positions?</h2>
+          <h3>Question 1: What is the name of the cipher that involves shifting each letter of the alphabet by a certain number of positions?</h3>
           <div>
             <input type="radio" name="q1" value="A">
             <label for="q1A">A. Caesar cipher</label>
@@ -64,7 +64,7 @@ input[type="radio"] {
           </div>
         </li>
         <li>
-          <h2>Question 2: What is the name of the cipher that involves replacing each letter with a different letter, number, or symbol according to a specific code?</h2>
+          <h3>Question 2: What is the name of the cipher that involves replacing each letter with a different letter, number, or symbol according to a specific code?</h3>
           <div>
             <input type="radio" name="q2" value="A">
             <label for="q2A">A. Substitution cipher</label>
