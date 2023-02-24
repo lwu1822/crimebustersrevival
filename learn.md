@@ -32,13 +32,21 @@
     <br>
     <br>
     </div></td>
-  </tr>
-  <tr>
     <td><div class="text-center">
         <a href="{{ site.baseurl }}/vigenereLearn">
             <button>Vignere</button>
         </a>
     <br>
+    </div></td>
+  </tr>
+</table>
+<br>
+<table class='table borderless' style="width: 55%; margin-left: auto; margin-right: auto">
+  <tr>
+    <td><div class="text-center">
+        <a href="{{ site.baseurl }}/substitutionLearn">
+            <button>Substitution</button>
+        </a>
     </div></td>
     <td><div class="text-center">
         <a href="{{ site.baseurl }}/affineLearn">
@@ -48,9 +56,5 @@
     </div></td>
   </tr>
 </table>
-    <div class="text-center">
-        <a href="{{ site.baseurl }}/substitutionLearn">
-            <button>Substitution</button>
-        </a>
-    </div>
+    
 </body>
