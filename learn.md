@@ -1,5 +1,9 @@
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Dosis&display=swap');
+  
+  .borderless tbody tr td, .borderless tbody tr th, .borderless thead tr th {
+    border: none;
+    }
 </style>
 <html>
 <head>
@@ -11,7 +15,7 @@
 <p>Choose a cipher to learn:</p>
     <title>Button</title>
 <body>
-<table style="width: 75%; border: hidden">
+<table class='table borderless' style="width: 75%; border: hidden; align: center">
   <tr>
     <td><div class="text-center">
         <a href="{{ site.baseurl }}/caesarLearn">
