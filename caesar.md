@@ -36,6 +36,7 @@
         
         document.getElementById("decrypted").innerHTML = data.result; 
       
+      const decryptedMessage = data.result;
       })
 
       //log stuff
@@ -78,7 +79,7 @@
             // Authenticate endpoint
             const login_url = baseurl + '/api/person/log';
 
-            const decryptedMessage = data.result;
+            
 
             const body = {
                 email: email,
