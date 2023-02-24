@@ -13,35 +13,35 @@
 <body>
     <div class="text-center">
         <a href="{{ site.baseurl }}/caesarLearn">
-            <button class="btn btn-primary btn-lg">Caesar</button>
+            <button>Caesar</button>
         </a>
     <br>
     <br>
     </div>
     <div class="text-center">
         <a href="{{ site.baseurl }}/atbashLearn">
-            <button class="btn btn-primary btn-lg">Atbash</button>
+            <button>Atbash</button>
         </a>
     <br>
     <br>
     </div>
     <div class="text-center">
         <a href="{{ site.baseurl }}/vigenereLearn">
-            <button class="btn btn-primary btn-lg">Vignere</button>
+            <button>Vignere</button>
         </a>
         <br>
     <br>
     </div>
     <div class="text-center">
         <a href="{{ site.baseurl }}/affineLearn">
-            <button class="btn btn-primary btn-lg">Affine</button>
+            <button>Affine</button>
         </a>
         <br>
     <br>
     </div>
     <div class="text-center">
         <a href="{{ site.baseurl }}/substitutionLearn">
-            <button class="btn btn-primary btn-lg">Substitution</button>
+            <button>Substitution</button>
         </a>
     </div>
 </body>

@@ -78,9 +78,11 @@
             // Authenticate endpoint
             const login_url = baseurl + '/api/person/log';
 
+            const decryptedMessage = data.result;
+
             const body = {
                 email: email,
-                log: "testing",
+                log: decryptedMessage,
                 userId: id
             };
 
