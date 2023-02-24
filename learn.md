@@ -15,7 +15,8 @@
 <p>Choose a cipher to learn:</p>
     <title>Button</title>
 <body>
-<table class='table borderless' style="width: 75%; margin-left: auto; margin-right: auto">
+<br>
+<table class='table borderless' style="width: 55%; margin-left: auto; margin-right: auto">
   <tr>
     <td><div class="text-center">
         <a href="{{ site.baseurl }}/caesarLearn">
@@ -37,14 +38,12 @@
         <a href="{{ site.baseurl }}/vigenereLearn">
             <button>Vignere</button>
         </a>
-        <br>
     <br>
     </div></td>
     <td><div class="text-center">
         <a href="{{ site.baseurl }}/affineLearn">
             <button>Affine</button>
         </a>
-        <br>
     <br>
     </div></td>
   </tr>
