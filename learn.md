@@ -22,21 +22,16 @@
         <a href="{{ site.baseurl }}/caesarLearn">
             <button>Caesar</button>
         </a>
-    <br>
-    <br>
     </div></td>
     <td>    <div class="text-center">
         <a href="{{ site.baseurl }}/atbashLearn">
             <button>Atbash</button>
         </a>
-    <br>
-    <br>
     </div></td>
     <td><div class="text-center">
         <a href="{{ site.baseurl }}/vigenereLearn">
             <button>Vignere</button>
         </a>
-    <br>
     </div></td>
   </tr>
 </table>
@@ -52,7 +47,6 @@
         <a href="{{ site.baseurl }}/affineLearn">
             <button>Affine</button>
         </a>
-    <br>
     </div></td>
   </tr>
 </table>
