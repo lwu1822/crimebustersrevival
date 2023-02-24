@@ -35,8 +35,7 @@
     </div></td>
   </tr>
 </table>
-<br>
-<table class='table borderless' style="width: 55%; margin-left: auto; margin-right: auto">
+<table class='table borderless' style="width: 40%; margin-left: auto; margin-right: auto">
   <tr>
     <td><div class="text-center">
         <a href="{{ site.baseurl }}/substitutionLearn">
