@@ -1,46 +1,53 @@
+<style>
+    .userInfo {
+        text-align: left !important;
+    }
+</style>
+
+# Settings
+
+<br>
+
 <!--populate with user info using JS-->
-<div id="email"></div>
-<div id="name"></div>
-<div id="dob"></div>
+<div id="userInfo">
+  <div id="email"></div>
+  <div id="name"></div>
+  <div id="dob"></div>
+</div>
 <br>
 
 <button onclick="deleteUsr()">Delete user</button>
 
 <script>
-      // prepare URL
-  var url = "https://crimebusters.tk/api/person/findEmail";
+  //show user information (email, dob, name, etc.) on settings page
   
+  //get user info based on cookie
+  var usrSettingsUrl = "https://crimebusters.tk/api/person/findEmail";
 
-
-  // set options for cross origin header request
-    options = {
-    method: 'GET', // *GET, POST, PUT, DELETE, etc.
-    mode: 'cors', // no-cors, *cors, same-origin
-    cache: 'default', // *default, no-cache, reload, force-cache, only-if-cached
-    credentials: 'include', // include, *same-origin, omit
+  var usrSettingsOptions = {
+    method: 'GET', 
+    mode: 'cors', 
+    cache: 'default', 
+    credentials: 'include', 
     headers: {
       'Content-Type': 'application/json',
     },
   };
-  // fetch the API
-  fetch(url, options)
-    // response is a RESTful "promise" on any successful fetch
+
+  fetch(usrSettingsUrl, usrSettingsOptions)
     .then(response => {
-      // check for response errors and display
+      //error message
       if (response.status !== 200) {
         const errorMsg = 'Database response error: ' + response.status;
         console.log(errorMsg);
-    /**********************************************************/
         //HTML error output
         const p = document.createElement("p");
         p.appendChild(document.createTextNode("Oops! There seems to be an error with the server. Sorry for the inconvenience, please try again at a later time.")); 
         document.getElementById("loginError").appendChild(p);
-    /********************************************************/
         return;
       }
 
-
-
+      //show user info if success
       response.json().then(data => {
         console.log(data);
         var email = data.email;
@@ -65,19 +72,118 @@
         p.appendChild(document.createTextNode("Birthday: " + dob)); 
         document.getElementById("dob").appendChild(p);
          
+      })
+    })
+  
+  //delete user button
+  function deleteUsr() {
+    //get user id from cookie (need id to delete user)
+    var getUrl = "https://crimebusters.tk/api/person/findEmail";
+
+    var getOptions = {
+      method: 'GET', 
+      mode: 'cors', 
+      cache: 'default', 
+      credentials: 'include', 
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    };
+
+    fetch(getUrl, getOptions)
+    .then(response => {
+        //error message
+        if (!response.ok) {
+            const errorMsg = 'Login error: ' + response.status;
+            console.log(errorMsg);
+            return;
+        }
+
+        //if success
+        console.log("User id successfully obtained");
+
+        response.json().then(data => {
+          console.log(data);
+
+          //get id from cookie
+          var id = data.id;
+
+          console.log("id: " + id);
+
+          //delete user based on id
+          var deleteBaseURL = "https://crimebusters.tk";
+          var deleteURL = deleteBaseURL + '/api/person/delete/' + id;
+
+          console.log("delete user url: " + deleteURL);
+
+          var deleteOptions = {
+            method: 'GET', 
+            mode: 'cors', 
+            cache: 'default', 
+            credentials: 'include', 
+            headers: {
+              'Content-Type': 'application/json',
+            },
+          };
+              
+          fetch(deleteURL, deleteOptions)
+          .then(response => {
+              //error
+              if (!response.ok) {
+                  const errorMsg = 'Login error: ' + response.status;
+                  console.log(errorMsg);
+                  return;
+              }
+
+              console.log("User successfully deleted");
+
+              window.location.href = "{{ site.baseurl }}/homepage";
+            
+            })
+
+
+         
         })
-      }
-      )
+    })
+       
+
+/*
+    var baseurl = "https://crimebusters.tk"
+    const login_url = baseurl + '/api/person/delete/38';
+
+    var deleteOptions = {
+      method: 'GET', // *GET, POST, PUT, DELETE, etc.
+      mode: 'cors', // no-cors, *cors, same-origin
+      cache: 'default', // *default, no-cache, reload, force-cache, only-if-cached
+      credentials: 'include', // include, *same-origin, omit
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    };
+        
+    // Fetch JWT
+    fetch(login_url, options)
+    .then(response => {
+        // trap error response from Web API
+        if (!response.ok) {
+            const errorMsg = 'Login error: ' + response.status;
+            console.log(errorMsg);
+            return;
+        }
+
+        console.log("User successfully created");
+       
+      })
+*/
 
 
+    /*
     function deleteUsr() {
         var baseurl = "https://crimebusters.tk"
 
-        /*************************************************
-         * THIS IS PROBABLY NOT NEEDED
+         //THIS IS PROBABLY NOT NEEDED
         // Comment out next line for local testing
         var  baseurl = "http://localhost:8085"
-        **************************************************/
 
 
         // Authenticate endpoint
@@ -112,6 +218,7 @@
         };
         */
 
+/*
    options = {
     method: 'GET', // *GET, POST, PUT, DELETE, etc.
     mode: 'cors', // no-cors, *cors, same-origin
@@ -140,6 +247,7 @@
                 //window.location.href = "https://lwu1822.github.io/crimebustersrevival/homepage";
                 //window.location.href = "{{ site.baseurl }}/homepage";
             })
+            */
 
     }
 </script>

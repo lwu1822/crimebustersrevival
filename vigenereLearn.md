@@ -90,13 +90,13 @@
   </head>
   <body>
     <p>
-      <button class="button" data-modal="modalOne">How to Encrypt Vigenere</button>
+      <button style="color: ghostwhite" class="button" data-modal="modalOne">How to Encrypt Vigenere</button>
     </p>
     <p>
-      <button class="button" data-modal="modalTwo">How to Decrypt Vigenere</button>
+      <button style="color: ghostwhite" class="button" data-modal="modalTwo">How to Decrypt Vigenere</button>
     </p>
     <p>
-      <button class="button" data-modal="modalThree">Vigenere Sample Problem</button>
+      <button style="color: ghostwhite" class="button" data-modal="modalThree">Vigenere Sample Problem</button>
     </p>
     <div id="modalOne" class="modal">
       <div class="modal-content">

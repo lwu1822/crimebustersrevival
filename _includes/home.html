@@ -76,14 +76,16 @@ body {
 
 /*CODE BELOW IS TO STYLE THE USER DROPDOWN MENU (box says: [email]) and
 dropdown leads to settings */
-.navbar2 {
+
+/*
+.userDropdown {
   overflow: visible;
   background-color: #001535;
   margin-bottom: 7%;
   margin-top: -2%;
 }
 
-.navbar2 a {
+.userDropdown a {
   float: right;
   font-size: 16px;
   color: #005b96;
@@ -91,14 +93,15 @@ dropdown leads to settings */
   padding: 14px 16px;
   text-decoration: none;
 }
+*/
 
-.dropdown2 {
+.userMenu {
   float: right;
   overflow: hidden;
   background-color: #001535;
 }
 
-.dropdown2 .dropbtn2 {
+.userMenu .userMenuButton {
   font-size: 16px;  
   border: none;
   outline: none;
@@ -109,11 +112,11 @@ dropdown leads to settings */
   margin-top: 3%;
 }
 
-.navbar2 a:hover, .dropdown2:hover .dropbtn2 {
+.userMenu:hover .userMenuButton {
   color: #D1A3CE;
 }
 
-.dropdown-content2 {
+.userMenuDropdownContent {
   display: none;
   position: absolute;
   background-color: #001535;
@@ -124,7 +127,7 @@ dropdown leads to settings */
   z-index: 1;
 }
 
-.dropdown-content2 a {
+.userMenuDropdownContent a {
   float: none;
   color: #005b96;
   padding: 12px 16px;
@@ -133,11 +136,11 @@ dropdown leads to settings */
   text-align: left;
 }
 
-.dropdown-content2 a:hover {
+.userMenuDropdownContent a:hover {
   color: #D1A3CE;
 }
 
-.dropdown2:hover .dropdown-content2 {
+.userMenu:hover .userMenuDropdownContent {
   display: block;
 }
 
@@ -172,22 +175,11 @@ dropdown leads to settings */
 </div>
 
 
-<div class="navbar2">
-    <div class="dropdown2">
-      <!--button says: [email]-->
-      <!--SEE JS (JS EDITS THE NAME IN [email])-->
-      <button class="dropbtn2" id="dropbtn2"></button>
 
-       <!--dropdown says: Settings-->
-      <div class="dropdown-content2">
-        <a href="{{ site.baseurl }}/settings">Settings</a>
-      </div>
-    </div> 
-</div>
 
-<br>
-<br>
-<br>
+<div id="makeUserMenu"></div>
+
+
 
 
 </body>
@@ -198,10 +190,18 @@ dropdown leads to settings */
 
 
 <script>
-  var login = window.location.origin + "/login";
-  var singup = window.location.origin + "/signup";
-  var page = [login, singup];
+  //default: user menu no show (only show if not on specific pages in list 
+  //below)
+  document.getElementById("makeUserMenu").innerHTML="";
 
+  //list of urls where i don't want user menu bar to show up (because
+  //the user has not logged in)
+  var login = window.location.origin + "/login";
+  var signup = window.location.origin + "/signup";
+  var homepage = window.location.origin + "/homepage";
+  var page = [login, signup, homepage];
+
+  //if showUsrMenu = true, user menu shows up
   var showUsrMenu = true;
 
   for (let i = 0; i < page.length; i++) {
@@ -211,64 +211,87 @@ dropdown leads to settings */
   }
 
   if (showUsrMenu) {
-    //console.log("hi");
- // prepare URL
-  var url = "https://crimebusters.tk/api/person/findEmail";
+    /* HTML code looks like this:
+
+    <div class="userMenu">
+      <!-- button says: [email] ->
+      <!--SEE JS (JS EDITS THE NAME IN [email])->
+      <button class="userMenuButton" id="userMenuButton"><button>
+
+      <!--dropdown says: Settings->
+      <div class="userMenuDropdownContent">
+        <a href="{{ site.baseurl }}/settings">Settings</a>
+      </div>
+    </div> 
+    */
+
+    //<div class="userMenu">
+    var userMenuDiv = document.createElement("div");
+    userMenuDiv.setAttribute("class", "userMenu");
+
+    //button says: [email]
+    //<button class="userMenuButton" id="userMenuButton">
+    var button = document.createElement("button");
+    button.setAttribute("class", "userMenuButton");
+    button.setAttribute("id", "userMenuButton");
+
+    //put button in userMenu div
+    userMenuDiv.appendChild(button);
+
+    //<div class="userMenuDropdownContent">
+    var userMenuDropdownContentDiv = document.createElement("div");
+    userMenuDropdownContentDiv.setAttribute("class", "userMenuDropdownContent");
+    //<a href="{{ site.baseurl }}/settings">Settings</a>
+    var a = document.createElement("a");
+    //dropdown says: Settings
+    var dropdownText = document.createTextNode("Settings");
+    a.appendChild(dropdownText);
+    a.href = "{{ site.baseurl }}/settings";
+    userMenuDropdownContentDiv.appendChild(a); 
+
+    //put userMenuDropdownContent div in userMenu div
+    userMenuDiv.appendChild(userMenuDropdownContentDiv)
+
+    document.getElementById("makeUserMenu").appendChild(userMenuDiv);
 
 
+    var url = "https://crimebusters.tk/api/person/findEmail";
 
-  /*************************************************
-  * THIS IS PROBABLY NOT NEEDED
-  // Uncomment next line for localhost testing 
-  // url = "http://localhost:8085/api/person/";
-  *****************************************************/
+    var options = {
+      method: 'GET', 
+      mode: 'cors', 
+      cache: 'default', 
+      credentials: 'include', 
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    };
 
+    fetch(url, options)
+      .then(response => {
+        //error
+        if (response.status !== 200) {
+          const errorMsg = 'Database response error: ' + response.status;
+          console.log(errorMsg);
+          //HTML error output
+          const p = document.createElement("p");
+          p.appendChild(document.createTextNode("Oops! There seems to be an error with the server. Sorry for the inconvenience, please try again at a later time.")); 
+          document.getElementById("loginError").appendChild(p);
+          return;
+        }
 
-  // set options for cross origin header request
-  var options = {
-    method: 'GET', // *GET, POST, PUT, DELETE, etc.
-    mode: 'cors', // no-cors, *cors, same-origin
-    cache: 'default', // *default, no-cache, reload, force-cache, only-if-cached
-    credentials: 'include', // include, *same-origin, omit
-    headers: {
-      'Content-Type': 'application/json',
-    },
-  };
-  // fetch the API
-  fetch(url, options)
-    // response is a RESTful "promise" on any successful fetch
-    .then(response => {
-      // check for response errors and display
-      if (response.status !== 200) {
-        const errorMsg = 'Database response error: ' + response.status;
-        console.log(errorMsg);
-    /**********************************************************/
-        //HTML error output
-        const p = document.createElement("p");
-        p.appendChild(document.createTextNode("Oops! There seems to be an error with the server. Sorry for the inconvenience, please try again at a later time.")); 
-        document.getElementById("loginError").appendChild(p);
-    /********************************************************/
-        return;
-      }
+        response.json().then(data => {
+            console.log(data.email);
+            var email = data.email;
 
-
-
-       // valid response will contain json data
-      response.json().then(data => {
-          console.log(data.email);
-          var email = data.email;
-
-          //make button on the right side of the screen with email
-          var p = document.createElement("p");
-          p.appendChild(document.createTextNode(email)); 
-          document.getElementById("dropbtn2").appendChild(p);
-
-   
-          
-         
+            //make button on the right side of the screen with user's 
+            //email as the text on the button
+            var p = document.createElement("p");
+            p.appendChild(document.createTextNode(email)); 
+            document.getElementById("userMenuButton").appendChild(p);
         })
-      }
-      )
+
+      })
   }
 
     var pointCount= 0;
@@ -277,5 +300,3 @@ dropdown leads to settings */
     }
   
 </script>
-
-<!-- 
