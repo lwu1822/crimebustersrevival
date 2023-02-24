@@ -15,7 +15,6 @@
 <p>Choose a cipher to learn:</p>
     <title>Button</title>
 <body>
-<br>
 <table class='table borderless' style="width: 55%; margin-left: auto; margin-right: auto">
   <tr>
     <td><div class="text-center">
