@@ -11,34 +11,41 @@
 <p>Choose a cipher to learn:</p>
     <title>Button</title>
 <body>
-    <div class="text-center">
+<table>
+
+  <tr>
+    <td><div class="text-center">
         <a href="{{ site.baseurl }}/caesarLearn">
             <button>Caesar</button>
         </a>
     <br>
     <br>
-    </div>
-    <div class="text-center">
+    </div></td>
+    <td>    <div class="text-center">
         <a href="{{ site.baseurl }}/atbashLearn">
             <button>Atbash</button>
         </a>
     <br>
     <br>
-    </div>
-    <div class="text-center">
+    </div></td>
+  </tr>
+  <tr>
+    <td><div class="text-center">
         <a href="{{ site.baseurl }}/vigenereLearn">
             <button>Vignere</button>
         </a>
         <br>
     <br>
-    </div>
-    <div class="text-center">
+    </div></td>
+    <td><div class="text-center">
         <a href="{{ site.baseurl }}/affineLearn">
             <button>Affine</button>
         </a>
         <br>
     <br>
-    </div>
+    </div></td>
+  </tr>
+</table>
     <div class="text-center">
         <a href="{{ site.baseurl }}/substitutionLearn">
             <button>Substitution</button>
