@@ -15,7 +15,7 @@
 <p>Choose a cipher to learn:</p>
     <title>Button</title>
 <body>
-<table class='table borderless' style="width: 75%; border: hidden; align: center">
+<table class='table borderless' style="width: 75%; margin-left: auto; margin-right: auto">
   <tr>
     <td><div class="text-center">
         <a href="{{ site.baseurl }}/caesarLearn">
