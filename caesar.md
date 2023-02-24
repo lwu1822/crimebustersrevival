@@ -80,7 +80,7 @@
 
             const body = {
                 email: email,
-                log: data.result,
+                log: "testing",
                 userId: id
             };
 
