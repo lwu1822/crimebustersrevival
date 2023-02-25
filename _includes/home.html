@@ -180,6 +180,7 @@ dropdown leads to settings */
   <a class="dropbtn" href="{{ site.baseurl }}/quiz">Quiz</a>
   <!--show/hide login button in navbar-->
   <div id="login">
+    <a class="dropbtn" href="{{ site.baseurl }}/login">Log-In</a>
   </div>
     <a class="dropbtn" href="{{ site.baseurl }}/contactus">Contact Us</a>
 </div>
@@ -288,9 +289,11 @@ dropdown leads to settings */
           const errorMsg = 'Database response error: ' + response.status;
           console.log(errorMsg);
           //HTML error output
+          /*
           const p = document.createElement("p");
           p.appendChild(document.createTextNode("Oops! There seems to be an error with the server. Sorry for the inconvenience, please try again at a later time.")); 
           document.getElementById("loginError").appendChild(p);
+          */
           return;
         }
 
@@ -334,9 +337,11 @@ dropdown leads to settings */
         const errorMsg = 'Database response error: ' + response.status;
         console.log(errorMsg);
         //HTML error output
+        /*
         const p = document.createElement("p");
         p.appendChild(document.createTextNode("Oops! There seems to be an error with the server. Sorry for the inconvenience, please try again at a later time.")); 
         document.getElementById("loginError").appendChild(p);
+        */
         return;
       }
 
@@ -372,9 +377,11 @@ dropdown leads to settings */
               const errorMsg = 'Database response error: ' + response.status;
               console.log(errorMsg);
               //HTML error output
+              /*
               const p = document.createElement("p");
               p.appendChild(document.createTextNode("Oops! There seems to be an error with the server. Sorry for the inconvenience, please try again at a later time.")); 
               document.getElementById("loginError").appendChild(p);
+              */
               return;
             }
 

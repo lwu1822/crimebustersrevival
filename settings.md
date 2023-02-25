@@ -3,15 +3,23 @@
         text-align: left !important;
     }
 
-    .deleteButton {
-    background: #c90c0c;
-    color: #001535;
+    .modal .modal-content .contact-form .box .deleteButton {
+    background: #c90c0c !important;
+    color: #ffffff;
     font-family: 'Dosis', sans-serif;
     font-size: large;
     border-radius: 8px;
     padding: 8px;
     }
 
+    .modal .modal-content .contact-form .box .deleteButton:hover {
+    background: #9c0b0b !important;
+    color: #ffffff;
+    font-family: 'Dosis', sans-serif;
+    font-size: large;
+    border-radius: 8px;
+    padding: 8px;
+    }
 
 
       .modal {
@@ -76,20 +84,20 @@
         text-decoration: none;
         cursor: pointer;
       }
-      button.button {
-        background: none;
+      
+     button.button {
+        background: #c90c0c;
         border-top: none;
         outline: none;
         border-right: none;
         border-left: none;
         border-bottom: #02274a 1px solid;
-        padding: 0 0 3px 0;
+        padding: 5px 5px 5px 5px;
         font-size: 16px;
         cursor: pointer;
       }
       button.button:hover {
-        border-bottom: #a99567 1px solid;
-        color: #a99567;
+        background: #9c0b0b;
       }
 </style>
 
@@ -107,12 +115,11 @@
 
 <button onclick="updateUsr()">Update settings</button>
 
-<button onclick="deleteUsr()" class="deleteButton">Delete account</button>
 
 
 
 <p>
-<button style="color: red" class="button" data-modal="modalOne">Delete account</button>
+<button class="button" data-modal="modalOne">Delete account</button>
 </p>
  
   <div id="modalOne" class="modal">
