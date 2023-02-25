@@ -16,6 +16,8 @@
 </div>
 <br>
 
+<button onclick="updateUsr()">Update settings</button>
+
 <button onclick="deleteUsr()">Delete user</button>
 
 <script>
@@ -75,6 +77,11 @@
       })
     })
   
+  //update user button
+  function updateUsr() {
+    window.location.href = "{{ site.baseurl }}/updateinfo";
+  }
+
   //delete user button
   function deleteUsr() {
     //get user id from cookie (need id to delete user)
