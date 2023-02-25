@@ -64,10 +64,16 @@ User successfully logged out!
                     
                         return;
                     }
+
+                    
+                    window.location.href = "{{ site.baseurl }}/homepage";
                 })
 
             }) 
             
         })
+
+
+
 
 </script>

@@ -69,6 +69,9 @@ The return of our awesome website. </p>
                     
                         return;
                     }
+
+                    
+                    window.location.href = "{{ site.baseurl }}/homepage";
                 })
 
             }) 
