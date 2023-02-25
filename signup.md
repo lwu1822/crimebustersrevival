@@ -12,10 +12,10 @@
     Name: <input type="text" id="name" required>
     <br>
     <br>
-    Birthday: <input type="text" id="dob" required>
+    Birthday: <input type="date" id="dob" required>
     <br>
     <br>
-    Confirm password: <input type="password" required>
+    Confirm password: <input type="password" id="password2" required>
     <br>
     <br>
     <button>Sign up</button>
@@ -23,10 +23,47 @@
 </form>
 
 <br>
+<br>
+
+<div id="passwordMsg"></div>
+<div id="successMsg" class="test"></div>
+
+<style>
+    p {
+        text-align: left !important;
+    }
+</style>
+
 
 
 <script>
+
     function signup() {
+
+        document.getElementById("passwordMsg").innerHTML = ""; 
+
+        var password = document.getElementById("password").value;
+        var password2 = document.getElementById("password2").value;
+
+        console.log(password);
+        console.log(password2);
+
+        if (password == password2) {
+            console.log("Match");
+            createUser(password); 
+        } else {
+            console.log("No match"); 
+
+            var p = document.createElement("p");
+            var msg = document.createTextNode("Passwords do not match. Please try again"); 
+            p.appendChild(msg); 
+            document.getElementById("passwordMsg").appendChild(p); 
+        }
+
+    }
+
+    function createUser(password) {
+
         var baseurl = "https://crimebusters.tk"
 
         /*************************************************
@@ -48,10 +85,10 @@
         */
         const body = {
             email: document.getElementById("email").value,
-            password: document.getElementById("password").value,
+            password: password,
             name: document.getElementById("name").value,
             dob: document.getElementById("dob").value,
-            personrole: [{"email": document.getElementById("email").value, "role": "user"}]
+            personrole: [{"email": document.getElementById("email").value, "role": "user"}],
         };
 
        
@@ -82,12 +119,23 @@
                 if (!response.ok) {
                     const errorMsg = 'Login error: ' + response.status;
                     console.log(errorMsg);
-;
+
                 
                     return;
                 }
 
-                console.log("hi");
+                console.log("User successfully created");
+
+                var p = document.createElement("p");
+                p.appendChild(document.createTextNode("User successfully created!")); 
+                document.getElementById("successMsg").appendChild(p);
+
+                var a = document.createElement('a');
+                var loginLink = document.createTextNode("Go back to login");
+                a.appendChild(loginLink);
+                a.href = "{{ site.baseurl }}/login";
+                document.getElementById("successMsg").appendChild(a);
+
                 // Success!!!
                 // Redirect to Database location
                 //window.location.href = "https://lwu1822.github.io/crimebustersrevival/homepage";

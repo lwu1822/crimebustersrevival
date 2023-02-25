@@ -1,5 +1,9 @@
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Dosis&display=swap');
+  
+  .borderless tbody tr td, .borderless tbody tr th, .borderless thead tr th {
+    border: none;
+    }
 </style>
 <html>
 <head>
@@ -11,37 +15,38 @@
 <p>Choose a cipher to learn:</p>
     <title>Button</title>
 <body>
-    <div class="text-center">
+<table class='table borderless' style="width: 55%; margin-left: auto; margin-right: auto">
+  <tr>
+    <td><div class="text-center">
         <a href="{{ site.baseurl }}/caesarLearn">
-            <button class="btn btn-primary btn-lg">Caesar</button>
+            <button>Caesar</button>
         </a>
-    <br>
-    <br>
-    </div>
-    <div class="text-center">
+    </div></td>
+    <td>    <div class="text-center">
         <a href="{{ site.baseurl }}/atbashLearn">
-            <button class="btn btn-primary btn-lg">Atbash</button>
+            <button>Atbash</button>
         </a>
-    <br>
-    <br>
-    </div>
-    <div class="text-center">
+    </div></td>
+    <td><div class="text-center">
         <a href="{{ site.baseurl }}/vigenereLearn">
-            <button class="btn btn-primary btn-lg">Vignere</button>
+            <button>Vignere</button>
         </a>
-        <br>
-    <br>
-    </div>
-    <div class="text-center">
+    </div></td>
+  </tr>
+</table>
+<table class='table borderless' style="width: 40%; margin-left: auto; margin-right: auto">
+  <tr>
+    <td><div class="text-center">
+        <a href="{{ site.baseurl }}/substitutionLearn">
+            <button>Substitution</button>
+        </a>
+    </div></td>
+    <td><div class="text-center">
         <a href="{{ site.baseurl }}/affineLearn">
-            <button class="btn btn-primary btn-lg">Affine</button>
+            <button>Affine</button>
         </a>
-        <br>
-    <br>
-    </div>
-    <div class="text-center">
-        <a href="{{ site.baseurl }}/atbash">
-            <button class="btn btn-primary btn-lg">Aristocrat/Substitution</button>
-        </a>
-    </div>
+    </div></td>
+  </tr>
+</table>
+    
 </body>
