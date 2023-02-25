@@ -62,7 +62,7 @@
             password: document.getElementById("password").value,
             name: document.getElementById("name").value,
             dob: document.getElementById("dob").value,
-            personrole: [{"email": document.getElementById("email").value, "role": "user"}]
+            personrole: [{"email": document.getElementById("email").value, "role": "user"}],
         };
 
        
