@@ -62,7 +62,7 @@ User successfully logged out!
                         const errorMsg = 'Login error: ' + response.status;
                         console.log(errorMsg);
                     
-                        return;
+                        window.location.href = "{{ site.baseurl }}/homepage";
                     }
 
                     

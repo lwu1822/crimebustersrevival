@@ -1,11 +1,18 @@
+<br>
+
+<h1>Update Settings</h1>
+
+
 Email: <input type="text" id="email">
 
 Name: <input type="text" id="name">
 
-Birthday: <input type="text" id="dob">
+Birthday: <input type="date" id="dob">
 
 
 <button onclick="update()">Update info</button>
+
+<div id="updateSuccess"></div>
 
 <br>
 
@@ -148,9 +155,22 @@ Confirm password: <input type="text" id="password2">
                     if (!response.ok) {
                         const errorMsg = 'Login error: ' + response.status;
                         console.log(errorMsg);
-                    
-                        return;
+
+                        document.getElementById("updateSuccess").innerHTML = "";
+
+
+                        var p = document.createElement("p");
+                        var msg = document.createTextNode("Info successfully updated!"); 
+                        p.appendChild(msg); 
+                        document.getElementById("updateSuccess").appendChild(p); 
                     }
+
+                        document.getElementById("updateSuccess").innerHTML = "";
+
+                        var p = document.createElement("p");
+                        var msg = document.createTextNode("Info successfully updated!"); 
+                        p.appendChild(msg); 
+                        document.getElementById("updateSuccess").appendChild(p); 
                 })
 
             }) 

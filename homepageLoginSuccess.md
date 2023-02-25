@@ -67,7 +67,7 @@ The return of our awesome website. </p>
                         const errorMsg = 'Login error: ' + response.status;
                         console.log(errorMsg);
                     
-                        return;
+                    window.location.href = "{{ site.baseurl }}/homepage";
                     }
 
                     
