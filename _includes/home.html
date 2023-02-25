@@ -180,7 +180,6 @@ dropdown leads to settings */
   <a class="dropbtn" href="{{ site.baseurl }}/quiz">Quiz</a>
   <!--show/hide login button in navbar-->
   <div id="login">
-    <a class="dropbtn" href="{{ site.baseurl }}/login">Log-In</a>
   </div>
     <a class="dropbtn" href="{{ site.baseurl }}/contactus">Contact Us</a>
 </div>
@@ -213,7 +212,8 @@ dropdown leads to settings */
   var login = window.location.origin + "/login";
   var signup = window.location.origin + "/signup";
   var homepage = window.location.origin + "/homepage";
-  var page = [login, signup, homepage];
+  var logout = window.location.origin + "/logout";
+  var page = [login, signup, homepage, logout];
 
   //if showUsrMenu = true, user menu shows up
   var showUsrMenu = true;
@@ -384,14 +384,28 @@ dropdown leads to settings */
               
               console.log(data.loginStatus);
 
-              document.getElementById("login").innerHTML = ""; 
+              var loginStatus = data.loginStatus; 
 
-              var a = document.createElement("a");
-              var linkText = document.createTextNode("Log-Out"); 
-              a.appendChild(linkText);
-              a.href = "{{ site.baseurl }}/logout"; 
-              a.setAttribute("class", "dropbtn");
-              document.getElementById("login").appendChild(a); 
+              if (loginStatus == "in") {
+                document.getElementById("login").innerHTML = ""; 
+                
+                var a = document.createElement("a");
+                var linkText = document.createTextNode("Log-Out"); 
+                a.appendChild(linkText);
+                a.href = "{{ site.baseurl }}/logout"; 
+                a.setAttribute("class", "dropbtn");
+                document.getElementById("login").appendChild(a); 
+              } else {
+                document.getElementById("login").innerHTML = ""; 
+                
+                var a = document.createElement("a");
+                var linkText = document.createTextNode("Log-In"); 
+                a.appendChild(linkText);
+                a.href = "{{ site.baseurl }}/login"; 
+                a.setAttribute("class", "dropbtn");
+                document.getElementById("login").appendChild(a); 
+              }
+             
               
             })
           })
@@ -405,5 +419,46 @@ dropdown leads to settings */
     function incrementCount(){
        count++;
     }
+
+
+
+    /*ARCHIVED CODE
+        var newId = ""; 
+
+    var usrSettingsUrl = "https://crimebusters.tk/api/person/findEmail";
+
+    var usrSettingsOptions = {
+    method: 'GET', 
+    mode: 'cors', 
+    cache: 'default', 
+    credentials: 'include', 
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  };
+
+    async function getId(url, options) {
+      var response = await fetch(url, options);
+      var data = await response.json();
+
+      return data.id;
+    }
+
+
+    async function main() {
+      
+      
+      getId(usrSettingsUrl, usrSettingsOptions)
+      .then(data => console.log(data));
+      
+
+      newId = await getId(usrSettingsUrl, usrSettingsOptions);
+      console.log("newid: " + newId);
+    }
+
+  
+
+    console.log("hi" + main());
+    */
   
 </script>
