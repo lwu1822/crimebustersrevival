@@ -15,6 +15,10 @@ Confirm password: <input type="text" id="password2">
 <button onclick="changePassword()">Change password</button>
 <div id="passwordMsg"></div>
 
+<br>
+<br>
+<button onclick="backToSettings()">Go back to settings</button>
+
 <script>
     
     //get user id from cookie (need id to delete user)
@@ -253,6 +257,10 @@ Confirm password: <input type="text" id="password2">
             p.appendChild(msg); 
             document.getElementById("passwordMsg").appendChild(p); 
         })
+    }
+
+    function backToSettings() {
+        window.location.href = "{{ site.baseurl }}/settings";
     }
 
 

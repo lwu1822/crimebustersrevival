@@ -2,6 +2,15 @@
     .userInfo {
         text-align: left !important;
     }
+
+    .deleteButton {
+    background: #c90c0c;
+    color: #001535;
+    font-family: 'Dosis', sans-serif;
+    font-size: large;
+    border-radius: 8px;
+    padding: 8px;
+    }
 </style>
 
 # Settings
@@ -18,7 +27,7 @@
 
 <button onclick="updateUsr()">Update settings</button>
 
-<button onclick="deleteUsr()">Delete user</button>
+<button onclick="deleteUsr()" class="deleteButton">Delete user</button>
 
 <script>
   //show user information (email, dob, name, etc.) on settings page
