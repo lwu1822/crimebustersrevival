@@ -178,7 +178,10 @@ dropdown leads to settings */
   </div> 
   <a class="dropbtn" href="{{ site.baseurl }}/learn">Learn</a>
   <a class="dropbtn" href="{{ site.baseurl }}/quiz">Quiz</a>
+  <!--show/hide login button in navbar-->
+  <div id="login">
     <a class="dropbtn" href="{{ site.baseurl }}/login">Log-In</a>
+  </div>
     <a class="dropbtn" href="{{ site.baseurl }}/contactus">Contact Us</a>
 </div>
 
@@ -198,6 +201,9 @@ dropdown leads to settings */
 
 
 <script>
+
+
+
   //default: user menu no show (only show if not on specific pages in list 
   //below)
   document.getElementById("makeUserMenu").innerHTML="";
@@ -301,6 +307,99 @@ dropdown leads to settings */
 
       })
   }
+
+
+
+
+
+
+ 
+
+  var usrSettingsUrl = "https://crimebusters.tk/api/person/findEmail";
+
+  var usrSettingsOptions = {
+    method: 'GET', 
+    mode: 'cors', 
+    cache: 'default', 
+    credentials: 'include', 
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  };
+
+  fetch(usrSettingsUrl, usrSettingsOptions)
+    .then(response => {
+      //error message
+      if (response.status !== 200) {
+        const errorMsg = 'Database response error: ' + response.status;
+        console.log(errorMsg);
+        //HTML error output
+        const p = document.createElement("p");
+        p.appendChild(document.createTextNode("Oops! There seems to be an error with the server. Sorry for the inconvenience, please try again at a later time.")); 
+        document.getElementById("loginError").appendChild(p);
+        return;
+      }
+
+      //show user info if success
+      response.json().then(data => {
+        console.log(data);
+        
+        var id = data.id;
+
+        console.log("home.html id: " + id); 
+
+
+        var baseUrl = "https://crimebusters.tk/api/person/";
+
+        var idUrl = id.toString(); 
+
+        var specificUsrUrl = baseUrl + idUrl; 
+
+        var specificUsrOptions = {
+          method: 'GET', 
+          mode: 'cors', 
+          cache: 'default', 
+          credentials: 'include', 
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        };
+
+        fetch(specificUsrUrl, specificUsrOptions)
+          .then(response => {
+            //error message
+            if (response.status !== 200) {
+              const errorMsg = 'Database response error: ' + response.status;
+              console.log(errorMsg);
+              //HTML error output
+              const p = document.createElement("p");
+              p.appendChild(document.createTextNode("Oops! There seems to be an error with the server. Sorry for the inconvenience, please try again at a later time.")); 
+              document.getElementById("loginError").appendChild(p);
+              return;
+            }
+
+            //show user info if success
+            response.json().then(data => {
+              console.log(data);
+              
+              console.log(data.loginStatus);
+
+              document.getElementById("login").innerHTML = ""; 
+
+              var a = document.createElement("a");
+              var linkText = document.createTextNode("Log-Out"); 
+              a.appendChild(linkText);
+              a.href = "{{ site.baseurl }}/logout"; 
+              a.setAttribute("class", "dropbtn");
+              document.getElementById("login").appendChild(a); 
+              
+            })
+          })
+         
+      })
+    })
+
+
 
     var pointCount= 0;
     function incrementCount(){
