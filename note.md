@@ -11,8 +11,7 @@
 <table class="tablelines">
     <tr>
         <th>Person Name</th>
-        <th>Plaintext</th>
-        <th>Note</th>
+             <th>Note</th>
     </tr>
 <tbody id="noteTable">
 
@@ -52,9 +51,9 @@
             var id = data.id;
 
             //get note for the person 
-            var getLogURL = "https://crimebusters.tk/api/person/getnote";
+            var getNoteURL = "https://crimebusters.tk/api/person/getnote";
 
-            var getLogOptions = {
+            var getNoteOptions = {
                 method: 'GET', 
                 mode: 'cors', 
                 cache: 'default', 
@@ -64,7 +63,7 @@
                 },
             };
                 
-            fetch(getLogURL, getLogOptions)
+            fetch(getNoteURL, getNoteOptions)
             .then(response => {
                 //error
                 if (!response.ok) {
