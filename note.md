@@ -3,6 +3,23 @@
     border: 1px solid white;
     }
 </style>
+<br>
+
+
+<p>Enter a note:</p>
+    <input type="text" id="note">
+    <br>
+    <br>
+    <button onclick="addnote()">AddNote</button>
+    <br>
+    <br>
+<div id="note"></div>
+<div id="noteSuccess"></div>
+
+<!-- Include the JavaScript file -->
+<script src="note.js"></script>
+</body>
+</html>
 
 <br>
 
