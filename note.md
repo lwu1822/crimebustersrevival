@@ -11,7 +11,7 @@
     <input type="text" id="note">
     <br>
     <br>
-    <button onclick="addnote()">AddNote</button>
+    <button onclick="addnote()">Add Note</button>
     <br>
     <br>
 <div id="note"></div>
