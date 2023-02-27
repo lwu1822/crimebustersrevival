@@ -41,7 +41,7 @@
 <script>
 
     //get user info based on cookie
-    var usrSettingsUrl = "https://crimebusters.tk/api/person/findEmail";
+    var usrSettingsUrl = "http://localhost:8085/api/person/findEmail";
 
     var usrSettingsOptions = {
         method: 'GET', 
@@ -69,7 +69,7 @@
             var id = data.id;
 
             //get note for the person 
-            var getNoteURL = "https://crimebusters.tk/api/person/getnote";
+            var getNoteURL = "http://localhost:8085/api/person/getnote";
 
             var getNoteOptions = {
                 method: 'GET', 
