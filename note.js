@@ -50,7 +50,7 @@ function addnote() {
                     text: note
                 };
 
-                console.log("body: " + body);
+                console.log("body: " + JSON.stringify(body));
                 // Set Headers to support cross origin
                 //IMPORTANT!!!!!!! TO SUCCESSFULLY POST, YOU NEED TO REMOVE
                 // credentials:'include'
