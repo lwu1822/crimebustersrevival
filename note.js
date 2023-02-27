@@ -42,7 +42,7 @@ function addnote() {
 
 
                 //var login_url = "http://localhost:8085/api/notes/note";
-                var login_url = "https://crimebusters.tk/api/notes/note";
+                var baseurl = "https://crimebusters.tk/api/notes/note";
                 //var baseurl = "https://crimebusters.tk";
         
                
@@ -72,7 +72,7 @@ function addnote() {
   };
                 //test   test
             
-                fetch(login_url, requestOptions)
+                fetch(baseurl, requestOptions)
                 .then(response => {
                     // trap error response from Web API
                     if (!response.ok) {
