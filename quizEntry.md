@@ -1,6 +1,7 @@
 <style>
 body {
   font-family: sans-serif;
+  text-align: center;
 }
 
 h1 {
@@ -52,12 +53,12 @@ input[type="radio"] {
     <div id="errors" style="color:red">
     </div>
       <div>
-         <label>name :</label>
+         <label>Name :</label>
          <input id="pName" type = "input" placeholder="your name">
       </div>
       <p/>
       <div>
-         <label>email :</label>
+         <label>Email :</label>
         <input id="email" type = "input" placeholder ="your email">
       </div>
        <p/> <p/>           
