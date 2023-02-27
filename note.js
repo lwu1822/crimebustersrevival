@@ -41,7 +41,8 @@ function addnote() {
                 console.log("note: " + note);
 
 
-                var login_url = "http://localhost:8085/api/notes/note";
+                //var login_url = "http://localhost:8085/api/notes/note";
+                var login_url = "https://crimebusters.tk/api/notes/note";
                 //var baseurl = "https://crimebusters.tk";
         
                
