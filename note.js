@@ -4,8 +4,8 @@ function addnote() {
    
         console.log("hi");
 
-        var getUrl = "http://localhost:8085/api/person/findEmail";
-        //var getUrl = "https://crimebusters.tk/api/person/findEmail";
+       // var getUrl = "http://localhost:8085/api/person/findEmail";
+        var getUrl = "https://crimebusters.tk/api/person/findEmail";
         //test
 
         var getOptions = {
