@@ -16,6 +16,7 @@
     <br>
 <div id="note"></div>
 <div id="noteSuccess"></div>
+<!--hvghghhj ---->
 
 <!-- Include the JavaScript file -->
 <script src="note.js"></script>
@@ -41,6 +42,7 @@
 <script>
 
     //get user info based on cookie
+    //var usrSettingsUrl = "http://localhost:8085/api/person/findEmail"; 
     var usrSettingsUrl = "https://crimebusters.tk/api/person/findEmail";
 
     var usrSettingsOptions = {
@@ -69,7 +71,9 @@
             var id = data.id;
 
             //get note for the person 
-            var getNoteURL = "https://crimebusters.tk/api/person/getnote";
+           //var getNoteURL = "http://localhost:8085/api/person/getnote";
+             var getNoteURL = "https://crimebusters.tk/api/person/getnote";
+            
 
             var getNoteOptions = {
                 method: 'GET', 
@@ -91,22 +95,24 @@
                 }
                 
                 response.json().then(data => {
-
+                    console.log("out row");
                     console.log(data);
 
                 
                 for (const row of data) {
-                    if (id == row.userId) {
+                    console.log("in row");
+                    console.log(row);
+                   // if (id == row.userId) {
                     // make "tr element" for each "row of data"
                       const tr = document.createElement("tr");
                       
                       // td for joke cell
                       const personName = document.createElement("td");
-                      personName.innerHTML = row.personName;  // add fetched data to innerHTML
+                      personName.innerHTML = row.Email;  // add fetched data to innerHTML
 
                        // td for joke cell
                       const noteText = document.createElement("td");
-                      noteText.innerHTML = row.noteText;  // add fetched data to innerHTML
+                      noteText.innerHTML = row.Text;  // add fetched data to innerHTML
           
                                             
                       // this builds ALL td's (cells) into tr (row) element
@@ -116,7 +122,7 @@
           
                       // this adds all the tr (row) work above to the HTML "result" container
                       document.getElementById("noteTable").appendChild(tr);
-                    }                 
+                    //}                 
                     }               
 
                 })

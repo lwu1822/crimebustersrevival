@@ -4,7 +4,9 @@ function addnote() {
    
         console.log("hi");
 
+        //var getUrl = "http://localhost:8085/api/person/findEmail";
         var getUrl = "https://crimebusters.tk/api/person/findEmail";
+        //test
 
         var getOptions = {
             method: 'GET', 
@@ -36,9 +38,11 @@ function addnote() {
                 var email = data.email; 
 
                 console.log("id: " + id);
+                console.log("note: " + note);
 
 
-                var baseurl = "https://crimebusters.tk"
+                //var baseurl = "http://localhost:8085";
+                var baseurl = "https://crimebusters.tk";
         
                 // Authenticate endpoint
                 const login_url = baseurl + '/api/person/note';
@@ -53,17 +57,21 @@ function addnote() {
                 // Set Headers to support cross origin
                 //IMPORTANT!!!!!!! TO SUCCESSFULLY POST, YOU NEED TO REMOVE
                 // credentials:'include'
+                //test
                 const requestOptions = {
                     method: 'POST',
                     mode: 'cors', // no-cors, *cors, same-origin
                     cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
-                    //credentials: 'include', // include, *same-origin, omit
+                    ////credentials: 'include', // include, *same-origin, omit
                     body: JSON.stringify(body),
                     headers: {
                         "content-type": "application/json"
                     },
                 };
 
+
+
+                //test   test
             
                 fetch(login_url, requestOptions)
                 .then(response => {
@@ -74,6 +82,13 @@ function addnote() {
                     
                         return;
                     }
+
+                    response.json().then(data => {
+
+                        console.log(data);
+                        console.log("hiiiiiiiiiiiii");
+    
+                    }),    
 
                     console.log("Note success");
 
