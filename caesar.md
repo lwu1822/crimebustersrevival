@@ -40,6 +40,7 @@ function decrypt() {
       const decryptedMessage = data.result;
       
       document.getElementById("decrypted").innerHTML = decryptedMessage; 
+    
 
       //log button
     var logButton = document.createElement("button"); 
@@ -138,6 +139,7 @@ function decrypt() {
     };
 
     document.getElementById("log").appendChild(logButton);
+}
 }
 
 </script>
