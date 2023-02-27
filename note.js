@@ -56,6 +56,7 @@ function addnote() {
                 // Set Headers to support cross origin
                 //IMPORTANT!!!!!!! TO SUCCESSFULLY POST, YOU NEED TO REMOVE
                 // credentials:'include'
+                //test
                 const requestOptions = {
                     method: 'POST',
                     mode: 'cors', // no-cors, *cors, same-origin
