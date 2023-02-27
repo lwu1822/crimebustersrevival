@@ -71,8 +71,8 @@
             var id = data.id;
 
             //get note for the person 
-           //var getNoteURL = "http://localhost:8085/api/person/getnote";
-             var getNoteURL = "https://crimebusters.tk/api/person/getnote";
+           var getNoteURL = "http://localhost:8085/api/person/getnote";
+           //  var getNoteURL = "https://crimebusters.tk/api/person/getnote";
             
 
             var getNoteOptions = {
