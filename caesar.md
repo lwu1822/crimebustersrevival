@@ -6,20 +6,6 @@
     <title>Caesar Cipher</title>
 </head>
 <body>
-<h1>Caesar Cipher</h1>
-
-<p>Enter a message to be decrypted:</p>
-<input type="text" id="message">
-<br>
-<br>
-<button onclick="decrypt()">Decrypt</button>
-<br>
-<br>
-<p>Decrypted message:</p>
-<p id="decrypted"></p>
-
-<div id="log"></div>
-<div id="logSuccess"></div>
 
 <!-- Include the JavaScript file -->
 <script>
@@ -143,5 +129,20 @@ function decrypt() {
 }
 
 </script>
+<h1>Caesar Cipher</h1>
+
+<p>Enter a message to be decrypted:</p>
+<input type="text" id="message">
+<br>
+<br>
+<button onclick="decrypt()">Decrypt</button>
+<br>
+<br>
+<p>Decrypted message:</p>
+<p id="decrypted"></p>
+
+<div id="log"></div>
+<div id="logSuccess"></div>
+
 </body>
 </html>
