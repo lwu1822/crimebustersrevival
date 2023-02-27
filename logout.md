@@ -1,13 +1,8 @@
+User successfully logged out!
 
-
-
-
-<p> Codebusters Revival!
-The return of our awesome website. </p>
 
 <script>
-
-        //get user id from cookie (need id to delete user)
+//get user id from cookie (need id to delete user)
         var getUrl = "https://crimebusters.tk/api/person/findEmail";
 
         var getOptions = {
@@ -43,7 +38,7 @@ The return of our awesome website. </p>
        
                 var updateBody = {
                     id: id,
-                    loginStatus: "in"
+                    loginStatus: "out"
                 };
 
        
@@ -67,7 +62,7 @@ The return of our awesome website. </p>
                         const errorMsg = 'Login error: ' + response.status;
                         console.log(errorMsg);
                     
-                    window.location.href = "{{ site.baseurl }}/homepage";
+                        window.location.href = "{{ site.baseurl }}/homepage";
                     }
 
                     
@@ -77,6 +72,8 @@ The return of our awesome website. </p>
             }) 
             
         })
-    
+
+
+
 
 </script>

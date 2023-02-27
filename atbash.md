@@ -18,6 +18,9 @@
     <p>Decrypted message:</p>
     <p id="decrypted"></p>
 
+<div id="log"></div>
+<div id="logSuccess"></div>
+
 <!-- Include the JavaScript file -->
 <script src="atbash.js"></script>
 </body>

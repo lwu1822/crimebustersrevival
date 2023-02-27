@@ -1,33 +1,7 @@
-function decrypt() {
+function addnote() {
     // Get the message from the text box
-    var message = document.getElementById("message").value;
-
-    // Shift each letter of the message by 3
-    var decrypted = "";
-    for (var i = 0; i < message.length; i++) {
-        // Get the ASCII code of the current character
-        var c = message.charCodeAt(i);
-
-        if (c >= 65 && c <= 90) {  // uppercase letter
-            c = (25 - (c - 65)) % 26 + 65;
-        } else if (c >= 97 && c <= 122) {  // lowercase letter
-            c = (25 - (c - 97)) % 26 + 97;
-        }
-
-        // Append the encrypted character to the encrypted message
-        decrypted += String.fromCharCode(c);
-    }
-
-    // Update the HTML page with the encrypted message
-    document.getElementById("decrypted").innerHTML = decrypted;
-
-
-    //log button
-    var logButton = document.createElement("button"); 
-    var logText = document.createTextNode("Log?"); 
-    logButton.appendChild(logText);
-
-    logButton.onclick = function() {
+    var note = document.getElementById("note").value;   
+   
         console.log("hi");
 
         var getUrl = "https://crimebusters.tk/api/person/findEmail";
@@ -67,14 +41,11 @@ function decrypt() {
                 var baseurl = "https://crimebusters.tk"
         
                 // Authenticate endpoint
-                const login_url = baseurl + '/api/person/log';
+                const login_url = baseurl + '/api/person/note';
 
                 const body = {
                     email: email,
-                    cipherType: "atbash",
-                    plaintext: decrypted,
-                    ciphertext: message,
-                    userId: id
+                    text: note
                 };
 
             
@@ -104,20 +75,22 @@ function decrypt() {
                         return;
                     }
 
-                    console.log("Log success");
+                    console.log("Note success");
 
                     var p = document.createElement("p"); 
-                    var logSuccessMsg = document.createTextNode("Cipher successfully saved!"); 
-                    p.appendChild(logSuccessMsg);
-                    document.getElementById("logSuccess").appendChild(logSuccessMsg); 
+                    var noteSuccessMsg = document.createTextNode("Note successfully saved!"); 
+                    p.appendChild(noteSuccessMsg);
+                    document.getElementById("noteSuccess").appendChild(noteSuccessMsg); 
 
                 })
 
             
             })
-        })
-    };
+        });
+  //  };
 
-    document.getElementById("log").appendChild(logButton);
+    //document.getElementById("log").appendChild(logButton);
 
 }
+///test
+

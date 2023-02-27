@@ -10,6 +10,7 @@ body {
 
 .navbar {
   overflow: hidden;
+  border-radius: 8px;
   background-color: #D1A3CE;
   margin-bottom: 5%;
 }
@@ -26,6 +27,7 @@ body {
 .dropdown {
   float: left;
   overflow: hidden;
+  border-radius: 8px;
 }
 
 .dropdown .dropbtn {
@@ -35,6 +37,7 @@ body {
   color: #001535;
   padding: 14px 16px;
   background-color: inherit;
+  border-radius: 8px;
   font-family: inherit;
   margin-top: 3%;
 }
@@ -47,6 +50,7 @@ body {
   display: none;
   position: absolute;
   background-color: #D1A3CE;
+  border-radius: 8px;
   padding-top: 1%;
   padding-bottom: 2%;
   min-width: 160px;
@@ -99,11 +103,13 @@ dropdown leads to settings */
   float: right;
   overflow: hidden;
   background-color: #001535;
+  border-radius: 8px;
 }
 
 .userMenu .userMenuButton {
   font-size: 16px;  
   border: none;
+  border-radius: 8px;
   outline: none;
   color: #005b96;
   padding: 14px 16px;
@@ -119,6 +125,7 @@ dropdown leads to settings */
 .userMenuDropdownContent {
   display: none;
   position: absolute;
+  border-radius: 8px;
   background-color: #001535;
   padding-top: 1%;
   padding-bottom: 2%;
@@ -167,10 +174,18 @@ dropdown leads to settings */
         <a href="{{ site.baseurl }}/affine">Affine</a>
         <a href="{{ site.baseurl }}/caesar">Caesar</a>
         <a href="{{ site.baseurl }}/vigenere">Vigenere</a>
+        <a href="{{ site.baseurl }}/history">History</a>
     </div>
   </div> 
   <a class="dropbtn" href="{{ site.baseurl }}/learn">Learn</a>
-    <a class="dropbtn" href="{{ site.baseurl }}/login">Log-In/Sign-Up</a>
+    <a class="dropbtn" href="{{ site.baseurl }}/trivia">Trivia</a>
+    <a class="dropbtn" href="{{ site.baseurl }}/jokes">jokes</a>
+    <a class="dropbtn" href="{{ site.baseurl }}/note">Notes</a>
+  <a class="dropbtn" href="{{ site.baseurl }}/quiz">Quiz</a>
+  <!--show/hide login button in navbar-->
+  <div id="login">
+    <a class="dropbtn" href="{{ site.baseurl }}/login">Log-In</a>
+  </div>
     <a class="dropbtn" href="{{ site.baseurl }}/contactus">Contact Us</a>
 </div>
 
@@ -190,16 +205,21 @@ dropdown leads to settings */
 
 
 <script>
+
+
+
   //default: user menu no show (only show if not on specific pages in list 
   //below)
-  document.getElementById("makeUserMenu").innerHTML="";
 
+
+  /*
   //list of urls where i don't want user menu bar to show up (because
   //the user has not logged in)
   var login = window.location.origin + "/login";
   var signup = window.location.origin + "/signup";
   var homepage = window.location.origin + "/homepage";
-  var page = [login, signup, homepage];
+  var logout = window.location.origin + "/logout";
+  var page = [login, signup, homepage, logout];
 
   //if showUsrMenu = true, user menu shows up
   var showUsrMenu = true;
@@ -209,8 +229,127 @@ dropdown leads to settings */
       showUsrMenu = false; 
     }
   }
+  */
 
-  if (showUsrMenu) {
+ 
+
+
+
+
+
+ 
+
+  var usrSettingsUrl = "https://crimebusters.tk/api/person/findEmail";
+
+  var usrSettingsOptions = {
+    method: 'GET', 
+    mode: 'cors', 
+    cache: 'default', 
+    credentials: 'include', 
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  };
+
+  fetch(usrSettingsUrl, usrSettingsOptions)
+    .then(response => {
+      //error message
+      if (response.status !== 200) {
+        const errorMsg = 'Database response error: ' + response.status;
+        console.log(errorMsg);
+        //HTML error output
+        /*
+        const p = document.createElement("p");
+        p.appendChild(document.createTextNode("Oops! There seems to be an error with the server. Sorry for the inconvenience, please try again at a later time.")); 
+        document.getElementById("loginError").appendChild(p);
+        */
+        return;
+      }
+
+      //show user info if success
+      response.json().then(data => {
+        console.log(data);
+        
+        var id = data.id;
+
+        console.log("home.html id: " + id); 
+
+
+        var baseUrl = "https://crimebusters.tk/api/person/";
+
+        var idUrl = id.toString(); 
+
+        var specificUsrUrl = baseUrl + idUrl; 
+
+        var specificUsrOptions = {
+          method: 'GET', 
+          mode: 'cors', 
+          cache: 'default', 
+          credentials: 'include', 
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        };
+
+        fetch(specificUsrUrl, specificUsrOptions)
+          .then(response => {
+            //error message
+            if (response.status !== 200) {
+              const errorMsg = 'Database response error: ' + response.status;
+              console.log(errorMsg);
+              //HTML error output
+              /*
+              const p = document.createElement("p");
+              p.appendChild(document.createTextNode("Oops! There seems to be an error with the server. Sorry for the inconvenience, please try again at a later time.")); 
+              document.getElementById("loginError").appendChild(p);
+              */
+              return;
+            }
+
+            //show user info if success
+            response.json().then(data => {
+              console.log(data);
+              
+              console.log(data.loginStatus);
+
+              var loginStatus = data.loginStatus; 
+
+              if (loginStatus == "in") {
+
+                document.getElementById("makeUserMenu").innerHTML = "";
+
+                document.getElementById("login").innerHTML = ""; 
+                
+                var a = document.createElement("a");
+                var linkText = document.createTextNode("Log-Out"); 
+                a.appendChild(linkText);
+                a.href = "{{ site.baseurl }}/logout"; 
+                a.setAttribute("class", "dropbtn");
+                document.getElementById("login").appendChild(a); 
+
+                showUserMenu();
+              } else {
+                document.getElementById("makeUserMenu").innerHTML = "";
+
+                document.getElementById("login").innerHTML = ""; 
+                
+                var a = document.createElement("a");
+                var linkText = document.createTextNode("Log-In"); 
+                a.appendChild(linkText);
+                a.href = "{{ site.baseurl }}/login"; 
+                a.setAttribute("class", "dropbtn");
+                document.getElementById("login").appendChild(a); 
+              }
+             
+              
+            })
+          })
+         
+      })
+    })
+
+function showUserMenu() {
+ document.getElementById("makeUserMenu").innerHTML="";
     /* HTML code looks like this:
 
     <div class="userMenu">
@@ -274,9 +413,11 @@ dropdown leads to settings */
           const errorMsg = 'Database response error: ' + response.status;
           console.log(errorMsg);
           //HTML error output
+          /*
           const p = document.createElement("p");
           p.appendChild(document.createTextNode("Oops! There seems to be an error with the server. Sorry for the inconvenience, please try again at a later time.")); 
           document.getElementById("loginError").appendChild(p);
+          */
           return;
         }
 
@@ -292,11 +433,55 @@ dropdown leads to settings */
         })
 
       })
-  }
+}
+
+
+
 
     var pointCount= 0;
     function incrementCount(){
        count++;
     }
+
+
+
+    /*ARCHIVED CODE
+        var newId = ""; 
+
+    var usrSettingsUrl = "https://crimebusters.tk/api/person/findEmail";
+
+    var usrSettingsOptions = {
+    method: 'GET', 
+    mode: 'cors', 
+    cache: 'default', 
+    credentials: 'include', 
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  };
+
+    async function getId(url, options) {
+      var response = await fetch(url, options);
+      var data = await response.json();
+
+      return data.id;
+    }
+
+
+    async function main() {
+      
+      
+      getId(usrSettingsUrl, usrSettingsOptions)
+      .then(data => console.log(data));
+      
+
+      newId = await getId(usrSettingsUrl, usrSettingsOptions);
+      console.log("newid: " + newId);
+    }
+
+  
+
+    console.log("hi" + main());
+    */
   
 </script>
