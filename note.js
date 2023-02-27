@@ -51,7 +51,7 @@ function addnote() {
                     email: email,
                     text: note
                 };
-
+//jghghjgkj
             
 
                 // Set Headers to support cross origin
