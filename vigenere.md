@@ -23,8 +23,9 @@
 <script>
   function vigencrypt() {
     let expression = document.getElementById("message").value;
+    let expression2 = document.getElementById("key").value;
     const urlStart = "https://crimebusters.tk/api/vigenc/all/";
-    const url = urlStart + expression;
+    const url = urlStart + expression + "/" + expression2;
     console.log(url); 
     fetch(url)
       .then(res => res.json())
