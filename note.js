@@ -50,7 +50,7 @@ function addnote() {
                     text: note
                 };
 
-
+                console.log("body: " + body);
                 // Set Headers to support cross origin
                 //IMPORTANT!!!!!!! TO SUCCESSFULLY POST, YOU NEED TO REMOVE
                 // credentials:'include'
@@ -60,7 +60,7 @@ function addnote() {
     method: "POST",
     mode: "cors", // no-cors, *cors, same-origin
     cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
-    credentials: "include", // include, *same-origin, omit
+    //credentials: "include", // include, *same-origin, omit
     body: JSON.stringify(body),
     headers: {
       "content-type": "application/json",
@@ -73,8 +73,7 @@ function addnote() {
                     // trap error response from Web API
                     if (!response.ok) {
                         const errorMsg = 'Login error: ' + response.status;
-                        console.log(errorMsg);
-                    
+                        console.log(errorMsg);                    
                         return;
                     }
 
