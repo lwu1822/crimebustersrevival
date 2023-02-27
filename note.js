@@ -49,7 +49,7 @@ function addnote() {
 
                 const body = {
                     email: email,
-                    text: "hjhjhhj"
+                    text: note
                 };
 
             
@@ -79,6 +79,12 @@ function addnote() {
                     
                         return;
                     }
+
+                    response.json().then(data => {
+
+                        console.log(data);
+    
+                    },    
 
                     console.log("Note success");
 
