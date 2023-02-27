@@ -89,7 +89,7 @@ function addnote() {
         });
   //  };
 
-    document.getElementById("log").appendChild(logButton);
+    //document.getElementById("log").appendChild(logButton);
 
 }
 ///test
