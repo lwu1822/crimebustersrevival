@@ -45,32 +45,29 @@ function addnote() {
                 //var baseurl = "https://crimebusters.tk";
         
                 // Authenticate endpoint
-                const login_url = baseurl + '/api/person/note';
+                const login_url = baseurl + '/api/notes/note';
 
                 const body = {
                     email: email,
                     text: note
                 };
-//jghghjgkj
-            
+
 
                 // Set Headers to support cross origin
                 //IMPORTANT!!!!!!! TO SUCCESSFULLY POST, YOU NEED TO REMOVE
                 // credentials:'include'
                 //test
-                const requestOptions = {
-                    method: 'POST',
-                    mode: 'cors', // no-cors, *cors, same-origin
-                    cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
-                    ////credentials: 'include', // include, *same-origin, omit
-                    body: JSON.stringify(body),
-                    headers: {
-                        "content-type": "application/json"
-                    },
-                };
-
-
-
+                // Set Headers to support cross origin
+  const requestOptions = {
+    method: "POST",
+    mode: "cors", // no-cors, *cors, same-origin
+    cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+    credentials: "include", // include, *same-origin, omit
+    body: JSON.stringify(body),
+    headers: {
+      "content-type": "application/json",
+    },
+  };
                 //test   test
             
                 fetch(login_url, requestOptions)
