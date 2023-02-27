@@ -38,6 +38,7 @@ function addnote() {
                 var email = data.email; 
 
                 console.log("id: " + id);
+                console.log("note: " + note);
 
 
                 //var baseurl = "http://localhost:8085";
