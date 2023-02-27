@@ -45,8 +45,8 @@ input[type="radio"] {
     <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body>
-    <h1><div>Welcome to Code Busters Quiz</div></h1>
-    <h3><div>Register to Code Busters quiz and test your knowledge!!</div></h3>
+    <h1><div>Welcome to our Code Busters Quiz</div></h1>
+    <h3>Register to the quiz and test your knowledge!!</h3>
     <br>
     <form>
     <div id="errors" style="color:red">
