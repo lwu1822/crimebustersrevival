@@ -1,9 +1,8 @@
 function enterQuiz() {
-  var url = "http://localhost:8085/api/quiz/quizTaker";
+  var url = "https://crimebusters.tk/api/quiz/quizTaker";
   // Uncomment next line for localhost testing
  /*
   {
-    "name":"DB",
     "email":"test2@test.com"
 }
   
