@@ -5,6 +5,7 @@ function addnote() {
         console.log("hi");
 
         var getUrl = "http://localhost:8085/api/person/findEmail";
+        //test
 
         var getOptions = {
             method: 'GET', 
