@@ -109,7 +109,7 @@
                       
                       // td for joke cell
                       const personName = document.createElement("td");
-                      personName.innerHTML = data.Email;  // add fetched data to innerHTML
+                      personName.innerHTML = data.email;  // add fetched data to innerHTML
 
                        // td for joke cell
                       const noteText = document.createElement("td");
