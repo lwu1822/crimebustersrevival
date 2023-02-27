@@ -56,6 +56,9 @@ function addnote() {
                 // credentials:'include'
                 //test
                 // Set Headers to support cross origin
+//ghfghfhjg
+
+
   const requestOptions = {
     method: "POST",
     mode: "cors", // no-cors, *cors, same-origin uguu
