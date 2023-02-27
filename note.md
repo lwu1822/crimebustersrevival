@@ -100,7 +100,7 @@
                     console.log(data);
 */
                 
-                for (const row of data) {
+               // for (const row of data) {
                     console.log("in row");
                     console.log(row);
                    // if (id == row.userId) {
@@ -125,7 +125,7 @@
                       document.getElementById("noteTable").appendChild(tr);
                     //}  
                                    
-                    }               
+                  //  }               
 
                 })
                 
