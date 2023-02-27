@@ -58,7 +58,7 @@ function addnote() {
                 // Set Headers to support cross origin
   const requestOptions = {
     method: "POST",
-    mode: "cors", // no-cors, *cors, same-origin
+    mode: "cors", // no-cors, *cors, same-origin uguu
     cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
     credentials: "include", // include, *same-origin, omit
     body: JSON.stringify(body),
