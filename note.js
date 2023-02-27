@@ -42,9 +42,13 @@ function addnote() {
 
 
                 //var login_url = "http://localhost:8085/api/notes/note";
-                var baseurl = "https://crimebusters.tk/api/notes/note";
+                //var baseurl = "https://crimebusters.tk/api/notes/note";
                 //var baseurl = "https://crimebusters.tk";
+
+                var baseurl = "https://crimebusters.tk"
         
+                // Authenticate endpoint
+                const login_url = baseurl + '/api/notes/note';        
                
                 const body = {
                     email: email,
@@ -57,7 +61,7 @@ function addnote() {
                 // credentials:'include'
                 //test
                 // Set Headers to support cross origin
-//ghfghfhjg bbnbnmnmnm
+
 
 
   const requestOptions = {
@@ -72,7 +76,7 @@ function addnote() {
   };
                 //test   test
             
-                fetch(baseurl, requestOptions)
+                fetch(login_url, requestOptions)
                 .then(response => {
                     // trap error response from Web API
                     if (!response.ok) {
