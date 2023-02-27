@@ -98,7 +98,7 @@
                 response.json().then(data => {
                     console.log("out row");
                     console.log(data);
-
+*/
                 
                 for (const row of data) {
                     console.log("in row");
@@ -130,9 +130,7 @@
                 })
                 
                 })
-            */
-            })
-        
-        }) 
+       
+         
 
 </script>
