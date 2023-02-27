@@ -86,8 +86,9 @@ function addnote() {
                     response.json().then(data => {
 
                         console.log(data);
+                        console.log("hiiiiiiiiiiiii");
     
-                    },    
+                    }),    
 
                     console.log("Note success");
 
