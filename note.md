@@ -109,11 +109,11 @@
                       
                       // td for joke cell
                       const personName = document.createElement("td");
-                      personName.innerHTML = row.Email;  // add fetched data to innerHTML
+                      personName.innerHTML = data.Email;  // add fetched data to innerHTML
 
                        // td for joke cell
                       const noteText = document.createElement("td");
-                      noteText.innerHTML = row.Text;  // add fetched data to innerHTML
+                      noteText.innerHTML = data.Text;  // add fetched data to innerHTML
           
                                             
                       // this builds ALL td's (cells) into tr (row) element
