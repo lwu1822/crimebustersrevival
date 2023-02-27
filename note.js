@@ -4,8 +4,8 @@ function addnote() {
    
         console.log("hi");
 
-       var getUrl = "http://localhost:8085/api/person/findEmail";
-        //var getUrl = "https://crimebusters.tk/api/person/findEmail"; *
+       // var getUrl = "http://localhost:8085/api/person/findEmail";
+        var getUrl = "https://crimebusters.tk/api/person/findEmail";
         //test
 
         var getOptions = {
@@ -38,15 +38,14 @@ function addnote() {
                 var email = data.email; 
 
                 console.log("id: " + id);
-                /*
                 console.log("note: " + note);
 
 
-                var login_url = "http://localhost:8085/api/notes/note";
+                //var login_url = "http://localhost:8085/api/notes/note";
                 //var baseurl = "https://crimebusters.tk/api/notes/note";
                 //var baseurl = "https://crimebusters.tk";
 
-                //var baseurl = "https://crimebusters.tk" *
+                var baseurl = "https://crimebusters.tk"
         
                 // Authenticate endpoint
                 const login_url = baseurl + '/api/notes/note';        
@@ -62,7 +61,6 @@ function addnote() {
                 // credentials:'include'
                 //test
                 // Set Headers to support cross origin
-                */
 
 
 
@@ -112,4 +110,3 @@ function addnote() {
 
 }
 ///test
-
