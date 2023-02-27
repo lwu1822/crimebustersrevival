@@ -7,6 +7,10 @@ h1 {
   text-align: center;
 }
 
+h3 {
+  text-align: center;
+}
+
 form {
   max-width: 500px;
   margin: 0 auto;
