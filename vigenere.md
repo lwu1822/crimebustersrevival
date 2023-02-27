@@ -14,7 +14,7 @@
     <input type="text" id="key">
     <br>
     <br>
-    <button onclick="encrypt()">Decrypt</button>
+    <button onclick="vigencrypt()">Decrypt</button>
     <br>
     <br>
     <p>Decrypted message:</p>
