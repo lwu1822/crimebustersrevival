@@ -11,7 +11,7 @@
     <input type="text" id="note">
     <br>
     <br>
-    <button onclick="addnote()">Add Note</button>
+    <!--<button onclick="addnote()">Add Note</button>-->
     <br>
     <br>
 <div id="note"></div>
@@ -19,7 +19,7 @@
 <!--hvghghhj ---->
 
 <!-- Include the JavaScript file -->
-<!--<script src="note.js"></script>-->
+<!-- <script src="note.js"></script>-->
 </body>
 </html>
 
