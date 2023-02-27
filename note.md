@@ -100,6 +100,7 @@
 
                 
                 for (const row of data) {
+                    console.log(row);
                    // if (id == row.userId) {
                     // make "tr element" for each "row of data"
                       const tr = document.createElement("tr");
