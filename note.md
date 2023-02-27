@@ -100,17 +100,17 @@
 
                 
                 for (const row of data) {
-                    if (id == row.userId) {
+                   // if (id == row.userId) {
                     // make "tr element" for each "row of data"
                       const tr = document.createElement("tr");
                       
                       // td for joke cell
                       const personName = document.createElement("td");
-                      personName.innerHTML = row.personName;  // add fetched data to innerHTML
+                      personName.innerHTML = row.Email;  // add fetched data to innerHTML
 
                        // td for joke cell
                       const noteText = document.createElement("td");
-                      noteText.innerHTML = row.noteText;  // add fetched data to innerHTML
+                      noteText.innerHTML = row.Text;  // add fetched data to innerHTML
           
                                             
                       // this builds ALL td's (cells) into tr (row) element
@@ -120,7 +120,7 @@
           
                       // this adds all the tr (row) work above to the HTML "result" container
                       document.getElementById("noteTable").appendChild(tr);
-                    }                 
+                    //}                 
                     }               
 
                 })
