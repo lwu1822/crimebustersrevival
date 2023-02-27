@@ -41,12 +41,10 @@ function addnote() {
                 console.log("note: " + note);
 
 
-                var baseurl = "http://localhost:8085";
+                var login_url = "http://localhost:8085/api/notes/note";
                 //var baseurl = "https://crimebusters.tk";
         
-                // Authenticate endpoint
-                const login_url = baseurl + '/api/notes/note';
-
+               
                 const body = {
                     email: email,
                     text: note
