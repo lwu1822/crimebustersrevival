@@ -92,3 +92,5 @@ function addnote() {
     document.getElementById("log").appendChild(logButton);
 
 }
+///test
+
