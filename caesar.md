@@ -24,7 +24,7 @@
 function decrypt() {
   let expression = document.getElementById("message").value;
 
-  const urlStart = "http://localhost:8085/api/decrypt/all/";
+  const urlStart = "https://crimebusters.tk/api/decrypt/all/";
   const url = urlStart + expression;
 
   console.log(url); 
@@ -39,7 +39,7 @@ function decrypt() {
       document.getElementById("decrypted").innerHTML = decryptedMessage; 
 
       //log stuff
-      var getUrl = "http://localhost:8085/api/person/findEmail";
+      var getUrl = "https://crimebusters.tk/api/person/findEmail";
 
       var getOptions = {
         method: 'GET', 
@@ -72,7 +72,7 @@ function decrypt() {
 
             console.log("id: " + id);
 
-            var baseurl = "http://localhost:8085"
+            var baseurl = "https://crimebusters.tk"
        
             // Authenticate endpoint
             const login_url = baseurl + '/api/person/log';
