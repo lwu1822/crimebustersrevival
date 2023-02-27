@@ -67,7 +67,7 @@
 
         //show user info if success
         response.json().then(data => {
-            console.log("DATA: " + data);
+            console.log("DATA: " + JSON.stringify(data));
             var id = data.id;
 
             /*
@@ -102,7 +102,7 @@
                 
                // for (const row of data) {
                     console.log("in row");
-                    console.log(row);
+                    console.log(JSON.stringify(data));
                    // if (id == row.userId) {
                     // make "tr element" for each "row of data"
                       const tr = document.createElement("tr");
