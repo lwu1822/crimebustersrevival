@@ -10,7 +10,7 @@ function addnote() {
             method: 'GET', 
             mode: 'cors', 
             cache: 'default', 
-            credentials: 'include', 
+           // credentials: 'include', 
             headers: {
                 'Content-Type': 'application/json',
             },
