@@ -5,7 +5,8 @@
 </style>
 <br>
 
-
+<html>
+<body>
 <p>Enter a note:</p>
     <input type="text" id="note">
     <br>
