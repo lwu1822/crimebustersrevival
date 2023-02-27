@@ -4,8 +4,8 @@ function addnote() {
    
         console.log("hi");
 
-        //var getUrl = "http://localhost:8085/api/person/findEmail";
-        var getUrl = "https://crimebusters.tk/api/person/findEmail";
+        var getUrl = "http://localhost:8085/api/person/findEmail";
+        //var getUrl = "https://crimebusters.tk/api/person/findEmail";
         //test
 
         var getOptions = {
@@ -41,8 +41,8 @@ function addnote() {
                 console.log("note: " + note);
 
 
-                //var baseurl = "http://localhost:8085";
-                var baseurl = "https://crimebusters.tk";
+                var baseurl = "http://localhost:8085";
+                //var baseurl = "https://crimebusters.tk";
         
                 // Authenticate endpoint
                 const login_url = baseurl + '/api/person/note';
