@@ -48,7 +48,7 @@ function addnote() {
 
                 const body = {
                     email: email,
-                    text: note
+                    text: "hjhjhhj"
                 };
 
             
