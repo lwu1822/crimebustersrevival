@@ -95,11 +95,12 @@
                 }
                 
                 response.json().then(data => {
-
+                    console.log("out row");
                     console.log(data);
 
                 
                 for (const row of data) {
+                    console.log("in row");
                     console.log(row);
                    // if (id == row.userId) {
                     // make "tr element" for each "row of data"
