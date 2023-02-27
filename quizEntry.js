@@ -3,7 +3,6 @@ function enterQuiz() {
   // Uncomment next line for localhost testing
  /*
   {
-    "name":"DB",
     "email":"test2@test.com"
 }
   
