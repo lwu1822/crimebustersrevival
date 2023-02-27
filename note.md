@@ -19,7 +19,7 @@
 <!--hvghghhj ---->
 
 <!-- Include the JavaScript file -->
-<script src="note.js"></script>
+<!--<script src="note.js"></script>-->
 </body>
 </html>
 
@@ -42,7 +42,7 @@
 <script>
 
     //get user info based on cookie
-    //var usrSettingsUrl = "http://localhost:8085/api/person/findEmail"; 
+    //var usrSettingsUrl = "http://localhost:8085/api/person/findEmail";
     var usrSettingsUrl = "https://crimebusters.tk/api/person/findEmail";
 
     var usrSettingsOptions = {
@@ -67,9 +67,10 @@
 
         //show user info if success
         response.json().then(data => {
-            console.log(data);
+            console.log("DATA: " + data);
             var id = data.id;
 
+            /*
             //get note for the person 
            var getNoteURL = "http://localhost:8085/api/person/getnote";
            //  var getNoteURL = "https://crimebusters.tk/api/person/getnote";
@@ -122,13 +123,16 @@
           
                       // this adds all the tr (row) work above to the HTML "result" container
                       document.getElementById("noteTable").appendChild(tr);
-                    //}                 
+                    //}  
+                                   
                     }               
 
                 })
                 
                 })
+            */
             })
+        
         }) 
 
 </script>

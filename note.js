@@ -38,6 +38,7 @@ function addnote() {
                 var email = data.email; 
 
                 console.log("id: " + id);
+                /*
                 console.log("note: " + note);
 
 
@@ -61,6 +62,7 @@ function addnote() {
                 // credentials:'include'
                 //test
                 // Set Headers to support cross origin
+                */
 
 
 
