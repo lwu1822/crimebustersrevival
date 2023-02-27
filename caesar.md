@@ -81,7 +81,9 @@ function decrypt() {
 
             const body = {
               email: email,
-              log: decryptedMessage,
+              cipherType: "caesar",
+              plaintext: document.getElementById("message").value,
+              ciphertext: decryptedMessage,
               userId: id
             };
 
