@@ -8,7 +8,7 @@
 <body>
 <h1>Caesar Cipher</h1>
 
-<p>Enter a message to be decrypyted:</p>
+<p>Enter a message to be decrypted:</p>
 <input type="text" id="message">
 <br>
 <br>
@@ -74,12 +74,12 @@ function decrypt() {
             //if success
             console.log("User id successfully obtained");
 
-            response.json().then(data => {
-                console.log(data);
+            response.json().then(data2 => {
+                console.log(data2);
 
                 //get id and email from cookie
-                var id = data.id;
-                var email = data.email; 
+                var id = data2.id;
+                var email = data2.email; 
 
                 console.log("id: " + id);
 
@@ -92,12 +92,12 @@ function decrypt() {
                 const body = {
                     email: email,
                     cipherType: "caesar",
-                    ciphertext: message, 
-                    plaintext: decrypted,
+                    ciphertext: expression, 
+                    plaintext: decryptedMessage,
                     userId: id
                 };
 
-            
+
 
                 // Set Headers to support cross origin
                 //IMPORTANT!!!!!!! TO SUCCESSFULLY POST, YOU NEED TO REMOVE
