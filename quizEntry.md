@@ -1,9 +1,14 @@
 <style>
 body {
   font-family: sans-serif;
+  text-align: center;
 }
 
 h1 {
+  text-align: center;
+}
+
+h3 {
   text-align: center;
 }
 
@@ -41,19 +46,19 @@ input[type="radio"] {
     <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body>
-    <h1><div>Welcome to Code Busters Quiz</div></h1>
-    <h3><div>Register to Code Busters quiz and test your knowledge!!</div></h3>
+    <h1><div>Welcome to our Code Busters Quiz</div></h1>
+    <h3>Register to the quiz and test your knowledge!!</h3>
     <br>
     <form>
     <div id="errors" style="color:red">
     </div>
       <div>
-         <label>name :</label>
+         <label>Name :</label>
          <input id="pName" type = "input" placeholder="your name">
       </div>
       <p/>
       <div>
-         <label>email :</label>
+         <label>Email :</label>
         <input id="email" type = "input" placeholder ="your email">
       </div>
        <p/> <p/>           

@@ -6,17 +6,6 @@
     <title>Caesar Cipher</title>
 </head>
 <body>
-<h1>Caesar Cipher</h1>
-
-<p>Enter a message to be decrypyted:</p>
-<input type="text" id="message">
-<br>
-<br>
-<button onclick="decrypt()">Decrypt</button>
-<br>
-<br>
-<p>Decrypted message:</p>
-<p id="decrypted"></p>
 
 <!-- Include the JavaScript file -->
 <script>
@@ -24,7 +13,7 @@
 function decrypt() {
   let expression = document.getElementById("message").value;
 
-  const urlStart = "http://localhost:8085/api/decrypt/all/";
+  const urlStart = "https://crimebusters.tk/api/decrypt/all/";
   const url = urlStart + expression;
 
   console.log(url); 
@@ -37,86 +26,123 @@ function decrypt() {
       const decryptedMessage = data.result;
       
       document.getElementById("decrypted").innerHTML = decryptedMessage; 
+    
 
-      //log stuff
-      var getUrl = "http://localhost:8085/api/person/findEmail";
+      //log button
+    var logButton = document.createElement("button"); 
+    var logText = document.createTextNode("Log?"); 
+    logButton.appendChild(logText);
 
-      var getOptions = {
-        method: 'GET', 
-        mode: 'cors', 
-        cache: 'default', 
-        credentials: 'include', 
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      };
+    logButton.onclick = function() {
+        console.log("hi");
 
-      fetch(getUrl, getOptions)
+        var getUrl = "https://crimebusters.tk/api/person/findEmail";
+
+        var getOptions = {
+            method: 'GET', 
+            mode: 'cors', 
+            cache: 'default', 
+            credentials: 'include', 
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        };
+
+        fetch(getUrl, getOptions)
         .then(response => {
-          //error message
-          if (!response.ok) {
-            const errorMsg = 'Login error: ' + response.status;
-            console.log(errorMsg);
-            return;
-          }
+            //error message
+            if (!response.ok) {
+                const errorMsg = 'Login error: ' + response.status;
+                console.log(errorMsg);
+                return;
+            }
 
-          //if success
-          console.log("User id successfully obtained");
+            //if success
+            console.log("User id successfully obtained");
 
-          response.json().then(data2 => {
-            console.log(data2);
+            response.json().then(data2 => {
+                console.log(data2);
 
-            //get id and email from cookie
-            var id = data2.id;
-            var email = data2.email; 
+                //get id and email from cookie
+                var id = data2.id;
+                var email = data2.email; 
 
-            console.log("id: " + id);
+                console.log("id: " + id);
 
-            var baseurl = "http://localhost:8085"
-       
-            // Authenticate endpoint
-            const login_url = baseurl + '/api/person/log';
 
-            const decryptedMessage = data.result;
+                var baseurl = "https://crimebusters.tk"
+        
+                // Authenticate endpoint
+                const login_url = baseurl + '/api/person/log';
 
-            const body = {
-              email: email,
-              log: decryptedMessage,
-              userId: id
-            };
+                const body = {
+                    email: email,
+                    cipherType: "caesar",
+                    ciphertext: expression, 
+                    plaintext: decryptedMessage,
+                    userId: id
+                };
 
-            // Set Headers to support cross origin
-            //IMPORTANT!!!!!!! TO SUCCESSFULLY POST, YOU NEED TO REMOVE
-            // credentials:'include'
-            const requestOptions = {
-              method: 'POST',
-              mode: 'cors', // no-cors, *cors, same-origin
-              cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
-              //credentials: 'include', // include, *same-origin, omit
-              body: JSON.stringify(body),
-              headers: {
-                "content-type": "application/json"
-              },
-            };
 
-            fetch(login_url, requestOptions)
-              .then(response => {
-                // trap error response from Web API
-                if (!response.ok) {
-                  const errorMsg = 'Login error: ' + response.status;
-                  console.log(errorMsg);
-                  return;
-                }
 
-                console.log("Log success");
+                // Set Headers to support cross origin
+                //IMPORTANT!!!!!!! TO SUCCESSFULLY POST, YOU NEED TO REMOVE
+                // credentials:'include'
+                const requestOptions = {
+                    method: 'POST',
+                    mode: 'cors', // no-cors, *cors, same-origin
+                    cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+                    //credentials: 'include', // include, *same-origin, omit
+                    body: JSON.stringify(body),
+                    headers: {
+                        "content-type": "application/json"
+                    },
+                };
 
-              })
+            
+                fetch(login_url, requestOptions)
+                .then(response => {
+                    // trap error response from Web API
+                    if (!response.ok) {
+                        const errorMsg = 'Login error: ' + response.status;
+                        console.log(errorMsg);
+                    
+                        return;
+                    }
 
-          })
+                    console.log("Log success");
+
+                    var p = document.createElement("p"); 
+                    var logSuccessMsg = document.createTextNode("Cipher successfully saved!"); 
+                    p.appendChild(logSuccessMsg);
+                    document.getElementById("logSuccess").appendChild(logSuccessMsg); 
+
+                })
+
+            
+            })
         })
-    })
+    };
+
+    document.getElementById("log").appendChild(logButton);
+}
 }
 
 </script>
+<h1>Caesar Cipher</h1>
+
+<p>Enter a message to be decrypted:</p>
+<input type="text" id="message">
+<br>
+<br>
+<button onclick="decrypt()">Decrypt</button>
+<br>
+<br>
+<p>Decrypted message:</p>
+<p id="decrypted"></p>
+
+<div id="log"></div>
+<div id="logSuccess"></div>
+
 </body>
 </html>
