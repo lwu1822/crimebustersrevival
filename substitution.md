@@ -8,23 +8,23 @@
 <body>
 <h1>Substitution Cipher</h1>
 
-<p>Enter a message to be decrypted:</p>
+<p>Enter a message to be encrypted:</p>
     <input type="text" id="message">
     <p>Key:</p>
     <input type="text" id="key">
     <br>
     <br>
-    <button onclick="subscrypt()">Decrypt</button>
+    <button onclick="subscrypt()">Encrypt</button>
     <br>
     <br>
-    <p>Decrypted message:</p>
+    <p>Encrypted message:</p>
     <p id="encrypted"></p>
 <!-- Include the JavaScript file -->
 <script>
   function subscrypt() {
     let expression = document.getElementById("message").value;
     let expression2 = document.getElementById("key").value;
-    const urlStart = "https://crimebusters.tk/api/substitution/all/";
+    const urlStart = "https://crimebusters.tk/api/subsc/all/";
     const url = urlStart + expression + "/" + expression2;
     console.log(url); 
     fetch(url)
