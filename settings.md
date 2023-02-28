@@ -110,6 +110,7 @@
   <div id="email"></div>
   <div id="name"></div>
   <div id="dob"></div>
+  <div id="roles"></div>
 </div>
 <br>
 
@@ -199,6 +200,9 @@
         //00:00:00.0
         dob = dob.slice(0, -10)
 
+        var role = data.personrole[0].role;
+        console.log("role" + role);
+
         //print user info (HTML)
         var p = document.createElement("p");
         p.appendChild(document.createTextNode("Email: " + email)); 
@@ -214,6 +218,21 @@
         p.appendChild(document.createTextNode("Birthday: " + dob)); 
         document.getElementById("dob").appendChild(p);
          
+        //roles
+        var br = document.createElement("br");
+        p = document.createElement("p");
+        p.appendChild(document.createTextNode("Roles: ")); 
+        document.getElementById("roles").appendChild(p);
+        for (var i = 0; i < data.personrole.length; i++) {
+
+          p = document.createElement("p");
+          p.appendChild(document.createTextNode(data.personrole[i].role)); 
+
+          document.getElementById("roles").appendChild(p);
+          document.getElementById("roles").appendChild(br);
+        }
+        
+
       })
     })
   
