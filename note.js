@@ -93,7 +93,7 @@ function addnote() {
                         console.log(data);
                         console.log("hiiiiiiiiiiiii");
     
-                    }),    
+                   
 
                     console.log("Note success");
 
@@ -128,6 +128,7 @@ function addnote() {
           
                       // this adds all the tr (row) work above to the HTML "result" container
                       document.getElementById("noteTable").appendChild(tr);
+                    })
 
                 })
 
