@@ -105,6 +105,8 @@ function addnote() {
                     document.getElementById("mainTable").innerHTML = "";
 
                     console.log(data);
+                    console.log("email " + data.email);
+                    console.log("note " + data.text);
                    // if (id == row.userId) {
                     // make "tr element" for each "row of data"
                       const tr = document.createElement("tr");
