@@ -25,6 +25,7 @@
 <br>
 <br>
 
+<div id="nameMsg"></div>
 <div id="passwordMsg"></div>
 <div id="successMsg" class="test"></div>
 
@@ -37,6 +38,9 @@
 
 
 <script>
+
+    var today = new Date().toISOString().split('T')[0];
+    document.getElementById("dob").setAttribute('max', today);
 
     function signup() {
 
@@ -120,6 +124,13 @@
                     const errorMsg = 'Login error: ' + response.status;
                     console.log(errorMsg);
 
+                    if (response.status == 400) {
+                        console.log("Name format incorrect");
+                        var p = document.createElement("p");
+                        var msg = document.createTextNode("Please enter your full name."); 
+                        p.appendChild(msg); 
+                        document.getElementById("nameMsg").appendChild(p); 
+                    }
                 
                     return;
                 }

@@ -48,7 +48,8 @@ function addnote() {
                 var baseurl = "http://localhost:4002"
         
                 // Authenticate endpoint
-                const login_url = baseurl + '/api/notes/note';        
+               // const login_url = baseurl + '/api/notes/note';     
+                const login_url = 'http://localhost:4002/api/notes/note';        
                
                 const body = {
                     email: email,
