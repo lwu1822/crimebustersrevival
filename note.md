@@ -44,7 +44,8 @@
     //get user info based on cookie
     //var usrSettingsUrl = "http://localhost:8085/api/person/findEmail";
     //var usrSettingsUrl = "https://crimebusters.tk/api/person/findEmail";
-      var usrSettingsUrl = "https://crimebusters.tk/api/notes/findEmail";
+     // var usrSettingsUrl = "https://crimebusters.tk/api/notes/findEmail";
+      var usrSettingsUrl = "https://crimebusters.tk/api/notes/getNote";
 
 
     var usrSettingsOptions = {
