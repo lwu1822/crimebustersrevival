@@ -45,10 +45,12 @@ function addnote() {
                 //var baseurl = "https://crimebusters.tk/api/notes/note";
                 //var baseurl = "https://crimebusters.tk";
 
-                var baseurl = "http://localhost:4002"
+                var baseurl = "http://localhost:4002";
+
         
                 // Authenticate endpoint
-               // const login_url = baseurl + '/api/notes/note';     
+               // const login_url = baseurl + '/api/notes/note';  
+               //const login_url = 'http://localhost:4002/api/notes/note';      
                 const login_url = 'https://crimebusters.tk/api/notes/note';        
                
                 const body = {
