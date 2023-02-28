@@ -8,13 +8,16 @@
 <body>
     <h1>Affine Cipher</h1>
 
-  <p>Enter a message to be encrypted:</p>
-    <input type="text" id="message"> <br>
-    <p>Key A:</p>
-    <input type="text" id="keyA"> <br>
-    <p>Key B:</p>
-    <input type="text" id="keyB">
-    <br>
+  <div><p>Enter a message to be encrypted:</p> 
+    <input type="text" id="message"></div><br>
+  
+  <div><p>Key A:</p>
+    <input type="text" id="keyA"> <br></div><br>
+  
+  <div><p>Key B:</p>
+    <input type="text" id="keyB"></div><br>
+    
+  <br>
     <br>
     <button onclick="affcrypt()">Encrypt</button>
     <br>
