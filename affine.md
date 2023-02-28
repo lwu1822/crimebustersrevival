@@ -8,21 +8,33 @@
 <body>
     <h1>Affine Cipher</h1>
 
-    <p>Enter a message to be decrypyted:</p>
+  <p>Enter a message to be encrypted:</p>
     <input type="text" id="message">
-    <p>Shift:</p>
-    <input type="number" id="shift">
+    <p>Key:</p>
+    <input type="text" id="key">
     <br>
     <br>
-    <button onclick="decrypt()">Decrypt</button>
+    <button onclick="affcrypt()">Encrypt</button>
     <br>
     <br>
-    <p>Decrypted message:</p>
-    <p id="decrypted"></p>
+    <p>Encrypted message:</p>
+    <p id="encrypted"></p>
+<script>
+  function affcrypt() {
+    let expression = document.getElementById("message").value;
+    let expression2 = document.getElementById("key").value;
+    const urlStart = "https://crimebusters.tk/api/affc/all/";
+    const url = urlStart + expression + "/" + expression2;
+    console.log(url); 
+    fetch(url)
+      .then(res => res.json())
+      .then(data => {
+        console.log(data);
+        document.getElementById("encrypted").innerHTML = data.result; 
+      })    
+  }
+</script>
     
 <div id="log"></div>
 <div id="logSuccess"></div>
-
-<!-- Include the JavaScript file -->
-<script src="affine.js"></script>
 </body>
