@@ -42,7 +42,7 @@
 <script>
 
     //get user info based on cookie
-    var usrSettingsUrl = "http://localhost:4002/api/person/findEmail";
+    var usrSettingsUrl = "http://localhost:8080/api/person/findEmail";
     //var usrSettingsUrl = "https://crimebusters.tk/api/notes/findEmail";
 
     var usrSettingsOptions = {
