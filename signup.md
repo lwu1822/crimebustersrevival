@@ -39,6 +39,9 @@
 
 <script>
 
+    var today = new Date().toISOString().split('T')[0];
+    document.getElementById("dob").setAttribute('max', today);
+
     function signup() {
 
         document.getElementById("passwordMsg").innerHTML = ""; 
