@@ -42,8 +42,8 @@
 <script>
 
     //get user info based on cookie
-    var usrSettingsUrl = "http://localhost:8080/api/person/findEmail";
-    //var usrSettingsUrl = "https://crimebusters.tk/api/notes/findEmail";
+    //var usrSettingsUrl = "http://localhost:8085/api/person/findEmail";
+    var usrSettingsUrl = "https://crimebusters.tk/api/person/findEmail";
 
     var usrSettingsOptions = {
         method: 'GET', 
@@ -102,7 +102,7 @@
                 
                // for (const row of data) {
                     console.log("in row");
-                    console.log(JSON.stringify(data));
+                    console.log(data);
                    // if (id == row.userId) {
                     // make "tr element" for each "row of data"
                       const tr = document.createElement("tr");
