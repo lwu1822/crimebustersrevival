@@ -27,7 +27,7 @@
 
 <h1>Notes for a person</h1>
 
-<table class="tablelines">
+<table class="tablelines" id="mainTable">
     <tr>
         <th>Person Name</th>
              <th>Note</th>
@@ -43,7 +43,9 @@
 
     //get user info based on cookie
     //var usrSettingsUrl = "http://localhost:8085/api/person/findEmail";
-    var usrSettingsUrl = "https://crimebusters.tk/api/person/findEmail";
+    //var usrSettingsUrl = "https://crimebusters.tk/api/person/findEmail";
+      var usrSettingsUrl = "https://crimebusters.tk/api/notes/findEmail";
+
 
     var usrSettingsOptions = {
         method: 'GET', 

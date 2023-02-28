@@ -93,7 +93,7 @@ function addnote() {
                         console.log(data);
                         console.log("hiiiiiiiiiiiii");
     
-                    }),    
+                   
 
                     console.log("Note success");
 
@@ -102,9 +102,12 @@ function addnote() {
                     p.appendChild(noteSuccessMsg);
                     document.getElementById("noteSuccess").appendChild(noteSuccessMsg); 
 
-                    document.getElementById("noteTable").innerHTML = "";
+                    document.getElementById("mainTable").innerHTML = "";
+                    document.getElementById("mainTable").innerHTML = "<table class='tablelines' id='mainTable'><tr><th>Person Name</th><th>Note</th></tr><tbody id='noteTable'></tbody></table>";
 
                     console.log(data);
+                    console.log("email " + data.email);
+                    console.log("note " + data.text);
                    // if (id == row.userId) {
                     // make "tr element" for each "row of data"
                       const tr = document.createElement("tr");
@@ -125,6 +128,7 @@ function addnote() {
           
                       // this adds all the tr (row) work above to the HTML "result" container
                       document.getElementById("noteTable").appendChild(tr);
+                    })
 
                 })
 
