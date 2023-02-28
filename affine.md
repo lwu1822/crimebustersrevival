@@ -14,16 +14,16 @@
     <input type="text" id="key">
     <br>
     <br>
-    <button onclick="subscrypt()">Encrypt</button>
+    <button onclick="affcrypt()">Encrypt</button>
     <br>
     <br>
     <p>Encrypted message:</p>
     <p id="encrypted"></p>
 <script>
-  function subscrypt() {
+  function affcrypt() {
     let expression = document.getElementById("message").value;
     let expression2 = document.getElementById("key").value;
-    const urlStart = "https://crimebusters.tk/api/subsc/all/";
+    const urlStart = "https://crimebusters.tk/api/affc/all/";
     const url = urlStart + expression + "/" + expression2;
     console.log(url); 
     fetch(url)
