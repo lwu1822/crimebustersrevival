@@ -103,6 +103,7 @@ function addnote() {
                     document.getElementById("noteSuccess").appendChild(noteSuccessMsg); 
 
                     document.getElementById("mainTable").innerHTML = "";
+                    document.getElementById("mainTable").innerHTML = "<table class='tablelines' id='mainTable'><tr><th>Person Name</th><th>Note</th></tr><tbody id='noteTable'></tbody></table>";
 
                     console.log(data);
                     console.log("email " + data.email);
