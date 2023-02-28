@@ -19,7 +19,7 @@
 <!--hvghghhj ---->
 
 <!-- Include the JavaScript file -->
-<!-- <script src="note.js"></script>-->
+ <script src="note.js"></script>
 </body>
 </html>
 
