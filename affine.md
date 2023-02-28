@@ -17,9 +17,7 @@
   <div><p>Key B:</p>
     <input type="text" id="keyB"></div><br>
     
-  <br>
-    <br>
-    <button onclick="affcrypt()">Encrypt</button>
+  <button onclick="affcrypt()">Encrypt</button>
     <br>
     <br>
     <p>Encrypted message:</p>
