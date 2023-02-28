@@ -113,7 +113,7 @@
 
                        // td for joke cell
                       const noteText = document.createElement("td");
-                      noteText.innerHTML = data.Text;  // add fetched data to innerHTML
+                      noteText.innerHTML = data.text;  // add fetched data to innerHTML
           
                                             
                       // this builds ALL td's (cells) into tr (row) element
