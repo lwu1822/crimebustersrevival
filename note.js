@@ -102,7 +102,7 @@ function addnote() {
                     p.appendChild(noteSuccessMsg);
                     document.getElementById("noteSuccess").appendChild(noteSuccessMsg); 
 
-                    document.getElementById("noteTable").innerHTML = "";
+                    document.getElementById("mainTable").innerHTML = "";
 
                     console.log(data);
                    // if (id == row.userId) {

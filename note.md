@@ -27,7 +27,7 @@
 
 <h1>Notes for a person</h1>
 
-<table class="tablelines">
+<table class="tablelines" id="mainTable">
     <tr>
         <th>Person Name</th>
              <th>Note</th>
