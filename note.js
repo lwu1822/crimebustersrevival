@@ -102,6 +102,30 @@ function addnote() {
                     p.appendChild(noteSuccessMsg);
                     document.getElementById("noteSuccess").appendChild(noteSuccessMsg); 
 
+                    document.getElementById("noteTable").innerHTML = "";
+
+                    console.log(data);
+                   // if (id == row.userId) {
+                    // make "tr element" for each "row of data"
+                      const tr = document.createElement("tr");
+                      
+                      // td for joke cell
+                      const personName = document.createElement("td");
+                      personName.innerHTML = data.email;  // add fetched data to innerHTML
+
+                       // td for joke cell
+                      const noteText = document.createElement("td");
+                      noteText.innerHTML = data.text;  // add fetched data to innerHTML
+          
+                                            
+                      // this builds ALL td's (cells) into tr (row) element
+                      tr.appendChild(personName);
+                      //tr.appendChild(plaintext);
+                      tr.appendChild(noteText);
+          
+                      // this adds all the tr (row) work above to the HTML "result" container
+                      document.getElementById("noteTable").appendChild(tr);
+
                 })
 
             
