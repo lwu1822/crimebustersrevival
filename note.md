@@ -43,10 +43,9 @@
 
     //get user info based on cookie
     //var usrSettingsUrl = "http://localhost:8085/api/person/findEmail";
-    //var usrSettingsUrl = "https://crimebusters.tk/api/person/findEmail";
+    var usrSettingsUrl = "https://crimebusters.tk/api/person/findEmail";
      // var usrSettingsUrl = "https://crimebusters.tk/api/notes/findEmail";
-      var usrSettingsUrl = "https://crimebusters.tk/api/notes/getNote";
-
+   
 
     var usrSettingsOptions = {
         method: 'GET', 
@@ -73,12 +72,17 @@
             console.log("DATA: " + JSON.stringify(data));
             var id = data.id;
 
+               var getNoteURL = "https://crimebusters.tk/api/notes/getNote/" + data.email;
+
+
             /*
             //get note for the person 
+               var usrSettingsUrl = "https://crimebusters.tk/api/notes/getNote";
+
            var getNoteURL = "http://localhost:8085/api/person/getnote";
            //  var getNoteURL = "https://crimebusters.tk/api/person/getnote";
             
-
+*/
             var getNoteOptions = {
                 method: 'GET', 
                 mode: 'cors', 
@@ -101,7 +105,7 @@
                 response.json().then(data => {
                     console.log("out row");
                     console.log(data);
-*/
+
                 
                // for (const row of data) {
                     console.log("in row");
