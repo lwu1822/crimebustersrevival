@@ -10,8 +10,10 @@
 
   <p>Enter a message to be encrypted:</p>
     <input type="text" id="message">
-    <p>Key:</p>
-    <input type="text" id="key">
+    <p>Key A:</p>
+    <input type="text" id="keyA">
+    <p>Key B:</p>
+    <input type="text" id="keyB">
     <br>
     <br>
     <button onclick="affcrypt()">Encrypt</button>
@@ -22,9 +24,10 @@
 <script>
   function affcrypt() {
     let expression = document.getElementById("message").value;
-    let expression2 = document.getElementById("key").value;
+    let expression2 = document.getElementById("keyA").value;
+    let expression3 = document.getElementById("keyB").value;
     const urlStart = "https://crimebusters.tk/api/affc/all/";
-    const url = urlStart + expression + "/" + expression2;
+    const url = urlStart + expression + "/" + expression2 + "/" + expression3;
     console.log(url); 
     fetch(url)
       .then(res => res.json())
